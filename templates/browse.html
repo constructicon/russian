@@ -79,22 +79,18 @@
             <label for="checkbox">Show additional information</label>
 
             <div v-if="show_additional_information">
+              <div v-for="equivalent in records[current_record_number].equivalents">
+                <br>
+                <b>EQUIVALENTS ({[ to_title_case(key(equivalent)) ]})</b> <br><span v-html="value(equivalent)"></span>
+                <br>
+              </div>
               <br>
-              <b>EQUIVALENTS (English)</b>
 
-              <br>
-              <br>
-
-              <b>EQUIVALENTS (Norwegian)</b>
-
-              <br>
-              <br>
               <b>COMMON FILLERS</b>
               <ul v-if="records[current_record_number].common_fillers[0] != null">
                 <li v-for="item in records[current_record_number].common_fillers">{[ item ]}</li>
               </ul>
 
-              <br>
               <br>
 
               <b>SEMANTIC TYPE</b>
