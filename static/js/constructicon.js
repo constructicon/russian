@@ -300,6 +300,8 @@ var app = new Vue({
         all_data_loaded: function(new_, old_) {
             // to make sure that when we load the page first time, we see all results
             this.search();
+            this.set_record_from_fragment();
+            this.track_fragment();
         },
         search_string: function(new_, old_) {
             this.search_debounced();
@@ -327,6 +329,9 @@ var app = new Vue({
         },
         semantic_types_selected: function(new_, old_) {
             this.advanced_search_debounced();
+        },
+        current_record_number: function(new_, old_) {
+            this.set_fragment_from_record(new_);
         },
     },
     methods: {
@@ -408,6 +413,20 @@ var app = new Vue({
             let selected = random_selection(records_with_this_level, 5);
             selected.sort((a, b) => a - b);
             this.record_numbers_matching_search = selected;
-        }
+        },
+        set_record_from_fragment: function() {
+            let hash = window.location.hash.slice(1);
+            this.current_record_number = this.record_numbers.includes(hash) ? hash : null;
+        },
+        track_fragment: function() {
+            window.addEventListener('hashchange', () => {
+                this.set_record_from_fragment();
+            });
+        },
+        set_fragment_from_record: function (record_number) {
+            if (record_number && record_number !== window.location.hash.slice(1)) {
+                window.history.pushState(null, '', '#' + record_number);
+            }
+        },
     }
 })
