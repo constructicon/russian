@@ -415,8 +415,8 @@ var app = new Vue({
             this.record_numbers_matching_search = selected;
         },
         set_record_from_fragment: function() {
-            let hash = window.location.hash.slice(1);
-            this.current_record_number = this.record_numbers.includes(hash) ? hash : null;
+            let fragment = window.location.hash.slice(1);
+            this.current_record_number = this.record_numbers.includes(fragment) ? fragment : null;
         },
         track_fragment: function() {
             window.addEventListener('hashchange', () => {
