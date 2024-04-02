@@ -392,7 +392,7 @@ var app = new Vue({
         },
         annotate: function(text) {
             // renders words that come right after [...] as subscript with color
-            let matches = text.match(/(?<=\])[A-Za-z]+/g);
+            let matches = text.match(/(?<=\])[A-Za-z]+/g) || [];
             for (let substring of matches) {
                 text = text.replace(substring, '<sub><span style="color: #db2f6d">' + substring + '</span></sub>');
             }
