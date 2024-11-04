@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://constructicon.github.io/russian/img/favicon.ico">
+
+    <title>Constructicon</title>
+
+    
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="https://raw.githubusercontent.com/constructicon/russian/main/content/logo/constructicon-round.png" />
+    
+
+    
+      <meta name="description" content="Description of the Constructicon.
+" />
+      <meta name="twitter:description" content="Description of the Constructicon.
+" />
+    
+
+    
+      <meta name="twitter:title" content="Constructicon" />
+    
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+            integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68="
+            crossorigin="anonymous"></script>
+
+    <!-- https://vue-treeselect.js.org/ -->
+    <script src="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@3.14.0/dist/js-yaml.min.js"
+            integrity="sha256-8mtDTinb8+d2bC/9KhCJoCRBEylWUIV/3YEt5cSUvRk="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"
+            integrity="sha256-Jvh9+A4HNbbWsWl1Dw7kAzNsU3y8elGIjLnUSUNMtLg="
+            crossorigin="anonymous"></script>
+
+    <!-- https://github.com/bvaughn/js-search -->
+    <script src="https://cdn.jsdelivr.net/npm/js-search@2.0.0/dist/umd/js-search.min.js"
+            integrity="sha256-LD9UsSATk+xTzAbk8nD2gA2bjHKvetXtCMDAFkM2K5Q="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js" integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link href="https://constructicon.github.io/russian/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- navigation -->
+      <div class="row top-buffer">
+        <div class="col-md-3">
+          <figure class="figure">
+            
+            <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;66ea0c2bc689ec2a00.png"
+                 class="figure-img img-fluid rounded" alt="Constructicon logo">
+          </figure>
+        </div>
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9f2ff;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/">Browse</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/advanced-search/">Advanced search</a>
+                  </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/daily/">Daily dose</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/statistics/">Statistics</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/instructions/">Instructions</a>
+                  </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/about/">About</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- end navigation -->
+
+      <div class="top-buffer">
+        
+  <div id="app" v-cloak>
+
+    <div v-if="show_data_spinner">
+      <div class="row top-buffer">
+        <div class="col-md-12">
+        <h1>Loading data (can take few seconds) ...</h1>
+          <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="all_data_loaded">
+      <div class="row">
+        
+  
+  <div class="col-md-6 top-buffer">
+    <label>Semantic types</label>
+    <treeselect
+      :multiple="true"
+      :options="semantic_types_options"
+      placeholder="Select semantic types"
+      v-model="semantic_types_selected"
+      />
+    <treeselect-value :value="semantic_types_selected" />
+  </div>
+
+  
+  <div class="col-md-6 top-buffer">
+    <label>Syntactic type of construction</label>
+    <treeselect
+      :multiple="true"
+      :options="syntactic_type_of_construction_options"
+      placeholder="Select syntactic type of construction"
+      v-model="syntactic_type_of_construction_selected"
+      />
+    <treeselect-value :value="syntactic_type_of_construction_selected" />
+  </div>
+
+
+  
+  <div class="col-md-6 top-buffer">
+    <label>Semantic roles</label>
+    <treeselect
+      :multiple="true"
+      :options="semantic_roles_options"
+      placeholder="Select semantic roles"
+      v-model="semantic_roles_selected"
+      />
+    <treeselect-value :value="semantic_roles_selected" />
+  </div>
+
+  
+  <div class="col-md-6 top-buffer">
+    <label>Syntactic function of anchor</label>
+    <treeselect
+      :multiple="true"
+      :options="syntactic_function_of_anchor_options"
+      placeholder="Select syntactic function of anchor"
+      v-model="syntactic_function_of_anchor_selected"
+      />
+    <treeselect-value :value="syntactic_function_of_anchor_selected" />
+  </div>
+
+
+  
+  <div class="col-md-6 top-buffer">
+    <label>Morphology</label>
+    <treeselect
+      :multiple="true"
+      :options="morphology_options"
+      placeholder="Select morphology"
+      v-model="morphology_selected"
+      />
+    <treeselect-value :value="morphology_selected" />
+  </div>
+
+  
+  <div class="col-md-6 top-buffer">
+    <label>Syntactic structure of anchor</label>
+    <treeselect
+      :multiple="true"
+      :options="syntactic_structure_of_anchor_options"
+      placeholder="Select syntactic structure of anchor"
+      v-model="syntactic_structure_of_anchor_selected"
+      />
+    <treeselect-value :value="syntactic_structure_of_anchor_selected" />
+  </div>
+
+
+  
+  <div class="col-md-6 top-buffer">
+    <label>Level</label>
+    <treeselect
+      :multiple="true"
+      :options="level_options"
+      placeholder="Select level"
+      v-model="level_selected"
+      />
+    <treeselect-value :value="level_selected" />
+  </div>
+
+  
+  <div class="col-md-6 top-buffer">
+    <label>Part of speech of anchor</label>
+    <treeselect
+      :multiple="true"
+      :options="part_of_speech_of_anchor_options"
+      placeholder="Select part of speech of anchor"
+      v-model="part_of_speech_of_anchor_selected"
+      />
+    <treeselect-value :value="part_of_speech_of_anchor_selected" />
+  </div>
+
+
+
+        <div class="row top-buffer">
+        <div class="col-md-12 ">
+          <div v-if="record_numbers_matching_search.length > 0">
+            <div class="form-group">
+              <label>Results</label>
+              <select v-model="current_record_number" class="form-control" size="10">
+                
+                <option v-for="record_number in record_numbers_matching_search" :value="record_number">
+                  {[ record_number ]}.
+                  
+                  <b>{[ records[record_number].name ]}</b>
+                  &nbsp;
+                  |
+                  &nbsp;
+                  <i>{[ records[record_number].illustration ]}</i>
+                </option>
+              </select>
+            </div>
+            Number of matching constructions: {[record_numbers_matching_search.length]}
+          </div>
+          <div v-else>
+            No matching constructions
+          </div>
+        </div>
+
+          <div v-if="current_record_number == null">
+            
+            
+          </div>
+      <div class="row top-buffer">
+        <div class="col-md-12">
+          <div v-if="current_record_number != null">
+            {[ current_record_number ]}
+            <br>
+
+            <b>NAME</b><br>
+            <b>{[ records[current_record_number].name ]}</b> - <i>{[ records[current_record_number].illustration ]}</i>
+
+            <div v-for="definition in records[current_record_number].definitions">
+              <br>
+              <b>DEFINITION ({[ to_title_case(key(definition)) ]})</b> <br><span v-html="annotate(value(definition))"></span>
+              <br>
+            </div>
+
+            <br>
+            <b>EXAMPLES</b>
+            <ol>
+              <li v-for="example in records[current_record_number].examples"><span v-html="annotate(example)"></span></li>
+            </ol>
+
+            <br>
+            <b>CEFR LEVEL:</b> {[ records[current_record_number].cefr_level ]}
+            <br>
+
+            <br>
+            <input type="checkbox" id="checkbox" v-model="show_additional_information">
+            <label for="checkbox">Show additional information</label>
+
+            <div v-if="show_additional_information">
+              <div v-for="equivalent in records[current_record_number].equivalents">
+                <br>
+                <b>EQUIVALENTS ({[ to_title_case(key(equivalent)) ]})</b> <br><span v-html="value(equivalent)"></span>
+                <br>
+              </div>
+              <br>
+
+              <b>COMMON FILLERS</b>
+              <ul v-if="records[current_record_number].common_fillers[0] != null">
+                <li v-for="item in records[current_record_number].common_fillers">{[ item ]}</li>
+              </ul>
+
+              <br>
+
+              <b>SEMANTIC TYPE</b>
+              <ul>
+                <li v-for="item in records[current_record_number].semantic_types">
+                  {[ item['type'] ]}
+                  <ul>
+                    <li v-for="it in item['subtypes']">{[ it['type'] ]}</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <br>
+              <b>SYNTACTIC TYPE OF CONSTRUCTION</b>
+              <ul>
+                <li v-for="item in records[current_record_number].syntactic_type_of_construction">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>SYNTACTIC FUNCTION OF ANCHOR</b>
+              <ul>
+                <li v-for="item in records[current_record_number].syntactic_function_of_anchor">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>SYNTACTIC STRUCTURE OF ANCHOR</b>
+              <ul>
+                <li v-for="item in records[current_record_number].syntactic_structure_of_anchor">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>PART OF SPEECH OF ANCHOR</b>
+              <ul>
+                <li v-for="item in records[current_record_number].part_of_speech_of_anchor">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>DEPENDENCY STRUCTURE</b>
+              <ol>
+                <li v-for="item in records[current_record_number].dependency_structure">{[ item ]}</li>
+              </ol>
+
+              <br>
+              <b>DEPENDENCY STRUCTURE OF ILLUSTRATION</b>
+              <ol>
+                <li v-for="item in records[current_record_number].dependency_structure_of_illustration">{[ item ]}</li>
+              </ol>
+
+              <br>
+              <b>COMMUNICATIVE TYPE</b>
+              <ul>
+                <li v-for="item in records[current_record_number].intonation">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>USAGE LABEL</b> {[ records[current_record_number].usage_label ]}
+              <br>
+
+              <br>
+              <b>COMMENT</b> <br> {[ records[current_record_number].comment ]}
+              <br>
+
+              <br>
+              <b>REFERENCES</b>
+              <ul v-if="records[current_record_number].references[0] != ''" >
+                <li v-for="item in records[current_record_number].references">{[ item ]}</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+      </div>
+
+      <div class="more-buffer">
+		
+
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+    
+  <script src="https://constructicon.github.io/russian/js/constructicon.js"></script>
+
+
+  </body>
+</html>

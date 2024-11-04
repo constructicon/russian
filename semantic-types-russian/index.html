@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://constructicon.github.io/russian/img/favicon.ico">
+
+    <title>Constructicon</title>
+
+    
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="https://raw.githubusercontent.com/constructicon/russian/main/content/logo/constructicon-round.png" />
+    
+
+    
+      <meta name="description" content="Description of the Constructicon.
+" />
+      <meta name="twitter:description" content="Description of the Constructicon.
+" />
+    
+
+    
+      <meta name="twitter:title" content="Constructicon" />
+    
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+            integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68="
+            crossorigin="anonymous"></script>
+
+    <!-- https://vue-treeselect.js.org/ -->
+    <script src="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@3.14.0/dist/js-yaml.min.js"
+            integrity="sha256-8mtDTinb8+d2bC/9KhCJoCRBEylWUIV/3YEt5cSUvRk="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"
+            integrity="sha256-Jvh9+A4HNbbWsWl1Dw7kAzNsU3y8elGIjLnUSUNMtLg="
+            crossorigin="anonymous"></script>
+
+    <!-- https://github.com/bvaughn/js-search -->
+    <script src="https://cdn.jsdelivr.net/npm/js-search@2.0.0/dist/umd/js-search.min.js"
+            integrity="sha256-LD9UsSATk+xTzAbk8nD2gA2bjHKvetXtCMDAFkM2K5Q="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js" integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link href="https://constructicon.github.io/russian/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- navigation -->
+      <div class="row top-buffer">
+        <div class="col-md-3">
+          <figure class="figure">
+            
+            <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;66ea0c2bc689ec2a00.png"
+                 class="figure-img img-fluid rounded" alt="Constructicon logo">
+          </figure>
+        </div>
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9f2ff;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/">Browse</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/advanced-search/">Advanced search</a>
+                  </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/daily/">Daily dose</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/statistics/">Statistics</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/instructions/">Instructions</a>
+                  </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/about/">About</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- end navigation -->
+
+      <div class="top-buffer">
+        
+  <ul>
+    
+      <li>
+        <a href="https://constructicon.github.io/russian/semantic-types-russian/#semantic-types-semanticheskie-tipy-konstruktsii">Semantic types &#x2F; Семантические типы конструкций</a>
+        
+          <ul>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types-russian/#obzor">Обзор</a>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-semanticheskii-klass-kvalia-qualia">1. Семантический класс КВАЛИА (QUALIA)</a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-1-podklass-struktura-situatsii-situation-structure">1.1. Подкласс Структура ситуации (Situation Structure)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-2-podklass-osnovnye-roli-uchastnikov-situatsii-major-roles">1.2. Подкласс Основные роли участников ситуации (Major Roles)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-3-podklass-modifikatory-situatsii-situation-modifiers">1.3. Подкласс Модификаторы ситуации (Situation Modifiers)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-4-podklass-logicheskie-otnosheniia-logical-relations">1.4. Подкласс Логические отношения (Logical Relations)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-5-podklass-kharakteristiki-properties">1.5. Подкласс Характеристики (Properties)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-6-podklass-operatsii-s-mnozhestvami-i-ikh-elementami-sets-and-elements">1.6. Подкласс Операции с множествами и их элементами (Sets and Elements)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#1-7-podklass-velichiny-magnitude">1.7. Подкласс Величины (Magnitude)</a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types-russian/#2-semanticheskii-klass-modal-nost-i-smezhnye-kategorii-modality-and-its-neighborhood">2. Семантический класс МОДАЛЬНОСТЬ И СМЕЖНЫЕ КАТЕГОРИИ (MODALITY AND ITS NEIGHBORHOOD)</a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#2-1-podklass-tsentral-nye-modal-nye-znacheniia-core-modal-meanings">2.1. Подкласс Центральные модальные значения (Core Modal Meanings)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#2-2-podklass-smezhnye-s-modal-nost-iu-kategorii-neighborhood-of-core-modal-meanings">2.2. Подкласс Смежные с модальностью категории (Neighborhood of Core Modal Meanings)</a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types-russian/#3-semanticheskii-klass-vyrazhenie-subektivnosti-subjectivity">3. Семантический класс ВЫРАЖЕНИЕ СУБЪЕКТИВНОСТИ (SUBJECTIVITY)</a>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types-russian/#4-semanticheskii-klass-diskurs-discourse">4. Семантический класс ДИСКУРС (DISCOURSE)</a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#4-1-podklass-markery-organizatsii-diskursa-discourse-organization">4.1. Подкласс Маркеры организации дискурса (Discourse Organization)</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types-russian/#4-2-podklass-klauzal-nye-konstruktsii-s-diskursivnoi-funktsiei-discourse-clauses">4.2. Подкласс Клаузальные конструкции с дискурсивной функцией (Discourse Clauses)</a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types-russian/#5-semanticheskii-klass-parametry-parameters">5. Семантический класс ПАРАМЕТРЫ (PARAMETERS)</a>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types-russian/#spisok-literatury">Список литературы</a>
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+
+  
+    <h1 id="semantic-types-semanticheskie-tipy-konstruktsii">Semantic types / Семантические типы конструкций</h1>
+<h2 id="obzor">Обзор</h2>
+<p>На странице Продвинутый поиск (Advanced Search) можно искать конструкции, которые выражают определенное значение: например, сравнение, оценка, временная граница и др. Подобные типы значений, которые могут выражать конструкции, мы называем “семантическими типами”. В окне поиска Semantic types (Семантические типы) теги перечислены в алфавитном порядке, а их система детально представлена здесь. </p>
+<p>Разработанная нами система разметки включает 55 <strong>семантических типов</strong> и 182 их <strong>подтипа</strong>. Семантические типы являются более общими характеристиками, тогда как подтипы более узкие и информативные. Так, например, семантический тип Comparison (Сравнение) имеет подтипы  Equality (Отождествление), Inequality (Несходство), Similarity (Сходство), Imitation (Имитация) и Contrast (Контраст). Возможности поиска позволяют задать поиск конструкций по подтипам. Для того, чтобы открыть список подтипов каждого семантического типа в соответствующем окне на странице продвинутого поиска, необходимо нажать на значок стрелки › справа от списка типов.</p>
+<p>Все семантические типы конструкций, выделенные в Русском Конструктиконе, перечислены в обзорной таблице и объяснены в описании ниже. Поскольку таблица и описание содержат большое количество наименований, все семантические типы для удобства сопровождаются значком списка • (черный кружок). Наличие подтипов обозначено в таблице с помощью знака плюс +. Например, семантический тип Addressee (Адресат) имеет подтипы, судя по присутствию значка +, а семантический тип Instrument (Инструмент) в нашей системе разметки подтипов не имеет. Дефиниции и иллюстрации подтипов приводятся в описании ниже, где подтипы обозначены значком списка ° (пустой кружок).</p>
+<p>Семантические типы конструкций образуют группы большего охвата, здесь обозначенные как <strong>подклассы</strong> и <strong>классы</strong>. Для удобства пользователей, классы и подклассы конструкций пронумерованы. Их наименования служат подзаголовками разделов в приведенном описании и помогают представить обширный инвентарь семантических типов конструкций как структурированную систему. Названия классов и подклассов в окне поиска не приводятся.</p>
+<img width="987" alt="Screen Shot 2021-05-26 at 13 14 06" src="https://user-images.githubusercontent.com/63615172/119694176-4982cc00-be4d-11eb-90d6-700052af3fe0.png">
+<p>Ниже мы приводим русскоязычный аналог сводной таблицы семантических типов конструкций. Обратите внимание, что поиск задается только с помощью английских терминов.</p>
+<img width="987" alt="021-08-24 at 09 52 23" src="https://user-images.githubusercontent.com/63615172/130578650-81abc3cf-5398-4336-afad-45bc33064942.png">
+<h2 id="1-semanticheskii-klass-kvalia-qualia">1. Семантический класс КВАЛИА (QUALIA)</h2>
+<p>Термин «квалиа» заимствован из философии, где он используется для обозначения конкретных форм и типов сознательного опыта и качественных характеристик опыта. Этим термином мы обозначаем большой класс конструкций, которые описывают свойства, качества и характеристики объективно данной физической реальности, внешней по отношению к говорящему. В этом смысле, Квалиа как класс противопоставляется другим четырем классам конструкций, обозначенным терминами Субъективность, Модальность &amp; смежные категории, Дискурс, Параметры. В класс Квалиа объединяются семь групп семантических типов конструкций, а именно Структура ситуации, Модификаторы ситуации, Основные роли участников ситуации, Логические отношения, Характеристики, Величины, а также Операции с множествами и их элементами.</p>
+<h3 id="1-1-podklass-struktura-situatsii-situation-structure">1.1. Подкласс Структура ситуации (Situation Structure)</h3>
+<p>Структура ситуации – это термин, объединяющий семантические типы конструкций, которые с разных сторон характеризуют структуру ситуации. В их число входят Временная референция, Таксис, Акциональность, Глагольная множественность, Фазы действия, Результат и Реализованная возможность.</p>
+<ul>
+<li>
+<p><strong>Timeline</strong> (Временная референция) – Локализация ситуации на оси времени (в терминах прошлое – настоящее – будущее).</p>
+<ul>
+<li>
+<p><strong>Distant past</strong> (Отдаленное прошлое) – Соотнесение ситуации с отдаленным прошлым: <strong>было время, (когда) Cl</strong> – <em>Было время, когда её стихи очень любили.</em></p>
+</li>
+<li>
+<p><strong>Recent past</strong> (Недавнее прошлое) – Соотнесение ситуации с недавним прошлым: <strong>только что VP-Pfv.Pst</strong> – <em>Вася только что принес деньги.</em></p>
+</li>
+<li>
+<p><strong>Past</strong> (Прошлое) – Соотнесение ситуации с прошлым безотносительно его близости или отдаленности от момента речи: <strong>как-то раз VP</strong> – <em>Я как-то раз видела её на концерте.</em></p>
+</li>
+<li>
+<p><strong>Present</strong> (Настоящее) – Соотнесение ситуации с моментом речи, с настоящим: <strong>NP-Nom Cop на дворе</strong> – <em>Куда ты собралась, ночь на дворе?!</em></p>
+</li>
+<li>
+<p><strong>Future</strong> (Будущее) – Соотнесение ситуации с будущим, безотносительно его близости или отдаленности от момента речи: <strong>со временем Cl</strong> – <em>Со временем она обязательно научится готовить.</em></p>
+</li>
+<li>
+<p><strong>Near future</strong> (Ближайшее будущее) – Соотнесение ситуации с ближайшим будущим: <strong>вот-вот VP-Fut NP-Nom</strong> – <em>Вот-вот прилетит самолёт.</em></p>
+</li>
+<li>
+<p><strong>Distant future</strong> (Отдаленное будущее) – Соотнесение ситуации с отдаленным будущим: <strong>когда-нибудь (потом) VP-Fut</strong> – <em>Я прочитаю эту книгу когда-нибудь потом.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Taxis</strong> (Таксис) – Таксис, или относительное время, понимается здесь как категория темпоральной локализации событий друг относительно друга (одновременность, предшествование, следование). Тогда как обычно таксисные отношения маркируются специальными формами глагола (Храковский 2003: 39-40; Храковский 2009: 21-22), мы обнаруживаем ряд конструкционных средств маркирования таксисных отношений.</p>
+<ul>
+<li>
+<p><strong>Preceding action</strong> (Предшествование) – Указание на действие, предшествующее другому действию: <strong>Cl, перед тем как Cl</strong> – <em>Перед тем как сесть за стол, помой руки.</em></p>
+</li>
+<li>
+<p><strong>Simultaneous action</strong> (Одновременность) – Указание на действия, происходящие одновременно: <strong>в тот NP-Acc, как/когда VP</strong> – <em>Все ахнули в тот момент, когда она заговорила.</em></p>
+</li>
+<li>
+<p><strong>Subsequent action</strong> (Следование) – Указание на действие, следующее за другим действием: <strong>XP, после чего XP</strong> – <em>Нужно довести до кипения, после чего добавить овощи.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Actionality</strong> (Акциональность) – Этим термином мы обозначаем несколько семей конструкций, которые передают аспектуальные значения различных способов глагольного действия. Некоторые конструкции выражают эту семантику посредством глагола, образованного с помощью морфологического показателя способа глагольного действия (приставки или суффикса) и его аргументов, тогда как в других конструкциях способ глагольного действия выражается лексически, с помощью фиксированной части конструкции (якоря).</p>
+<ul>
+<li>
+<p><strong>Attenuative</strong> (Аттенуатив) – Указание на действие, которое производится слегка, без усилий, в противовес тому, как это действие осуществляется в норме. Конструкция содержит глагол, выражающий аттенуативный способ действия (также известный как смягчительный), и образованный приставками при-, под- или по- (Зализняк, Шмелев 2000: 120): <strong>при-Verb</strong> – <em>Катя приоткрыла окно.</em></p>
+</li>
+<li>
+<p><strong>Cumulative</strong> (Кумулятив) – Указание на &quot;накопление «результата действия»&quot; (Зализняк, Шмелев 2000: 114), то есть как правило накопление некоторого количества объектов посредством повторного выполнения некоторого действия. Конструкция обычно содержит глагол с приставкой на-, описывающий кумулятивный способ действия (также известный как накопительный и накопительно-суммарный): <strong>NP-Nom на-Verb NP-Gen.Pl</strong> – <em>Он навёз домой много вещей.</em></p>
+</li>
+<li>
+<p><strong>Distributive</strong> (Дистрибутив) – Указание на действие, которое поочередно распространяется на все объекты из множества или исходит от множества субъектов. Конструкция обычно содержит глагол с приставкой пере-, по- или раз-, описывающий дистрибутивный способ действия (также известный как распределительный) (Зализняк, Шмелев 2000: 124): <strong>NP-Nom раз-Verb NP-Acc.Pl</strong> – <em>Официант разнёс по столам подносы.</em></p>
+</li>
+<li>
+<p><strong>Gradual development</strong> (Постепенное развертывание ситуации) – Указание на ситуацию, которая развивается постепенно: <strong>VP с каждым NP-Ins</strong> – <em>Экономическая ситуация ухудшается с каждым днём.</em></p>
+</li>
+<li>
+<p><strong>Punctual</strong> (Пунктив) – Действие мыслится как происходящее моментально и не имеющее срединной фазы (Comrie 1976): <strong>VP в одну минуту</strong> – <em>Печаль моя прошла в одну минуту.</em></p>
+</li>
+<li>
+<p><strong>Saturative</strong> (Сатуратив) – Указание на действие, которое производится до полного насыщения или пресыщения, при этом  акцент делается на состоянии самого субъекта действия (Зализняк, Шмелев 2000: 114). Нередко рассматривается как частный случай кумулятивного способа действия: <strong>на-Verb-ся (NP-Ins)</strong> – <em>Земля напиталась водой.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Pluractionality</strong> (Глагольная множественность) – Глагольная множественность характеризует «количество наступлений ситуации либо повторение идентичных друг другу фаз в ее внутренней структуре» (см. Шлуинский 2005: 4, также Newman 1980).</p>
+<ul>
+<li>
+<p><strong>Alternation</strong> (Альтернация) – Указание на чередование ситуаций (см. Ладыгина, Рахилина 2016): <strong>когда XP, когда XP</strong> – <em>Когда вовремя придёт, когда опоздает.</em></p>
+</li>
+<li>
+<p><strong>Discontinuative</strong> (Дисконтинуатив) – Указание на то, что ситуация осуществляется с перерывами (см. Шлуинский 2005: 49): <strong>VP урывками</strong> – <em>Этой ночью она спала урывками.</em></p>
+</li>
+<li>
+<p><strong>Frequentative</strong> (Фреквентатив) – Указание на то, что ситуация осуществляется регулярно, но притом чаще, чем ожидается (см. Шлуинский 2005: 49): <strong>то и дело VP</strong> – <em>Маме то и дело звонили.</em></p>
+</li>
+<li>
+<p><strong>Habitual</strong> (Хабитуалис) – Указание на то, что некоторое действие регулярно повторяется или его выполнение является характерным свойством субъекта (см. Шлуинский 2005: 49): <strong>каждый/всякий раз VP, (когда/как Cl)</strong> – <em>Каждый раз улыбаюсь, когда вижу её.</em></p>
+</li>
+<li>
+<p><strong>Iterative</strong> (Итератив) – Указание на то, что ситуация имеет место неоднократно (см. Шлуинский 2005: 49): <strong>VP ещё и ещё</strong> – <em>Он ударил ещё и ещё.</em></p>
+</li>
+<li>
+<p><strong>Multiplicative</strong> (Мультипликатив) – Ситуация состоит из повторяющихся небольших квантов действия (см. Шлуинский 2005: 49): <strong>VP по NP-Dat</strong> – <em>Курочка по зернышку клюёт.</em></p>
+</li>
+<li>
+<p><strong>Raritive</strong> (Раритив) – Указание на то, что ситуация осуществляется регулярно, но притом реже, чем ожидается (см. Шлуинский 2005: 49): <strong>время от времени Cl</strong> – <em>Время от времени я перестаю что-либо успевать.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Phase of action</strong> (Фазы действия) – Конструкции с тегом Фазы действия указывают на одну из логически возможных временны́х фаз ситуации. В определении подтипов этой категории мы исходим из Plungian 1999, Плунгян 2011, где фазовость понимается как категория, которая характеризует &quot;не внутреннюю структуру ситуации, а сам факт существования / несуществования ситуации по отношению к более раннему моменту времени&quot; (Плунгян 2011: 315). Таким образом, фазовость рассматривается как семантическая зона, лежащая на периферии аспектуальности (Plungian 1999: 317).
+Указание на начало ситуации.</p>
+<ul>
+<li>
+<p><strong>Inchoative</strong> (Инхоатив) – Указание на начало ситуации: <strong>NP-Nom как начать VP-Inf!</strong> – <em>А он как начал кричать!</em></p>
+</li>
+<li>
+<p><strong>Continuative</strong> (Континуатив) – Указание на то, что ситуация, начавшаяся в более ранний момент времени, продолжается в настоящий момент: <strong>всё VP-Ipfv да/и ~VP-Ipfv</strong> – <em>Мальчик всё шёл да шёл.</em></p>
+</li>
+<li>
+<p><strong>Terminative</strong> (Терминатив) – Указание на окончание, прекращение ситуации: <strong>NP-Nom бросить VP-Inf</strong> – <em>Я бросил курить.</em></p>
+</li>
+<li>
+<p><strong>Cunctative</strong> (Кунктатив) – Указание на ненаступление ситуации, иными словами ситуация продолжает не иметь места (сопоставимо с англ. <em>not yet</em> и специальными формами глалога в языках Банту cf. Plungian 1999: 316; см. продолжение &quot;неначала&quot; ситуации в Плунгян 2011: 314): <strong>NP-Nom так и не VP</strong> – <em>Иван так и не женился.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Result</strong> (Результат) – Конструкции этого типа составляют так называемый блок результата и обозначают достигнутый результат, недостигнутый результат, а также попытку совершить действие и, как следствие, достичь некоторого результата. Следует заметить, что тег Результат в Русском Конструктиконе покрывает более широкий спектр значений, чем &quot;результатив&quot;, показатель, маркирующий именно результирующую стадию, согласно Плунгян 2011: 282 (ср. <em>дверь открыта, машина сломана</em>).</p>
+<ul>
+<li>
+<p><strong>Achieved Result</strong> (Достигнутый результат) – Указание на реальное событие или состояние, к которому приводит некоторая предшествующая ситуация: <strong>VP до NP-Gen</strong> – <em>Все овощи нужно залить кипятком и варить до готовности.</em></p>
+</li>
+<li>
+<p><strong>Antiresultative</strong> (Антирезультатив) – Указание на нарушенную результативную фазу (см. Плунгян 2001). Антирезультативное значение реализуется в двух разновидностях: 1) результат не был достигнут, поскольку движение к результату было прервано; 2) результат был достигнут, но затем отменен: <strong>едва не VP-Pst</strong> – <em>Иван Иванович едва не умер после такого розыгрыша.</em></p>
+</li>
+<li>
+<p><strong>Conative</strong> (Конатив) – Указание на попытку совершить действие: <strong>NP-Nom пробовать VP-Inf</strong> – <em>Вася несколько раз пробовал открыть окно.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Actuality</strong> (Реализованная возможность) – Указание на успешную реализацию действия (ср. англ. глагол <em>manage</em> (см. Plungian &amp; van der Auwera 1998: 104), на &quot;реализованную способность&quot; (Aijmer 2004: 62). Эта категория находится на пересечении аспектуальности и модальности (см. Мордашова В работе): <strong>NP-Dat удалось VP-Inf</strong> – <em>Мише удалось покурить.</em> Без подтипов.</p>
+</li>
+</ul>
+<hr />
+<h3 id="1-2-podklass-osnovnye-roli-uchastnikov-situatsii-major-roles">1.2. Подкласс Основные роли участников ситуации (Major Roles)</h3>
+<p>Терминология, которую мы используем в данном разделе, пересекается с названиями семантических ролей (Апресян 1974/1995). В данном случае выделенные разновидности относятся к конструкциям целиком, а термины описывают различные варианты взаимодействия участников ситуации или различные типы ситуаций (напр. обладание, отсутствие участника и пр.).</p>
+<ul>
+<li>
+<p><strong>Addressee</strong> (Адресат) – Адресат понимается как гиперроль и включает не только адресата речи, но и адресата неречевого действия. Это действие может затрагивать участника в позитивном (Бенефициант) или негативном (Малефициант) ключе. Адресат речи может быть одним человеком (Собственно адресат) или представлен группой людей (Аудитория).</p>
+<ul>
+<li>
+<p><strong>Core Addressee</strong> (Собственно адресат) – Указание на адресата некоторой информации в ситуации речи, то есть на участника, который в устном или письменном виде получает сообщение от другого участника: <strong>NP в адрес NP-Gen</strong> – <em>В адрес Вани послышались оскорбления.</em></p>
+</li>
+<li>
+<p><strong>Audience</strong> (Аудитория) – Указание на множественного адресата некоторой информации в ситуации речи, то есть на группу людей, которые в устном или письменном виде получают некоторую информацию: <strong>NP/VP перед NP-Ins</strong> – <em>Он умел говорить перед большой публикой.</em></p>
+</li>
+<li>
+<p><strong>Beneficiary</strong> (Бенефициант) – Указание на адресата действия, который получает пользу от этого действия: <strong>NP/VP в угоду NP-Dat</strong> – <em>Он сказал это в угоду начальству.</em></p>
+</li>
+<li>
+<p><strong>Maleficiary</strong> (Малефициант) – Указание на участника, которому некоторое действие или ситуация принесли вред: <strong>VP назло NP-Dat</strong> – <em>Назло кондуктору куплю билет.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Instrument</strong> (Инструмент) – Указание на инструмент или орудие действия, то есть на объект, используемый участником для совершения некоторого действия: <strong>VP с помощью/при помощи NP-Gen</strong> – <em>Он всё починил с помощью отвёртки.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Possession</strong> (Обладание) – Указание на обладание объектом или, реже, качеством, правом. Данный тип шире, чем посессив, который традиционно понимается исключительно как обладание объектом: <strong>NP-Nom Cop/VP у NP-Gen на руках</strong> – <em>Документы у меня на руках.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Comitative</strong> (Комитатив) – Указание на совместное действие с другим участником или с группой участников. В отличие от типа Обладание, тип Комитатив подразумевает только одушевленных участников: <strong>VP за компанию (с NP-Ins)</strong> – <em>Пойдёшь с нами за компанию?</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Caritive</strong> (Каритив) – Указание на «отсутствие в ситуации второстепенного агенса или объекта обладания главного участника» (Плунгян 2011: 125): <strong>NP-Nom Cop без NP-Gen как без рук</strong> – <em>Я без часов как без рук.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Non-standard subject</strong> (Нестандартный субъект действия) – Конструкции этого типа содержат различные способы выражения логического субъекта действия и включают нестандартное маркирование субъекта и замещение субъекта другим участником.</p>
+<ul>
+<li>
+<p><strong>Non-standard subject marking</strong> (Нестандартное выражение субъекта) – Логический субъект выражается нестандартным способом, отличным от именительного падежа: <strong>я PronPers-Dat VP-Fut!</strong> – <em>Я тебе поору!</em></p>
+</li>
+<li>
+<p><strong>Subject substitution</strong> (Замещение субъекта) – Конструкция указывает на заместителя субъекта или на то, что действие выполняется участником, отличным от ожидаемого субъекта действия: <strong>VP за NP-Acc</strong> – <em>Мать за дочь сделала домашнее задание.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-3-podklass-modifikatory-situatsii-situation-modifiers">1.3. Подкласс Модификаторы ситуации (Situation Modifiers)</h3>
+<p>Конструкции, принадлежащие к этому типу, содержат информацию о пространственных и временны́х характеристиках ситуации, а также об образе действия.</p>
+<ul>
+<li>
+<p><strong>Spatial expressions</strong> (Пространственные выражения) – Пространственные выражения - это конструкции, которые выражают пространственные отношения, указывают на пространственные характеристики (или модификаторы) ситуации. Мы различаем пространственные выражения со значением направления движения (подтипы Откуда, Куда, Траектория) и со значением нахождения (Где), согласно общепринятной классификации описанной в Mitrofanova 2016 и процитированных там работах.</p>
+<ul>
+<li>
+<p><strong>Path:Source</strong> (Откуда) – Указание на направление движения в пространстве, в фокусе внимания отправная точка движения (откуда): <strong>NP/VP с торца (NP-Gen)</strong> -  <em>Вход с торца.</em></p>
+</li>
+<li>
+<p><strong>Path:Goal</strong> (Куда) – Указание на направление движения в пространстве, в фокусе внимания конечная точка движения, пункт назначения (куда): <strong>NP-Nom вести в NP-Acc</strong> - <em>Дверь вела в комнату.</em></p>
+</li>
+<li>
+<p><strong>Path:Route</strong> (Траектория) – Указание на траекторию, маршрут направленного движения, в фокусе внимания сама траектория (ср. <em>идти по дороге, сквозь темноту, через лес</em>): <strong>VP вдоль по NP-Dat</strong> - <em>Мы пошли вдоль по улице.</em></p>
+</li>
+<li>
+<p><strong>Location</strong> (Где) – Указание на статическое местоположение объекта (нет указания на движение и на направление движения): <strong>NP в NP-Loc</strong> - <em>Боль в животе.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Temporal expressions</strong> (Темпоральные выражения) – Тег объединяет различные способы указания на время (e.g. темпоральные выражения), отличные от грамматического времени.</p>
+<ul>
+<li>
+<p><strong>Clock</strong> (Время на часах) – Указание на конкретное время дня или ночи на часах: <strong>без NumCrd-Gen (минут) NumCrd-Nom</strong> - <em>Приходи к без пятнадцати десять.</em></p>
+</li>
+<li>
+<p><strong>Proper time</strong> (Подходящее время) – Указание на подходящее время для совершения действия: <strong>(NP-Dat) давно пора Cop VP-Inf</strong> - <em>Детям давно пора поесть.</em></p>
+</li>
+<li>
+<p><strong>Temporal boundary</strong> (Временнáя граница) – Указание на точку на оси времени, которая служит границей (начальной или конечной) в протекании действия или существовании ситуации: <strong>до сих пор Cl</strong> - <em>До сих пор мне грустно.</em></p>
+</li>
+<li>
+<p><strong>Time period</strong> (Временнóй интервал) – Указание на промежуток времени, в рамках которого происходит действие или имеет место некоторая ситуация: <strong>VP за NP-Ins</strong> - <em>Он молчал за обедом.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Manner</strong> (Образ действия) – Указание на образ действия. Конструкции выражают качественную характеристику действия, способы его совершения: <strong>VP-Ipfv без устали</strong> - <em>Жена без устали готовила на кухне.</em> Без подтипов.</p>
+</li>
+</ul>
+<hr />
+<h3 id="1-4-podklass-logicheskie-otnosheniia-logical-relations">1.4. Подкласс Логические отношения (Logical Relations)</h3>
+<p>Указание на причинно-следственные отношения между событиями (подтипы Причина, Цель, Следствие, Условие и Уступка).</p>
+<ul>
+<li>
+<p><strong>Cause</strong> (Причина) – Указание на причину действия: <strong>VP от NP-Gen</strong> – <em>Ноги дрожат от страха.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Purpose</strong> (Цель) – Указание на цель действия: <strong>на что NP-Dat Cop NP-Nom?</strong> – <em>На что мне эти книги?</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Consequence</strong> (Следствие) – Указание на следствие действия: <strong>Cl, вследствие чего Cl</strong> – <em>Деньги расходовались нерационально, вследствие чего предприятие быстро разорилось.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Condition</strong> (Условие) – Указание на условие действия или ситуации: <strong>раз (уж) Cl, (то) Cl</strong> – <em>Раз уж мы встретились, давайте обсудим эту проблему.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Concession</strong> (Уступка) – Конструкции этого типа противопоставляют две ситуации, которые исключают друг друга. Конструкции обозначают, что одна из этих ситуаций имеет место или возможна даже несмотря на враждебные ей условия, создаваемые другой ситуацией. При выделении подтипов уступки мы опираемся на классификацию уступительных конструкций в Апресян 1999.</p>
+<ul>
+<li>
+<p><strong>At least</strong> (Уступка вопреки желанию) – Говорящий понимает, что иметь желаемое трудно или невозможно, и поэтому согласен вместо этого иметь нечто меньшее, обладание которым вполне возможно: <strong>(Cl,) по крайней мере Cl</strong> – <em>Если ты его не любишь, ты могла бы его по крайней мере уважать.</em></p>
+</li>
+<li>
+<p><strong>Compensation</strong> (Компенсация) – Говорящий признает наличие некоторой ситуации, но обращает внимание собеседника на другую независимую ситуацию, которая оценивается говорящим противоположно (по сравнению с первой ситуацией) и которую он считает важнее. Таким образом, вторая ситуация компенсирует первую: <strong>Cl, зато Cl</strong> – <em>Мы опоздали на самолет, зато теперь есть дополнительный день отдыха.</em></p>
+</li>
+<li>
+<p><strong>Concession with disagreement</strong> (Уступка с несогласием) – Указание на то, что некоторая ситуация с точки зрения говорящего маловероятна. Если эта ситуация будет иметь место, то она будет ослаблена или нейтрализована некоторым событием: <strong>(даже) если NP и VP, то Cl</strong> – <em>Если он и выиграет матч, то чемпионом всё равно не станет.</em></p>
+</li>
+<li>
+<p><strong>Extreme limit</strong> (Предел) – Говорящий утверждает, что некоторая ситуация должна или будет иметь место, даже несмотря на обстоятельства, которые сильно выходят за пределы нормы: <strong>хоть VP-Imp, (но/а) Cl</strong> – <em>Хоть умри, а завтра должен быть на работе рано утром.</em></p>
+</li>
+<li>
+<p><strong>Failed expectation</strong> (Обманутое ожидание) – Указание на то, что некоторая ситуация происходит несмотря на препятствующие ей обстоятельства другой ситуации: <strong>Несмотря/Невзирая на NP-Acc, Cl</strong> – <em>Несмотря на отзывы туристов, он всё равно поехал в Грузию.</em></p>
+</li>
+<li>
+<p><strong>Imitative agreement</strong> (Возражение под видом согласия) – Указание на то, что некоторая ситуация с точки зрения говорящего не создает достаточных условий для реализации второй ситуации. Значение уструпки выражается посредством повтора компонентов и наличия противительного союза во второй части: <strong>VP-Inf(-то) ~VP, а/но Cl</strong> – <em>Спросить спрошу, но он может не знать.</em></p>
+</li>
+<li>
+<p><strong>Limitation</strong> (Оговорка) – Говорящий признает наличие некоторой ситуации, но обращает внимание собеседника на другую независимую ситуацию, менее важную и оцениваемую говорящим противоположно (по сравнению с первой ситуацией). Вторая ситуация затрудняет реализацию первой: <strong>(Cl), вот только Cl</strong> – <em>Всё бы сделал, вот только времени не хватает.</em></p>
+</li>
+<li>
+<p><strong>Other</strong> (Другое) – Конструкции, не относящиеся к указанным выше подтипам: <strong>(Cl) разве что/только Cl</strong> – <em>Не буду пить, разве что пригублю.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-5-podklass-kharakteristiki-properties">1.5. Подкласс Характеристики (Properties)</h3>
+<p>Группа конструкций, которая включает конструкции трех семантических типов: Значимый признак, Врéменная характеристика, Сравнение.</p>
+<ul>
+<li>
+<p><strong>Salient property</strong> (Значимый признак) – Конструкции с этим тегом содержат указание на ключевую и как правило постоянную характеристику объекта, участника или действия, которая определяет их природу и сущность.</p>
+<ul>
+<li>
+<p><strong>Belonging to a class</strong> (Принадлежность классу) – Характеристика участника ситуации или объекта путем отнесения его к некоторому классу: <strong>NP из Adj-Gen</strong> –  <em>Человек из любопытных.</em></p>
+</li>
+<li>
+<p><strong>Capacity for an activity</strong> (Способность выполнять действие) – Характеристика участника ситуации через его способность осуществлять некоторое действие: <strong>NP-Nom Cop слишком Adj, чтобы VP-Inf</strong> – <em>Он слишком слаб, чтобы лететь на самолете.</em></p>
+</li>
+<li>
+<p><strong>Characteristics through specification</strong> (Характеристика через уточнение) – Характеристика участника ситуации или объекта с помощью уточнения его наименования: <strong>не Noun, а NP</strong> – <em>Не дом у них, а столярная мастерская.</em></p>
+</li>
+<li>
+<p><strong>Domain</strong> (Область) – Характеристика участника ситуации или объекта через отсылку к области или сфере деятельности: <strong>NP/VP по вопросам NP-Gen</strong> – <em>Специалист по вопросам экологии.</em></p>
+</li>
+<li>
+<p><strong>Essence</strong> (Сущность) – Характеристика участника ситуации или объекта через отсылку к его ключевой природе, наиболее важным качествам: <strong>Noun-Nom – это ~Noun-Nom</strong> – <em>Москва – это Москва.</em></p>
+</li>
+<li>
+<p><strong>Experience</strong> (Опыт) – Характеристика участника ситуации или объекта через отсылку к личному опыту или опыту его использования (в случае объекта): <strong>NP-Nom иметь дело с NP-Ins</strong> – <em>Он когда-то имел дело с трудными подростками.</em></p>
+</li>
+<li>
+<p><strong>Functionality</strong> (Использование) – Характеристика объекта через отсылку к текущему или планируемому способу его использования, применения: <strong>NP от NP-Gen</strong> – <em>Ключ от двери.</em></p>
+</li>
+<li>
+<p><strong>Matching the standard</strong> (Соответствие стандарту) – Характеристика участника ситуации, объекта или действия путем оценки соответствия его некому стандарту, норме: <strong>чем NP-Nom Cop не NP-Nom?</strong> – <em>Чем картошка не еда?</em></p>
+</li>
+<li>
+<p><strong>Naming</strong> (Наименование) – Указание на имя участника ситуации или название объекта (включая фамилию, отчество, псевдоним, кличку, прозвище, название улицы и пр.): <strong>NP-Acc звать-Inf NP-Ins/NP-Nom</strong> – <em>Мальчика звать Юрой.</em></p>
+</li>
+<li>
+<p><strong>Paragon</strong> (Образец) – Характеристика участника ситуации или объекта через отсылку к образцу, лучшему примеру некоторого качества: <strong>(ну) Noun-Nom и ~Noun-Nom</strong> – <em>Мужик здоровый такой. Ну медведь и медведь.</em></p>
+</li>
+<li>
+<p><strong>Personal interests</strong> (Личные интересы) – Характеристика объекта или деятельности через отсылку к сфере личных интересов, пристрастий или способностей участника ситуации. Характеристика осуществляется посредством включения в эту сферу или исключения из нее: <strong>XP это Cop не PronPoss-Nom</strong> – <em>Математика это не моё.</em></p>
+</li>
+<li>
+<p><strong>Personality</strong> (Личностные качества) – Характеристика участника ситуации через его личностные качества, тип темперамента, общие психологические особенности личности: <strong>NP-Nom Cop себе на уме</strong> – <em>Вася себе на уме, никогда не говорит всей правды.</em></p>
+</li>
+<li>
+<p><strong>Property assignment</strong> (Присваивание признака) – Конструкции служат выражению общей характеристики объекта, присваивая ему некоторое качество или отмечая его особенности: <strong>NP-Nom носить/иметь Adj-Acc характер-Acc</strong> – <em>Большинство звонков носило консультационный характер.</em></p>
+</li>
+<li>
+<p><strong>Repeatedly the same</strong> (Неоднократно одинаковый) – Характеристика действия или ситуации как одинаковых и повторяющихся: <strong>VP-Ipfv одно и то же</strong> – <em>Писал он всегда одно и то же.</em></p>
+</li>
+<li>
+<p><strong>Sensory property</strong> (Признаки, воспринимаемые органами чувств) – Характеристика участника ситуации или объекта с помощью определения визуальных особенностей, внешности, вкуса, запаха и др.: <strong>NP-Nom иметь вид NP-Gen</strong> – <em>Лучи изгибались, имея вид гиперболы.</em></p>
+</li>
+<li>
+<p><strong>Spatial characteristics</strong> (Пространственная характеристика) – Характеристика объекта через отсылку к его расположению в пространстве: <strong>NP/VP с торца (NP-Gen)</strong> – <em>Вход с торца.</em></p>
+</li>
+<li>
+<p><strong>Status</strong> (Статус) – Характеристика участника ситуации через отсылку к его статусу. Конструкции называют как семейные отношения, так и отношения другого рода: дружба, должностные посты, академические степени, рабочие отношения (начальник vs подчиненный), репутацию. Общим является компонент значения 'присваивание субъекту статуса, места в определенной иерархии или общности': <strong>NP-Nom приходиться NP-Dat NP-Ins</strong> – <em>Этот мальчик приходится мне сыном.</em></p>
+</li>
+<li>
+<p><strong>Temporal characteristics</strong> (Временна́я характеристика) – Характеристика объекта через отсылку к периоду времени: <strong>NP за NP-Acc</strong> – <em>Журнал за ноябрь скоро выйдет из печати.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Temporary characteristics</strong> (Врéменная характеристика) – Конструкции с этим тегом содержат указание на врéменные, непостоянные характеристики, которые не описывают сущность или ключевую природу участника ситуации, а характеруют его внешние проявления (поведение, эмоциональное и физическое состояние, внешние обстоятельства и т.д.).</p>
+<ul>
+<li>
+<p><strong>Appropriateness</strong> (Уместность) – The construction refers to appropriateness of an action or an object: <strong>VP (не) по делу</strong> – <em>Он всё говорил по делу.</em></p>
+</li>
+<li>
+<p><strong>Availability</strong> (Доступность) – Указание на наличие и возможность использовать некоторый объект или участника ситуации: <strong>VP на поверхности</strong> – <em>Разгадка всё это время лежала на поверхности.</em></p>
+</li>
+<li>
+<p><strong>Behavior</strong> (Поведение) – Характеристика участника ситуации через отсылку к его поведению: <strong>NP-Nom держать NP-Acc при себе</strong> – <em>Он держит мысли при себе.</em></p>
+</li>
+<li>
+<p><strong>Bodily position</strong> (Положение в пространстве) – Указание на пространственную конфигурацию тела участника или объекта: <strong>VP вниз головой</strong> – <em>Девочка висит вниз головой.</em></p>
+</li>
+<li>
+<p><strong>Circumstances</strong> (Обстоятельства) – Характеристика участника ситуации через отсылку к внешним обстоятельствам, ситуации, в которой он оказывается: <strong>NP-Nom оказаться в NP-Loc</strong> – <em>Он оказался в трудной ситуации.</em></p>
+</li>
+<li>
+<p><strong>Context</strong> (Контекст) – Указание на контекст развития действия или ситуации: <strong>Cl в свете NP-Gen</strong> – <em>В свете приближающихся выборов партии оживили свою работу.</em></p>
+</li>
+<li>
+<p><strong>Control</strong> (Контроль над ситуацией) – Указание на то, что участник ситуации держит ситуацию под контролем и в связи с этим ощущает себя комфортно: <strong>у NP-Gen всё Cop схвачено</strong> – <em>У нашего директора везде всё схвачено.</em></p>
+</li>
+<li>
+<p><strong>Emotional state</strong> (Эмоциональное состояние) – Характеристика участника ситуации через отсылку к его эмоциональному состоянию: <strong>NP-Nom Cop вне себя</strong> – <em>Иди скорее! Начальник вне себя!</em></p>
+</li>
+<li>
+<p><strong>Importance</strong> (Важность) – Указание на важность, ценность участника ситуации или объекта: <strong>NP-Nom Cop в цене</strong> – <em>Раньше дружба была в цене.</em></p>
+</li>
+<li>
+<p><strong>Matching the norm</strong> (Соответствие норме) – Характеристика объекта или ситуации через соотнесение их с нормой: <strong>(у NP-Gen) NP-Nom Cop в порядке</strong> – <em>У тебя всё в порядке?</em></p>
+</li>
+<li>
+<p><strong>Physical state</strong> (Физическое состояние) – Характеристика участника ситуации через отсылку к его физическому состоянию: <strong>NP-Nom Cop без сознания</strong> – <em>Помогите, тут девушка без сознания!</em></p>
+</li>
+<li>
+<p><strong>Relevance</strong> (Актуальность) – Указание на актуальность объекта на настоящий момент: <strong>NP-Nom/VP-Inf Cop в моде/тренде</strong> – <em>В моде сейчас яркие цвета в одежде.</em></p>
+</li>
+<li>
+<p><strong>Transformation</strong> (Трансформация) – Указание на качественное изменение, трансформацию объекта или участника ситуации: <strong>VP NP-Acc из ничего</strong> – <em>Он смастерил шкатулку из ничего.</em></p>
+</li>
+<li>
+<p><strong>Witnesses</strong> (Свидетели) – Указание на то, что действие или ситуация происходит в присутствии свидетелей: <strong>VP при NP-Loc</strong> – <em>Не ругайся при детях!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Comparison</strong> – Сравнение понимается как оценка степени сходства или различия двух или более сущностей (Treis 2018: 1). Этот тип включает следующие подтипы: Неравенство, Равенство, Сходство, Контраст и Имитация (в типологической литературе также используется термин <em>Simulation</em>).</p>
+<ul>
+<li>
+<p><strong>Equality</strong> (Отождествление) – Конструкция выражает идентичность двух объектов по некоторому признаку: <strong>такой же XP как и NP</strong> – <em>Сын такой же высокий, как и отец.</em></p>
+</li>
+<li>
+<p><strong>Inequality</strong> (Несходство) – Конструкция обозначает различие объектов по некоторому признаку: один из сравниваемых объектов имеет бо́льшую или меньшую степень проявления признака, чем другой: <strong>по-Adj/Adv-Cmp</strong> – <em>К сыну надо относиться помягче.</em></p>
+</li>
+<li>
+<p><strong>Similarity</strong> (Сходство) – Конструкция выражает сходство объектов по некоторому признаку: <strong>NP в стиле NP-Gen</strong> – <em>Истории в стиле Андерсена.</em></p>
+</li>
+<li>
+<p><strong>Imitation</strong> (Имитация) – Конструкция указывает на мнимое сходство двух объектов: <strong>VP под видом NP-Gen</strong> – <em>Она приехала в город под видом туриста.</em></p>
+</li>
+<li>
+<p><strong>Contrast</strong> (Контраст) – Конструкция выражает противопоставление объектов по некоторому признаку: <strong>в отличие от NP-Gen VP</strong> – <em>В отличие от Пети, Миша всегда говорил правду.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-6-podklass-operatsii-s-mnozhestvami-i-ikh-elementami-sets-and-elements">1.6. Подкласс Операции с множествами и их элементами (Sets and Elements)</h3>
+<p>Конструкции, принадлежащие к этому типу, содержат информацию о соотношении элемента и некоторого множества. Мы различаем кванторы и операторы. Операторы модифицируют пропозицию или множество, &quot;накладываются&quot; на кванторы, вместе с которыми образуют сложные кванторы.</p>
+<ul>
+<li>
+<p><strong>Additive</strong> (Оператор добавления) – Указание на добавление физических объектов к числу других (&quot;предметный&quot; аддитив, в отличие от &quot;дискурсивного аддитива&quot;, который обозначает добавление некоторой информации к уже сказанному): <strong>VP в придачу (к NP-Dat)</strong> – <em>В придачу к медали он получил премию.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Inclusive</strong> (Оператор включения) – Указание на включение элемента в множество: <strong>NP, в том числе (и) NP</strong> – <em>Живые существа, в том числе и растения, пьют воду.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Еxceptive</strong> (Оператор исключения) – Указание на исключение элемента из множества: <strong>за исключением NP-Gen, Cl</strong> – <em>Я прочитал все, за исключением последней главы.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Exclusive</strong> (Оператор исключительности) – Указание на физический объект, участника или действие, которые рассматриваются как единственные в своем роде, возможные и имеющие место исключительно в данной ситуации. Утверждение экслюзивности элемента выделяет, но не исключает его из множества: <strong>не кто/что иной, как NP</strong> – <em>Это был не кто иной, как директор школы.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Subset</strong> (Подмножество) – Указание на подмножество, принадлежность группе. Часто указание нa отношения гиперонима и гипонима: <strong>NP из круга NP-Gen</strong> – <em>Знакомые из круга писателей.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Options</strong> (Варианты на выбор) – Указание на наличие нескольких равноправных вариантов, которые могут реализоваться в ситуации: <strong>хоть NP, хоть NP</strong> – <em>Покупай хоть мотоцикл, хоть машину.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Quantification</strong> (Кванторные слова) – Конструкции, принадлежащие к этому типу, содержат кванторы, или кванторные слова, разного рода. Мы опираемся на типологически обоснованную классификацию кванторов, примененную к данным русского языка в работах Татевосов 2002 и Paperno 2012:</p>
+<ul>
+<li>
+<p><strong>Universal</strong> (Универсальный квантор) –  Наличие в конструкции универсального кванторного слова, то есть квантора со значением всеобщности, полного охвата множества (напр. <em>все, всякий, любой, каждый, всегда, везде, весь</em>): <strong>(NP) все до единый-Gen Cl</strong> – <em>Они все до единого присутствовали на собрании.</em></p>
+</li>
+<li>
+<p><strong>Universal: Free Choice</strong> (Универсальный квантор произвольного выбора) – Наличие в конструкции универсального квантора со значением произвольного выбора, подтипа универсальных кванторов (напр. <em>какой угодно, где угодно, любой, хоть</em>): <strong>PronInt угодно</strong> – <em>Вася попросил купить что угодно.</em></p>
+</li>
+<li>
+<p><strong>Existential</strong> (Обобщенный квантор существования) – Наличие в конструкции обобщенного кванторa существования, то есть квантора со значением существования множества множеств (напр. <em>большинство, несколько, меньшинство, иногда, периодически</em>): <strong>(великое) множество NP-Gen.Pl</strong> – <em>Можно найти великое множество примеров этой конструкции.</em></p>
+</li>
+<li>
+<p><strong>Existential: Free Choice</strong> (Обобщенный квантор произвольного выбора) – Наличие в конструкции oбобщенного квантора существования со значением произвольного выбора, подтипа обобщенных кванторов существования (напр. <em>сколько влезет, сколько хочешь, сколько угодно</em>): <strong>VP-Ipfv.Imp/NP-Gen сколько хочешь</strong> – <em>Читай сколько хочешь.</em></p>
+</li>
+<li>
+<p><strong>Proportional</strong> (Пропорциональный квантор) – Наличие в конструкции пропорционального квантора, то есть квантора со значением пропорционального соотношения (напр. <em>во многом, по большей части, каждый пятый, в основном, нечасто, обычно, в целом, время от времени, редко, в большинстве своем</em> и др.): <strong>NP/PP в большинстве своем VP</strong> – <em>Дети в большинстве своем были готовы к школе.</em></p>
+</li>
+<li>
+<p><strong>Existential: Value judgment quantifier</strong> (Квантор субъективной оценки количества) –  Наличие в конструкции квантора, который выражает субъективную оценку имеющегося количества (напр. <em>много, мало, немного, сколько, столько</em>). Это подтип обобщенных кванторов существования: <strong>столько NP-Gen Cop/VP, что Cl</strong> – <em>На концерт пришло столько людей, что некуда было сесть.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-7-podklass-velichiny-magnitude">1.7. Подкласс Величины (Magnitude)</h3>
+<p>Группа конструкций, которая включает конструкции трех семантических типов: Несуществование, Измерение количества и Счет.</p>
+<ul>
+<li>
+<p><strong>Non-Existence</strong> (Несуществование) – Конструкции с этим тегом содержат указание на полное отсутствие, незатронутость действием или исчезновение важного компонента ситуации.</p>
+<ul>
+<li>
+<p><strong>Absence</strong> (Отсутствие компонента ситуации) – Указание на то, что некоторый важный для говорящего компонент ситуации (такой как время, место, объект, партнер и пр.) отсутствует. Близкие по значению конструкции в английском: <em>there is nothing to live for; there is nowhere to go; there is nothing to eat; there is noone to talk to</em> и т.д.: <strong>(NP-Dat) VP-Inf Cop нечего</strong> – <em>Есть было нечего.</em></p>
+</li>
+<li>
+<p><strong>Disappear</strong> (Исчезновение) – Указание на исчезновение объекта или участника ситуации: <strong>NP-Gen как не бывало</strong> – <em>Простуды как не бывало.</em></p>
+</li>
+<li>
+<p><strong>Unaffected generally</strong> (Незатронутый объект) – Указание на то, что действие совсем не затрагивает некоторый объект: <strong>ничего не VP</strong> – <em>Вася ничего не ел.</em></p>
+</li>
+<li>
+<p><strong>Unaffected small portion</strong> (Незатронутый квант) – Указание на то, что действие не затрагивает ни одну малейшую порцию объекта: <strong>ни крошки не VP</strong> – <em>Он так и не съел ни крошки.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Measure</strong> (Измерение количества) – Конструкции данного типа выражают количество дискретных предметов или вещества, а также величину измеряемых характеристик этих объектов (размер, длина, объём, вес и т. д.). Данный семантический тип включает конструкции с числами и другими нечисловыми способами выразить количество.</p>
+<ul>
+<li>
+<p><strong>Age</strong> (Возраст) – Указание на возраст: <strong>NP под NumCrd-Acc (лет)</strong> – <em>Людмиле Петровне под пятьдесят.</em></p>
+</li>
+<li>
+<p><strong>Dimensions</strong> (Линейные величины) – Указание на измерение линейных величин некоторого объекта (длины, ширины, глубины, радиуса, диаметра). Такое объединение основано на использовании одних и тех же конструкций для этих параметров: <strong>NP длиной/шириной/толщиной/высотой/глубиной (в) NumCrd-Acc NP-Gen</strong> – <em>Велодорожка длиной шесть километров.</em></p>
+</li>
+<li>
+<p><strong>Distance</strong> (Расстояние) – Указание на измерение расстояния между двумя объектами: <strong>Cl в NumCrd-Loc кварталах/домах (от NP-Gen)</strong> – <em>Этот магазин был в трёх кварталах от почты.</em></p>
+</li>
+<li>
+<p><strong>Money</strong> (Деньги) – Указание на цену или иное количество денежных средств: <strong>VP на NumCrd-Acc рублей</strong> – <em>На сто рублей можно купить хлеб и колбасу.</em></p>
+</li>
+<li>
+<p><strong>Size</strong> (Размер) – Указание на размер объекта или участника: <strong>NP (размером/величиной) с NP-Acc</strong> – <em>Собака была размером с лошадь.</em></p>
+</li>
+<li>
+<p><strong>Speed</strong> (Скорость) – Указание на измерение скорости: <strong>Cl, а как чешет!</strong> – <em>Такой маленький, а как чешет!</em></p>
+</li>
+<li>
+<p><strong>Surface area</strong> (Площадь) – Указание на измерение площади некоторой территории или поверхности: <strong>NP площадью (в) NumCrd-Acc NP</strong> – <em>Участок площадью сто гектаров.</em></p>
+</li>
+<li>
+<p><strong>Time</strong> (Время) – Указание на количество времени: <strong>VP NumCrd-Nom NP-Gen</strong> – <em>Он писал письмо четыре часа.</em></p>
+</li>
+<li>
+<p><strong>Unrestricted domain</strong> (Сфера измерения не ограничена) – Этот подтип объединяет конструкции, которые не ограничиваются одним параметром измерения количества: <strong>куча NP-Gen</strong> – <em>У меня всегда куча дел.</em></p>
+</li>
+<li>
+<p><strong>Volume</strong> – The construction denotes measurement of an object's volume. The construction is relevant for both the volume of a physical container or a metaphorical container of information, such as a book: e.g. <strong>NP объёмом (в) NumCrd-Acc NP</strong>, as in <em>Книга объёмом в сто страниц.</em></p>
+</li>
+<li>
+<p><strong>Weight</strong> (Объем) – Указание на измерение количества в единицах объема. Релевантно для физических и абстрактных контейнеров (типа книг и др. носителей информации): <strong>NP весом/массой (в) NumCrd-Acc NP</strong> – <em>Баржа весом в шесть тонн.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Calculation</strong> (Счет) – Конструкции формулируют различные математические операции (сложение, вычитание, деление, умножение, возведение в степень, извлечениe корня), а также равенства, неравенства и дроби.</p>
+<ul>
+<li>
+<p><strong>Addition</strong> (Сложение) – Формулировка математической операции сложения: <strong>NumCrd-Nom плюс/и NumCrd-Nom – (равно/VP) NumCrd-Nom/NumCrd-Dat</strong> – <em>Два плюс два равно четыре.</em></p>
+</li>
+<li>
+<p><strong>Division</strong> (Деление) – Формулировка математической операции деления: <strong>NumCrd-Acc разделить/поделить/делить на NumCrd-Acc – (равно/VP) NumCrd-Nom</strong> – <em>Пятнадцать разделить на три равно пять.</em></p>
+</li>
+<li>
+<p><strong>Equation</strong> (Равенства) – Формулировка математического равенства или неравенства: <strong>Cl (не) равно/равняется NumCrd-Dat/NumCrd-Nom</strong> – <em>Два плюс один не равно пяти.</em></p>
+</li>
+<li>
+<p><strong>Exponentiation</strong> (Возведение в степень) – Формулировка математической операции возведения в степень. Включает частные операции по возведению во вторую степень (квадрат) и в третью степень (куб): <strong>NumCrd-Nom в NumOrd-Loc (степени) – (равно/VP) NumCrd-Nom/NumCrd-Dat</strong> – <em>Десять в пятой степени – сто тысяч.</em></p>
+</li>
+<li>
+<p><strong>Extraction of a root</strong> (Извлечение корня) – Формулировка математической операции извлечения корня: <strong>(квадратный) корень из NumCrd-Gen – (это) NumCrd-Nom/равен NumCrd-Dat</strong> – <em>Десять в пятой степени – сто тысяч.</em></p>
+</li>
+<li>
+<p><strong>Fraction</strong> (Дроби) – Формулировка математических дробей. Включает обыкновенные и десятичные дроби: <strong>одна NumOrd-Sg.F (часть/доля) (NP-Gen)</strong> –  <em>Добавить одну пятую ложки сахара.</em></p>
+</li>
+<li>
+<p><strong>Multiplication</strong> (Умножение) – Формулировка математической операции умножения: <strong>NumCrd-Acc (умножить/помножить) на NumCrd-Acc – (равно/VP) NumCrd-Nom</strong> – <em>Семь на восемь – пятьдесят шесть.</em></p>
+</li>
+<li>
+<p><strong>Subtraction</strong> (Вычитание) – Формулировка математической операции вычитания: <strong>NumCrd-Nom минус NumCrd-Nom – (равно/VP) NumCrd-Nom/NumCrd-Dat</strong> – <em>Пять минус три будет два.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="2-semanticheskii-klass-modal-nost-i-smezhnye-kategorii-modality-and-its-neighborhood">2. Семантический класс МОДАЛЬНОСТЬ И СМЕЖНЫЕ КАТЕГОРИИ (MODALITY AND ITS NEIGHBORHOOD)</h2>
+<p>С одной стороны, мы следуем традиционному подходу, в соответствии с которым модальность понимается узко и соотносится с исходной, &quot;корневой&quot; модальностью и эпистемической модальностью. С другой стороны, мы принимаем во внимание и категории, смежные с модальностью: Волитивность, Побуждение к действию, Запрет, Угроза, Просьба, Опасение и формулы речи, выражающие проклятия.</p>
+<h3 id="2-1-podklass-tsentral-nye-modal-nye-znacheniia-core-modal-meanings">2.1. Подкласс Центральные модальные значения (Core Modal Meanings)</h3>
+<ul>
+<li>
+<p><strong>Root modality</strong> (Исходная (&quot;корневая&quot;) модальность) – Мы следуем традиционному подходу, в соответствии с которым модальность понимается узко, т. е. как категория, включающая только значения необходимости и возможности (см. van der Auwera &amp; Plungian 1998; Nuyts 2016). Для деонтической внешней возможности вводится отдельный тег Разрешение.</p>
+<ul>
+<li>
+<p><strong>Necessity: Internal</strong> (Необходимость: Внутренняя) – Указание на необходимость, обусловленную потребностями и свойствами (напр. чертами характера) участника: <strong>(NP-Dat) Cop нужный-Short/необходимый-Short NP-Nom</strong> – <em>Мне нужна ваша поддержка.</em></p>
+</li>
+<li>
+<p><strong>Necessity: External</strong> (Необходимость: Внешняя) – Указание на необходимость, обусловленную внешними обстоятельствами, навязывающими участнику определенное поведение: <strong>(NP-Dat) пришлось/придётся VP-Inf</strong> – <em>Пришлось выпить лекарство.</em></p>
+</li>
+<li>
+<p><strong>Possibility</strong> (Возможность) – Указание на динамическую возможность, под которой понимается как внутренняя возможность (способность), обусловленная свойствами самого участника (его физическими качествами, умениями), так и внешняя возможность, обусловленная отсутствием препятствий для осуществления ситуации: <strong>(NP-Dat) Cop можно VP-Inf</strong> – <em>До Москвы из Лондона можно долететь за четыре часа.</em></p>
+</li>
+<li>
+<p><strong>Permission</strong> (Разрешение) – Указание на деонтическую внешнюю возможность, т. е. разрешение на осуществление ситуации или запрос на таковое со стороны говорящего: <strong>не страшно/ничего, если Cl?</strong> – <em>Не страшно, если я закурю?</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Epistemic modality</strong> (Эпистемическая модальность) – Эпистемическая модальность подразумевает оценку вероятности некоторого положения дел (см. Nuyts 2016: 38) и указывает на степень уверенности (как правило, говорящего) в сообщаемой информации (см. Boye 2016: 117).</p>
+<ul>
+<li>
+<p><strong>High degree of certainty</strong> (Уверенность) – Указание на высокую степень уверенности в сообщаемом: ситуация оценивается как вероятная или очень вероятная: <strong>зуб даю, что Cl</strong> – <em>Зуб даю, что никто в комнату не заходил.</em></p>
+</li>
+<li>
+<p><strong>Low degree of certainty</strong> (Неуверенность) – Указание на низкую степень уверенности в сообщаемом: ситуация оценивается как маловероятная: <strong>вроде (как) XP/Cl</strong> – <em>Он вроде как идёт.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="2-2-podklass-smezhnye-s-modal-nost-iu-kategorii-neighborhood-of-core-modal-meanings">2.2. Подкласс Смежные с модальностью категории (Neighborhood of Core Modal Meanings)</h3>
+<ul>
+<li>
+<p><strong>Volition</strong> (Волитивность) – Указание на желание или пожелание. Mы включаем сюда и обозначение желания говорящего (оптатив), и обозначение желания любого участника ситуации (дезидератив): <strong>вот бы (NP-Dat) (никогда не/всегда) VP-Inf!</strong> – <em>Вот бы никогда не работать!</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Causation</strong> (Побуждение к действию) – Мы используем тег Побуждение к действию в наиболее широком смысле, который не обязательно подразумевает появление нового участника в исходной диатезе (как ожидалось бы от каузативной актантной деривации).</p>
+<ul>
+<li>
+<p><strong>Direct</strong> (Прямое) – Конструкция содержит прямо и ясно выраженное побуждение к действию (прежде всего императивные формы): <strong>давай(те) VP-Fut.1.Pl!</strong> – <em>Давайте пойдем в кино!</em></p>
+</li>
+<li>
+<p><strong>Indirect</strong> (Непрямое) – Конструкция содержит имплицитное или несколько завуалированное побуждение к действию (например, в виде вопроса): <strong>как насчёт XP?</strong> – <em>Как насчёт выпить?</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Prohibition</strong> (Запрет) – Конструкции этого типа содержат различные способы выражения запрета, в частности, стандартный (Прохибитив) и смягченный (Аттенуативный прохибитив). Вслед за (Рахилина 2013), в этот класс мы также включаем континуативные прохибитивы.</p>
+<ul>
+<li>
+<p><strong>Attenuated prohibitive</strong> (Аттенуативный прохибитив) – Конструкция выражает запрет на совершение действия в будущем, но имеет более смягченную форму и произносится менее категоричным тоном, чем прототипический прохибитив: <strong>(NP-Dat) не стоит VP-Ipfv.Inf</strong> – <em>Не стоит разговаривать с ним.</em></p>
+</li>
+<li>
+<p><strong>Continuative prohibitive</strong> (Континуативный прохибитив) – Конструкция выражает побуждение прервать некоторое действие: <strong>хорош VP-Ipfv.Inf!</strong> – <em>Эй, наверху! Хорош прыгать!</em></p>
+</li>
+<li>
+<p><strong>Prohibitive</strong> (Прохибитив) – Конструкция выражает строгий категоричный запрет на совершение действия в будущем: <strong>ни слова NP-Dat о NP-Loc!</strong> – <em>Ни слова маме о нашей поездке!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Threat</strong> (Угроза) – Конструкция выражает угрозу. Говорящий осуждает действие, которое собеседник или другой участник ситуации совершает или потенциально может совершить. Подразумевается, что в случае неповиновения говорящий может его наказать: <strong>я PronPers-Dat VP-Fut!</strong> – <em>Я тебе поору!</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Request</strong> (Просьба) – Конструкция выражает просьбу говорящего совершить действие: <strong>нельзя ли Cop VP-Inf?</strong> – <em>Нельзя ли сделать музыку потише?</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Apprehension</strong> (Опасение) – TВыражение опасения или предостережения относительно некоторой нежелательной ситуации, которую говорящий считает возможной и хочет избежать (Baydina 2016). Говорящий опасается, что эта ситуация может произойти (подтип Аппрехенсив) и призывает собеседника совершить действие, которое бы помогло избежать этой ситуации (подтип Превентив) (cf. Добрушина 2006).</p>
+<ul>
+<li>
+<p><strong>Apprehensive</strong> (Аппрехенсив) – Конструкция выражает опасение говорящего относительно того, что может произойти некоторая нежелательная ситуация: <strong>((Я) боюсь,) как бы не VP-Pfv.Pst</strong> – <em>Как бы Миша не опоздал!</em></p>
+</li>
+<li>
+<p><strong>Preventive</strong> (Превентив) – Конструкция выражает предостережение и является попыткой говорящего предотвратить нежела­тельное действие или событие: <strong>смотреть-Imp, (не) VP-Imp</strong> – <em>Смотрите, не опоздайте!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Curse</strong> – См. семантический класс ДИСКУРС (DISCOURSE), подкласс Клаузальные конструкции с дискурсивной функцией (Discourse clauses), семантический тип Формулы речи (Routine).</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-semanticheskii-klass-vyrazhenie-subektivnosti-subjectivity">3. Семантический класс ВЫРАЖЕНИЕ СУБЪЕКТИВНОСТИ (SUBJECTIVITY)</h2>
+<p>Большой класс конструкций, которые выражают оценку, отношение, миративность или источник мнения.</p>
+<ul>
+<li>
+<p><strong>Assessment</strong> (Оценка) – Конструкции этого типа выражают оценку внешнего по отношению к говорящему элемента ситуации (Endresen and Janda 2020). Объектом оценки может быть физический предмет, одушевленный участник или сама ситуация.</p>
+<ul>
+<li>
+<p><strong>Assessment in relation to knowledge</strong> (Оценка с учетом знания) – Компонент ситуации (объект, участник, время или место) оценивается в зависимости от того, является ли он известной или неизвестной информацией для говорящего: <strong>бог весть PronInt</strong> – <em>Они принесли в пакете бог весть что.</em></p>
+</li>
+<li>
+<p><strong>Assessment in relation to norms and expectations</strong> (Оценка с точки зрения норм и ожиданий) – Объект оценивается с учетом нормального, стандартного, ожидаемого. Говорящий соотносит оцениваемый объект со своей идеализированной моделью мира, которая функционирует как некий стандарт. Представление о том, что соответствует норме, формирует ожидания говорящего (Endresen and Janda 2020): <strong>VP как следует</strong> – <em>Он работал как следует.</em></p>
+</li>
+<li>
+<p><strong>Assessment in relation to quantification</strong> (Оценка через измерение) – Объект оценивается посредством отсылки к степени проявления признака. Степени образуют шкалу и включают: нисколько, мало, немного, много, сверх меры: <strong>VP/Adj сверх меры</strong> – <em>Он одарён сверх меры.</em></p>
+</li>
+<li>
+<p><strong>Assessment specific to people</strong> (Оценка характеристик специфичных для человека) – Объектом оценки являются характеристики присущие людям, такие как умственные способности, поведение, власть, внешность, эмоциональное состояние и пр.: <strong>у NP-Gen NP-Nom хромать</strong> – <em>У брата сильно хромает география.</em></p>
+</li>
+<li>
+<p><strong>General Assessment</strong> (Общая оценка) – Объект оценивается целиком, а не с одной определенной стороны. Как правило, общая оценка выражается прилагательными &quot;хороший&quot;, &quot;плохой&quot; и их синонимами, которые различаются по своей выразительности и стилистической окраске: <strong>NP-Nom Cop хороший-Short/плохой-Short NP-Ins</strong> – <em>Эти места хороши своими лесами.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Attitude</strong> (Отношение) – Конструкции этого типа выражают отношение, которое понимается как эмоционально-оценочный взгляд говорящего на ситуацию или ее участников. Выражается, что говорящий чувствует по отношению к ситуации, какую внутреннюю позицию он занимает, какой точки зрения он придерживается относительно ситуации или темы (Endresen and Janda 2020).</p>
+<ul>
+<li>
+<p><strong>Acceptance</strong> (Принятие ситуации) – Указание на принятие или непринятие ситуации говорящим. В конкретных конструкциях эта общая семантика сужается до ряда вариантов, которые привносят дополнительные смысловые нюансы в общую семантику принятия (или непринятия) ситуации. Так, может выражаться поддержка или отсутствие поддержки говорящим идеи или ситуации, желание или нежелание его выполнять действие, безразличие или участие по отношению к ситуации или участнику, смирение, сожаление и др.: <strong>XP так ~XP</strong> – <em>Суп так суп.</em></p>
+</li>
+<li>
+<p><strong>Capacity and Preferences</strong> (Способности и предпочтения) – Указание на предпочтения говорящего по отношению к некоторому роду деятельности. Эти предпочтения обусловлены способностями и знаниями говорящего и создают у него ощущение комфорта или дискомфорта: <strong>NP-Nom Cop с NP-Ins на &quot;вы&quot;</strong> – <em>Я с техникой на &quot;вы&quot;.</em></p>
+</li>
+<li>
+<p><strong>Dissatisfaction</strong> (Недовольство) – Указание на то, что говорящий недоволен другим участником, его действиями или всей ситуацией. Варианты недовольства образуют шкалу от слабого неодобрения до осуждения, использования ругательств и проклятий: <strong>(NP-Dat) только NP-Gen (ещё) не хватало!</strong> – <em>Только дождя не хватало!</em></p>
+</li>
+<li>
+<p><strong>Emotional Attitude</strong> (Эмоциональное отношение) – Указание на эмоциональное отношение говорящего к ситуации. Могут обозначаться конкретные эмоции и чувства, неконтролируемость эмоций или глубина чувств: <strong>NP-Dat Noun-Nom Cop не (в) ~Noun (без NP-Gen)</strong> – <em>Девочкам радость не в радость.</em></p>
+</li>
+<li>
+<p><strong>Mental Attitude</strong> (Отношение, мотивированное знаниями говорящего) – Указание на отношение, которое основано на знаниях и ожиданиях говорящего. Конструкции выражают скептицизм, уверенность, недоумение или удивление: <strong>рассказывай/рассказывайте, Cl</strong> – <em>Рассказывай, не было денег!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Polarity value</strong> (Значение полярности) – Данный тег используется для разметки конструкций с семантикой оценки и отношения и уточняет, какую (положительную или отрицательную) полярность они выражают.</p>
+<ul>
+<li>
+<p><strong>Positive</strong> (Положительная полярность) – Положительная оценка объекта, ситуации или участника ситуации или положительное отношение к ним со стороны говорящего: <strong>NP-Nom Cop ничего (такой-Nom)</strong> – <em>Профессор он был ничего.</em></p>
+</li>
+<li>
+<p><strong>Negative</strong> (Отрицательная полярность) – Отрицательная оценка объекта, ситуации или участника ситуации говорящим или отрицательное отношение к ним со стороны говорящего: <strong>с PronPers-Gen хватит/хватило (NP-Gen)/с PronPers-Gen Cop довольно (NP-Gen)!</strong> – <em>С меня хватит!</em></p>
+</li>
+<li>
+<p><strong>Both Negative and Positive</strong> (Отрицательная и положительная полярность) – Возможна и положительная, и отрицательная оценка или отношение говорящего в зависимости от лексического заполнения слота конструкции, постановки отрицания или более обширного контекста: <strong>на редкость Adj/Adv</strong> – <em>На редкость просто.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Source of opinion</strong> (Источник мнения) – Указание на автора высказанного мнения.</p>
+<ul>
+<li>
+<p><strong>Asking for opinion</strong> (Вопрос о мнении) – Конструкция формулирует вопрос к участнику относительно его мнения по некоторой теме: <strong>PronPers-Nom не находить, что Cl?</strong> – <em>Вы не находите, что это немного странно?</em></p>
+</li>
+<li>
+<p><strong>Expressing opinion</strong> (Выражение мнения) – Конструкция выражает мнение участника по некоторой теме: <strong>по мнению NP-Gen, Cl</strong> – <em>По мнению властей, необходимо принять меры и остановить загрязнение реки.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Mirative</strong> (Миративность) – Выражение удивления говорящего неожиданно установленным фактом (DeLancey 1997; Aikhenvald 2012): <strong>NP-Nom возьми и VP-Imp</strong> – <em>А он возьми и купи новую машину!</em> No subtypes.</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-semanticheskii-klass-diskurs-discourse">4. Семантический класс ДИСКУРС (DISCOURSE)</h2>
+<p>Дискурс понимается как письменная или устная коммуникация между говорящим и его собеседником. Термином &quot;дискурс&quot; мы обозначаем обширный класс конструкций, которые функционируют на коммуникативном уровне. Такие конструкции структурируют текст, организуют коммуникацию и как правило отсылают к более общирному контексту чем отдельное предложение, в котором они используются.</p>
+<h3 id="4-1-podklass-markery-organizatsii-diskursa-discourse-organization">4.1. Подкласс Маркеры организации дискурса (Discourse Organization)</h3>
+<p>Эта группа включает конструкции, функция которых состоит в организации процесса коммуникации. Как правило, такие конструкции добавляют факультативную информацию в виде комментария, оформленного как вводные или вставные элементы. Выделяются две группы таких конструкций, а именно конструкции, оформляющие Структуру дискурса, и конструкции, приводящие Источник информации.</p>
+<ul>
+<li>
+<p><strong>Discourse structure</strong> (Структура дискурса) – Конструкции этого типа организуют текст, его внутреннюю структуру, например, оформляют перечисление, введение новой информации, подытоживание, переход к новой теме, приведение примера или пояснение понятия.</p>
+<ul>
+<li>
+<p><strong>Clarification</strong> (Пояснение) – Пояснение некоторой формулировки в тексте иными словами: <strong>иначе говоря, XP</strong> – <em>Смешное потому и смешно, что оно правдиво. Иначе говоря, не всё правдивое смешно, но всё смешное правдиво.</em></p>
+</li>
+<li>
+<p><strong>Discourse additive</strong> (Дискурсивный аддитив) – Добавление некоторой информации к уже сказанному: <strong>ко всему прочему, Cl</strong> – <em>Ко всему прочему, он курит и пьёт.</em></p>
+</li>
+<li>
+<p><strong>Emphasis</strong> (Эмфаза) – Логическое выделение какого-либо элемента высказывания: <strong>(и) без того XP</strong> – <em>Капитан и без того знал, что нужно делать.</em></p>
+</li>
+<li>
+<p><strong>Exеmplification</strong> (Пример) – Пояснение некоторого утверждения с помощью примера: <strong>к примеру, Cl/XP</strong> – <em>Вот, к примеру, мне нравится Мерилин Монро.</em></p>
+</li>
+<li>
+<p><strong>Sequence</strong> (Следование) – Указание на следование частей текста: <strong>в-NumOrd-ых, Cl</strong> – <em>Во-первых, я бы хотел поблагодарить своего тренера.</em></p>
+</li>
+<li>
+<p><strong>Summary</strong> (Подытоживание) – Конструкция содержит вывод, сделанный на основе предыдущих высказываний, или обобщает приведенную информацию, подводя итог сказанному: <strong>таким образом, Cl</strong> – <em>Таким образом, наша команда за год добилась важных результатов.</em></p>
+</li>
+<li>
+<p><strong>Topic</strong> (Введение темы) – Конструкция вводит тему для обсуждения: <strong>что касается NP-Gen, то Cl</strong> – <em>Что касается спорта, то я никогда не любил бегать.</em></p>
+</li>
+<li>
+<p><strong>Topic change</strong> (Смена темы) – Конструкция завершает обсуждение одной темы и переводит внимание на другую тему разговора: <strong>Это всё Cop Pred, но Cl</strong> – <em>Это всё хорошо, но самое главное – безопасность.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Intersubjectivity</strong> (Интерсубъективность) – Конструкция отсылает к широко известному, расхожему, часто идиоматическому выражению и таким образом апеллирует к широкого кругу говорящих, большему, чем отдельный индивид. Ср. англ. <em>as they say</em> (см. также Nuyts 2005: 14): <strong>так сказать, XP</strong> – <em>Это один из тех фильмов, которые, так сказать, на века.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Objectivity</strong> (Объективность) – Говорящий подает некоторую информацию как факт, хорошо известный многим людям. Конструкция объективизирует содержание высказывания, подчеркивая статус сообщаемой информации. Ср. англ. <em>in fact</em>: <strong>как известно, Cl</strong> – <em>Как известно, он мастер стихи сочинять.</em> Без подтипов.</p>
+</li>
+<li>
+<p><strong>Source of information</strong> (Источник информации) – Указание на источник сообщаемой информации: <strong>по словам NP-Gen, Cl</strong> – <em>По словам учителя, провести урок дистанционно не так просто.</em> Без подтипов.</p>
+</li>
+</ul>
+<hr />
+<h3 id="4-2-podklass-klauzal-nye-konstruktsii-s-diskursivnoi-funktsiei-discourse-clauses">4.2. Подкласс Клаузальные конструкции с дискурсивной функцией (Discourse Clauses)</h3>
+<p>Эта группа включает конструкции, которые имеют ярко выраженную коммуникативную функцию и представляют собой целую клаузу. Выделяются две группы таких конструкций, а именно конструкции, выражающие Реакцию на предшествующий дискурс и Формулы речи.</p>
+<ul>
+<li>
+<p><strong>Reaction to the previous discourse</strong> (Реакция на предшествующий дискурс) – Для понимания конструкций данного типа необходимо учитывать предыдущий контекст. Конструкции выражают реакцию говорящего на слова собеседника или слова самого говорящего. Конструкции также встречаются при передаче внутренней речи говорящего, которая конструируется как его диалог с самим собой. Мы рассматриваем многословные конструкции, которые могут быть равнозначны ответу &quot;Да&quot; или &quot;Нет&quot; (типы Согласие и Несогласие соответственно) или выражать удивление, обоснование или предупреждение. </p>
+<ul>
+<li>
+<p><strong>Agreement</strong> (Согласие) – Конструкция выражает, что говорящий согласен с предшествующим высказыванием: <strong>как Cop не VP-Inf!</strong> – <em>Как не знать!</em></p>
+</li>
+<li>
+<p><strong>Disagreement</strong> (Несогласие) – Конструкция выражает, что говорящий не согласен с предшествующим высказыванием: <strong>(а) кто (это) сказал, что Cl</strong> – <em>А кто сказал, что мы не хотим в кино?</em></p>
+</li>
+<li>
+<p><strong>Doubt</strong> (Сомнение) – Конструкция выражает сомнение говорящего относительно справедливости суждения, сделанного его собеседником: <strong>PronPers Verb-Fut.2.Sg!</strong> <em>– Ты должен его уговорить. – Его уговоришь!</em></p>
+</li>
+<li>
+<p><strong>Insight</strong> (Озарение) – Конструкция указывает на то, что говорящий вдруг понимает скрытый смысл слов или действий собеседника: <strong>вот NP-Nom к чему (клонить)</strong> – <em>Вот ты к чему клонишь...</em></p>
+</li>
+<li>
+<p><strong>Irrelevance</strong> (Нерелевантность) – Конструкция выражает, что некоторый элемент ситуации расценивается говорящим как нерелевантный, неважный или ненужный: <strong>что/чего тут Cop VP-Inf?!</strong> – <em>Что тут думать? Надо срочно покупать эту сумку!</em></p>
+</li>
+<li>
+<p><strong>Self-evidence</strong> (Самоочевидность) – Конструкция выражает, что некоторая информация с точки зрения говорящего является бесспорной или даже само собой разумеющейся, исходя из общих знаний говорящего или его осведомленности о ситуации: <strong>ещё бы PronPers-Dat не Verb-Inf, Cl!</strong> – <em>Ещё бы им не любить работу, когда они выросли в деревне!</em></p>
+</li>
+<li>
+<p><strong>Surprise</strong> (Удивление) – Конструкция выражает, что говорящий удивлен полученным сообщением: <strong>как это XP/Cl?</strong> – <em>Как это он не приедет?</em></p>
+</li>
+<li>
+<p><strong>Warning</strong> (Предупреждение) – Обозначение предупреждения, предостережения со стороны говорящего: <strong>и (только) не говори потом, что Cl</strong> – <em>И не говори потом, что я тебя не предупреждала!</em></p>
+</li>
+<li>
+<p><strong>Accentuation</strong> (Выделение) – Конструкция специально акцентирует, выделяет элемент высказывания, сделанного собеседником: <strong>в то́м-то и NP-Nom, (что) Cl</strong> – <em>В том-то и дело, что не знаем.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Routine</strong> (Формулы речи) – Устойчивые фразы для этикетного общения. Используются в типичных коммуникативных ситуациях (приветствие, прощание, благодарность, извинение и т.д.).</p>
+<ul>
+<li>
+<p><strong>Apology</strong> (Формулы извинений) – Выражение извинений: <strong>Прошу прошения за NP-Acc/за то, что Cl</strong> – <em>Прошу прощения за опоздание.</em></p>
+</li>
+<li>
+<p><strong>Conversation support</strong> (Формулы поддержания разговора) – Фразы для поддержания разговора, маркеры обратной связи: <strong>Вот-вот, Cl</strong> – <em>Вот-вот, мне тоже фильм понравился!</em></p>
+</li>
+<li>
+<p><strong>Curse</strong> (Проклятия) – Выражение негативных пожеланий в адрес собеседника или другого участника ситуации: <strong>чтоб NP-Dat пусто было</strong> – <em>И вообще, убирайтесь со своими советами. Чтоб вам всем пусто было!</em></p>
+</li>
+<li>
+<p><strong>Greeting</strong> (Формулы приветствия) – Фразы при приветствии: <strong>NP-Nom приветствовать NP-Acc</strong> – <em>Приветствуем вас на нашей конференции!</em></p>
+</li>
+<li>
+<p><strong>Kind wishes</strong> (Формулы пожеланий) – Выражение пожеланий (в том числе соболезнований) и поздравлений: <strong>(NP-Nom поздравлять) c NP-Ins (NP-Acc)</strong> – <em>С Новым годом!</em></p>
+</li>
+<li>
+<p><strong>Oath</strong> (Клятва) – Формулировка обещания, клятвы, которую дает говорящий: <strong>NP-Nom дать слово, что Cl</strong> – <em>Даю слово, что ты меня больше никогда не увидишь.</em></p>
+</li>
+<li>
+<p><strong>Parting</strong> (Формулы прощания) – Фразы при прощании: <strong>до NP-Gen!</strong> – <em>До свидания!</em></p>
+</li>
+<li>
+<p><strong>Politeness marker</strong> (Маркеры вежливости) – Выражение вежливости говорящего: <strong>Уж простить-Imp/извинить-Imp, но Cl</strong> – <em>Уж простите, но всё будет по договору.</em></p>
+</li>
+<li>
+<p><strong>Praise</strong> (Восхваление) – Восхваление и прославление говорящим других участников или абстрактных сил из чувства благодарности: <strong>Слава NP-Dat, (что) Cl</strong> – <em>Слава богу, вижу прекрасно и всё слышу.</em></p>
+</li>
+<li>
+<p><strong>Swearing</strong> (Ругательствa) – Экспрессивные фразы, которые содержат табуированную лексику и как правило выражают негативное отношение говорящего: <strong>ни черта́ не VP</strong> – <em>Я ни черта не вижу.</em></p>
+</li>
+<li>
+<p><strong>Thanks</strong> (Формулы благодарности) – Выражение благодарности: <strong>Спасибо NP-Dat (за NP-Acc/за то, что Cl)!</strong> – <em>Спасибо тебе за помощь!</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="5-semanticheskii-klass-parametry-parameters">5. Семантический класс ПАРАМЕТРЫ (PARAMETERS)</h2>
+<p>Параметрами мы называем значения интенсивности и точности/неточности, которые могут накладываться на другие значения (времени, места, количества и др.) и в этом смысле обладают очень широкой дистрибуцией. Параметры предполагают некоторую шкалу (шкалу интенсивности или шкалу точности), с которой каждая отдельная конструкция соотносит ситуацию или признак.</p>
+<ul>
+<li>
+<p><strong>Degree of intensity (Степень интенсивности)</strong> – Конструкции, выражающие степень интенсивности, соотносят проявление некоторого признака или ситуации со шкалой интенсивности и определяют место на этой шкале относительно полярных значений минимума и максимума. Каждая такая конструкция содержит указание на то, насколько сильно выражается или проявляется какой-либо признак. Группа конструкций степени интенсивности включает конструкции как высокой, так и низкой интенсивности. Теги-подтипы взяты из академической грамматики английского языка, которая содержит классификацию интенсификаторов в английском языке (Quirk et al. 1985). См. применение этой классификации к русским конструкциям в Zhukova 2020.</p>
+<ul>
+<li>
+<p><strong>Maximizer</strong> (Максимальная степень) – Указание на максимальную степень проявления признака или на полноту выполнения действия. У признака или действия есть внутренний предел, который был достигнут: <strong>как нельзя Adv-Cmp VP</strong> – <em>Порошок как нельзя лучше отстирал жирные пятна.</em></p>
+</li>
+<li>
+<p><strong>Booster</strong> (Высокая степень) – Указание на высокую степень проявления признака, который может (теоретически) неограниченно возрастать, т.е. не имеет внутреннего предела: <strong>VP не в пример Adj-Cmp/Adv-Cmp</strong> – <em>Он выглядел не в пример приятнее.</em></p>
+</li>
+<li>
+<p><strong>Approximator</strong> (Приближение к норме) – Указание на почти полное приближение к норме признака или почти полное соответствие действию, а также на соответствие признаку или действию в достаточной степени: <strong>почти/практически XP</strong> – <em>Мы почти приехали: осталось всего две остановки.</em></p>
+</li>
+<li>
+<p><strong>Diminisher</strong> (Небольшая степень) – Указание на небольшую степень проявления признака или на небольшое отклонение от нормы. Степень интенсивности больше, чем у конструкций подтипа Minimizer. Как правило используется с прилагательными и наречиями: <strong>не такой уж и Adj</strong> – <em>Не такой уж и страшный.</em></p>
+</li>
+<li>
+<p><strong>Minimizer: Low</strong> (Минимизатор: Низкая степень) – Указание на крайне низкую степень проявления признака или действия. Как правило, используется с глаголами и глагольными группами. Часто дополнительно указывает на то, что выполнить действие затруднительно: <strong>с трудом VP</strong> – <em>Я с трудом верил его рассказу.</em></p>
+</li>
+<li>
+<p><strong>Minimizer: Absence</strong> (Минимизатор: Нулевая степень) – Указание на полное отсутствие проявления признака или действия. Часто через выражение отсутствия даже минимального кванта этого признака или действия: <strong>ни на грамм не VP</strong> – <em>Она этому тону ни на грамм не верит.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Degree of accuracy</strong> (Степень точности) – Шкала точности: насколько близко к истинному значению / норме располагается реальное значение.</p>
+<ul>
+<li>
+<p><strong>Approximate</strong> (Приблизительное значение) – Указание на приблизительность чего-либо, как правило, числового значения (но включает также случаи типа <em>более или менее готов к экзамену</em>): <strong>NP-Gen.Pl NumCrd</strong> – <em>На лекцию пришли человек двадцать.</em></p>
+</li>
+<li>
+<p><strong>Exact</strong> (Точное значение) – Указание на точность (точное числовое значение, точное время, точный, идеально подходящий размер и т. д.): <strong>(в) аккурат VP</strong> – <em>Жди меня, и я вернусь в аккурат к обеду.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="spisok-literatury">Список литературы</h2>
+<p><strong>Англоязычные работы</strong></p>
+<p>Aijmer, Karin. 2004. The semantic path from modality to aspect: <em>Be able to</em> in a cross-linguistic perspective. In: Hans Lindquist and Christian Mair (eds.) Corpus approaches to grammaticalization in English. Amsterdam / Philadelphia: John Benjamins. 57-78.</p>
+<p>Aikhenvald, Alexandra. 2012. The essence of mirativity. In: Linguistic Typology, Vol. 16. 435–485. </p>
+<p>Baydina, Ekaterina. 2016. The Russian apprehensive construction: Syntactic status reassessed, negation vindicated. Leiden: Leiden University MA Thesis.</p>
+<p>Boye, Kasper.  2016. The expression of epistemic modality. In: Jan Nuyts and Johan van der Auwera (eds.). The Oxford Handbook of Modality and Mood. 117-140. Oxford: Oxford University Press.</p>
+<p>Comrie, Bernard. 1976. Aspect: An introduction to the study of verbal aspect and related problems. Cambridge: Cambridge University Press.</p>
+<p>DeLancey, S. 1997. Mirativity: The grammatical marking of unexpected information. In: Linguistic Typology, Vol. 1. 33–52.</p>
+<p>Endresen, Anna, Laura A. Janda. 2020. Taking Construction Grammar One Step Further: Families, Clusters, and Networks of Evaluative Constructions in Russian. In: Mike Putnam, Matthew Carlson, Antonio Fábregas, Eva Wittenberg (eds.) Defining construction: Insights into the emergence and generation of linguistic representations (special issue of Frontiers in Psychology 11). pp. 1-22.</p>
+<p>Mitrofanova, Natalia. 2016. Paths and Places: Aspects of Grammar and Acquisition. Doctoral dissertation. UiT: The Arctic University of Norway.</p>
+<p>Newman, Paul. 1980. Nominal and Verbal Plurality in Chadic. Berlin: Walter de Gruyter.</p>
+<p>Nuyts, Jan. 2005. Modality: Overview and linguistic issues. In: William Frawley (ed.) The Expression of Modality, 1-26. (The Expression of Cognitive Categories 1.) Berlin / New York: Mouton de Gruyter.</p>
+<p>Nuyts, Jan. 2016. Analyses of modal meanings. In: Jan Nuyts and Johan van der Auwera (eds.). The Oxford Handbook of Modality and Mood. 31-49. Oxford: Oxford University Press.</p>
+<p>Paperno, Denis. 2012. Quantification in Standard Russian. In: Edward L. Keenan, Denis Paperno. 2012. Handbook of quantifiers in natural language. (Studies in Linguistics and Philosophy 90), Vol. 1, 729-80. Dordrecht: Springer.</p>
+<p>Plungian, V.A. 1999. A typology of phasal meanings, Abraham, W., Kulikov, L. (eds.) Tense-aspect, transitivity, and causativity: Essays in honor of Vladimir Nedjalkov, John Benjamins, Amsterdam.</p>
+<p>Quirk, Randolph, Sidney Greenbaum, Geoffrey Leech, and Jan Svartvik. 1985. A Comprehensive Grammar of the English Language. London: Longman.</p>
+<p>Treis, Yvonne 2018. Comparative Constructions: An Introduction. In: Linguistic Discovery 16 (1). i–xxvi.</p>
+<p>van der Auwera, Johan and Plungian, Vladimir. 1998. Modality's Semantic Map. In: Linguistic Typology 2. 79-124.</p>
+<p>Zhukova, Valentina. 2020. Intensifying constructions in Russian based on data from Russian Constructicon. Moscow: National Research University Higher School of Economics, MA Thesis.</p>
+<p><strong>Русскоязычные работы</strong></p>
+<p>Апресян В. Ю. 1999. Уступительность в языке и слова со значением уступки. In: Вопросы языкознания. 1999. № 5. 24-44.</p>
+<p>Апресян Ю. Д. 1974/1995. Лексическая семантика. Москва. Издательство «Языки русской культуры».</p>
+<p>Добрушина Н. Р. 2006. Грамматические формы и конструкции со значением опасения и предостережения. In: Вопросы языкознания. 2006. № 2. 28-67.</p>
+<p>Зализняк А. А., Шмелев А.Д. 2000. Введение в русскую аспектологию. Москва.
+Издательство «Языки русской культуры».</p>
+<p>Ладыгина А. С., Рахилина, Е. В. 2016. Русские конструкции со значением чередования ситуаций. In: Язык: поиски, факты, гипотезы. Сборник статей к 100-летию со дня рождения академика Н.Ю. Шведовой. Москва. 320-336. </p>
+<p>Мордашова Д. Д. (в процессе работы) Значение реализованной возможности как зона пересечения модальности и аспекта. Кандидатская диссертация. Московский государственный университет им. М.В. Ломоносова. Москва.</p>
+<p>Плунгян, В. А. 2001. Антирезультатив: до и после результата. In: В. А. Плунгян (ред.). Исследования по теории грамматики. Вып. 1. Грамматические категории. Москва. Издательство «Русские словари», 50-88.</p>
+<p>Плунгян В. А. 2003. Общая морфология: введение в проблематику. 2-е изд. Москва. Издательство «Едиториал УРСС».</p>
+<p>Плунгян, В. А. 2011. Введение в грамматическую семантику: Грамматические значения и грамматические системы языков мира. Москва. Издательство Российского государственного гуманитарного университета.</p>
+<p>Рахилина, Е. В. 2013. Кондуктор, нажми на тормоза... In:  Компьютерная лингвистика и интеллектуальные технологии: По материалам ежегодной Международной конференции «Диалог». Т. 1: Основная программа конференции. Вып. 12 (19). Москва. Издательство Российского государственного гуманитарного университета. 665-673. </p>
+<p>Татевосов, С. Г. 2002. Семантика составляющих именной группы: кванторные слова. Москва. ИМЛИ РАН.</p>
+<p>Храковский, В. С. 2003. Категория таксиса (Общая характеристика). In: Вопросы языкознания, 2003, № 2. 33-54.</p>
+<p>Храковский В. С. 2009. Таксис: Семантика, синтаксис, типология. In:  Храковский В. С. (отв. ред.) Типология таксисных конструкций. Москва. Издательство «Знак». 11-113.</p>
+<p>Шлуинский, А. Б. 2005. Типология предикатной множественности: количественные аспектуальные значения. Кандидатская диссертация. Московский государственный университет им. М.В. Ломоносова. Москва.</p>
+
+  
+
+  
+
+      </div>
+
+      <div class="more-buffer">
+		
+          <hr>
+
+          <a href="https://diku.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;5a56b1753b10711c00.jpg"
+                   class="figure-img img-fluid rounded" alt="Diku logo">
+            </figure>
+          </a>
+
+          <span style="display:inline-block; width: 25px;"></span>
+
+          <a href="https://uit.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;7a9d3808320cf7f600.png"
+                   class="figure-img img-fluid rounded" alt="UiT logo">
+            </figure>
+          </a>
+
+          <a href="https://www.hse.ru/en/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;ba4794503f453bf200.jpg"
+                   class="figure-img img-fluid rounded" alt="HSE logo">
+            </figure>
+          </a>
+        
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+    
+    
+
+  </body>
+</html>

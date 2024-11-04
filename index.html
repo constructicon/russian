@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://constructicon.github.io/russian/img/favicon.ico">
+
+    <title>Constructicon</title>
+
+    
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="https://raw.githubusercontent.com/constructicon/russian/main/content/logo/constructicon-round.png" />
+    
+
+    
+      <meta name="description" content="Description of the Constructicon.
+" />
+      <meta name="twitter:description" content="Description of the Constructicon.
+" />
+    
+
+    
+      <meta name="twitter:title" content="Constructicon" />
+    
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+            integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68="
+            crossorigin="anonymous"></script>
+
+    <!-- https://vue-treeselect.js.org/ -->
+    <script src="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@3.14.0/dist/js-yaml.min.js"
+            integrity="sha256-8mtDTinb8+d2bC/9KhCJoCRBEylWUIV/3YEt5cSUvRk="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"
+            integrity="sha256-Jvh9+A4HNbbWsWl1Dw7kAzNsU3y8elGIjLnUSUNMtLg="
+            crossorigin="anonymous"></script>
+
+    <!-- https://github.com/bvaughn/js-search -->
+    <script src="https://cdn.jsdelivr.net/npm/js-search@2.0.0/dist/umd/js-search.min.js"
+            integrity="sha256-LD9UsSATk+xTzAbk8nD2gA2bjHKvetXtCMDAFkM2K5Q="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js" integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link href="https://constructicon.github.io/russian/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- navigation -->
+      <div class="row top-buffer">
+        <div class="col-md-3">
+          <figure class="figure">
+            
+            <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;66ea0c2bc689ec2a00.png"
+                 class="figure-img img-fluid rounded" alt="Constructicon logo">
+          </figure>
+        </div>
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9f2ff;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/">Browse</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/advanced-search/">Advanced search</a>
+                  </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/daily/">Daily dose</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/statistics/">Statistics</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/instructions/">Instructions</a>
+                  </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/about/">About</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- end navigation -->
+
+      <div class="top-buffer">
+        
+  <div id="app" v-cloak>
+
+    <div v-if="show_data_spinner">
+      <div class="row top-buffer">
+        <div class="col-md-12">
+        <h1>Loading data (can take few seconds) ...</h1>
+          <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="all_data_loaded">
+      <div class="row">
+        
+<div class="col-md-6 top-buffer">
+  <form>
+    <div class="form-group">
+      <label>Search in names and illustrations</label>
+      <input v-model="search_string" class="form-control" placeholder="не говоря о" onkeydown="if(event.keyCode==13){return false;}">
+    </div>
+  </form>
+</div>
+<div class="col-md-6">
+  
+  <div class="col-md-6 top-buffer">
+    <label>Level</label>
+    <treeselect
+      :multiple="true"
+      :options="level_options"
+      placeholder="Select level"
+      v-model="level_selected"
+      />
+    <treeselect-value :value="level_selected" />
+  </div>
+
+</div>
+
+        <div class="row top-buffer">
+        <div class="col-md-12 ">
+          <div v-if="record_numbers_matching_search.length > 0">
+            <div class="form-group">
+              <label>Results</label>
+              <select v-model="current_record_number" class="form-control" size="10">
+                
+                <option v-for="record_number in record_numbers_matching_search" :value="record_number">
+                  {[ record_number ]}.
+                  
+                  <b>{[ records[record_number].name ]}</b>
+                  &nbsp;
+                  |
+                  &nbsp;
+                  <i>{[ records[record_number].illustration ]}</i>
+                </option>
+              </select>
+            </div>
+            Number of matching constructions: {[record_numbers_matching_search.length]}
+          </div>
+          <div v-else>
+            No matching constructions
+          </div>
+        </div>
+
+          <div v-if="current_record_number == null">
+            
+
+<div id="carouselExampleIndicatorsEng" class="carousel slide pl-5 pr-5 pt-2 pb-5 mr-5 mt-5" data-ride="carousel" style="background-color: rgba(159,123,154, 0.4); width:100%; height: 300px">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicatorsEng" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicatorsEng" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicatorsEng" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicatorsEng" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicatorsEng" data-slide-to="4"></li>
+
+  </ol>
+  <div class="carousel-inner px-3">
+    <div class="carousel-item active px-5">
+      <h1 class="d-block mx-auto w-70 h-100">What is a construction?</h1><br>
+      Constructions are structural units of language, prominent linguistic patterns that form sentences and phrases.
+      Constructions are arguably stored in speakers’ minds as prefabricated units.
+      Some constructions are simple like the English construction <i>My <b>name is</b> John</i>.
+      Others are more complex like the English <i>nice-of-you</i> construction, as in <i><b>It’s</b> nice <b>of</b> you <b>to</b> call.</i>
+      Constructions often have a fixed part (the anchor) and variable parts (slots).
+      For example, <i><b>It’s</b></i>, <i><b>of</b></i>, and <i><b>to</b></i> are anchor words, whereas <i>nice</i>, <i>you</i> and <i>call</i> are fillers of the slots.
+      Because fillers can vary, one can employ the same construction to produce various utterances,
+      such as <i><b>It’s</b> bad <b>of</b> him <b>to</b> come late</i> or <i><b>It’s</b> sweet <b>of</b> them <b>to</b> ask</i>.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">What is a constructicon?</h1><br>
+      A constructicon is a system of constructions in a language and a thorough description of this system.
+      Constructions are closely related to each other and form families, clusters, and networks.
+      A constructicon resource represents constructions, their properties and relationships in the form of an
+      electronic database.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">What is the purpose of the Russian Constructicon?</h1><br>
+      The resource helps learners of Russian acquire constructions and understand their properties and uses.
+      Constructions are numerous and can be language-specific and challenging for learners to master.
+      However, textbooks and dictionaries often fail to provide readers with explicit information on constructions.
+      The resource is also useful for researchers of language: specialists in Russian, Slavic languages, and typology.
+      The collected data can furthermore serve to improve automatic translation software.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">What can you find here?</h1><br>
+      Here you can find over 2200 prominent Russian constructions.
+      We explain their structure and meaning and illustrate their use.
+      Each construction is accompanied with English and Norwegian equivalents.
+      You can search for constructions by meaning, anchor words, level of language proficiency, and other parameters.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">Who built this resource and how? </h1><br>
+      The Russian Constructicon is a joint project of the research group <a href="https://site.uit.no/clear/">CLEAR</a> at UiT -
+      The Arctic University of Norway and <a href="https://ling.hse.ru/en/">the School of Linguistics</a> at HSE University (Moscow).
+      We adopt the Construction Grammar approach to language and use data from <a href="https://ruscorpora.ru/en/">the Russian National Corpus</a>.
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicatorsEng" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicatorsEng" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide pl-5 pr-5 pt-2 pb-5 mr-5 mt-5" data-ride="carousel" style="background-color: rgba(180,210,112, 0.4); width:100%; height: 300px">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner px-3">
+    <div class="carousel-item active px-5">
+      <h1 class="d-block mx-auto w-70 h-100">Что такое конструкции?</h1><br>
+      Это структуры, которые, как кирпичики, образуют предложения и их
+      части. Есть простые конструкции,
+      например, <i>Меня зовут Петя</i>, а есть сложные — <i>Он нет-нет да и
+      спросит</i>. Все они имеют фиксированную (якорь) и переменные
+      части (слоты): якоря <i>зовут</i> и <i>нет-нет да и</i> окружены слотами с
+      заранее заданными свойствами. По-разному заполняя слоты одной
+      конструкции, можно говорить разные вещи: <i>Мою дочку зовут Маша,
+      Повара зовут Иван Петрович…</i> или: <i>Я нет-нет да и ошибусь, Нет-нет да и скажешь какую-нибудь ерунду</i>.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">Что такое конструктикон? </h1><br>
+      Конструктикон — это система конструкций в языке, а также подробное описание этой системы.
+      Конструкции тесно связаны друг с другом и образуют семьи, гнёзда и сети.
+      Конструкции, их свойства и отношения представлены в виде электронной базы данных.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">В чём задача Русского Конструктикона?</h1><br>
+      Помочь изучающим русский язык научиться употреблять конструкции и узнать их свойства.
+      Конструкций в языке очень много, в каждом языке они свои, а учат им редко, и в словарях их трудно найти.
+      Собранные сведения о русских конструкциях будут полезны и исследователям языка — русистам, славистам и типологам.
+      Также данные Русского Конструктикона можно использовать для улучшения программ автоматического перевода.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">Что можно узнать?</h1><br>
+      Здесь вы найдёте разнообразные интересные конструкции русского языка.
+      Мы объясняем их устройство, значение и приводим примеры использования.
+      Для каждой конструкции вы найдёте ближайший по значению эквивалент в английском и норвежском языках.
+      Вы можете искать конструкции по значению, отдельным словам, уровню владения русским языком как иностранным и
+      другим параметрам.
+    </div>
+    <div class="carousel-item px-5">
+      <h1 class="d-block mx-auto w-70 h-100">Как сделан этот ресурс?</h1><br>
+      Русский Конструктикон – это совместный проект <a href="https://site.uit.no/clear/">группы CLEAR</a> из
+      Норвежского Арктического Университета (Тромсе) и <a href="https://ling.hse.ru/">Школы
+      лингвистики</a> НИУ ВШЭ (Москва). Мы используем теоретические
+      рамки Грамматики конструкций и опираемся на данные
+      Национального корпуса русского языка (<a href="https://ruscorpora.ru/">НКРЯ</a>).
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+          </div>
+      <div class="row top-buffer">
+        <div class="col-md-12">
+          <div v-if="current_record_number != null">
+            {[ current_record_number ]}
+            <br>
+
+            <b>NAME</b><br>
+            <b>{[ records[current_record_number].name ]}</b> - <i>{[ records[current_record_number].illustration ]}</i>
+
+            <div v-for="definition in records[current_record_number].definitions">
+              <br>
+              <b>DEFINITION ({[ to_title_case(key(definition)) ]})</b> <br><span v-html="annotate(value(definition))"></span>
+              <br>
+            </div>
+
+            <br>
+            <b>EXAMPLES</b>
+            <ol>
+              <li v-for="example in records[current_record_number].examples"><span v-html="annotate(example)"></span></li>
+            </ol>
+
+            <br>
+            <b>CEFR LEVEL:</b> {[ records[current_record_number].cefr_level ]}
+            <br>
+
+            <br>
+            <input type="checkbox" id="checkbox" v-model="show_additional_information">
+            <label for="checkbox">Show additional information</label>
+
+            <div v-if="show_additional_information">
+              <div v-for="equivalent in records[current_record_number].equivalents">
+                <br>
+                <b>EQUIVALENTS ({[ to_title_case(key(equivalent)) ]})</b> <br><span v-html="value(equivalent)"></span>
+                <br>
+              </div>
+              <br>
+
+              <b>COMMON FILLERS</b>
+              <ul v-if="records[current_record_number].common_fillers[0] != null">
+                <li v-for="item in records[current_record_number].common_fillers">{[ item ]}</li>
+              </ul>
+
+              <br>
+
+              <b>SEMANTIC TYPE</b>
+              <ul>
+                <li v-for="item in records[current_record_number].semantic_types">
+                  {[ item['type'] ]}
+                  <ul>
+                    <li v-for="it in item['subtypes']">{[ it['type'] ]}</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <br>
+              <b>SYNTACTIC TYPE OF CONSTRUCTION</b>
+              <ul>
+                <li v-for="item in records[current_record_number].syntactic_type_of_construction">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>SYNTACTIC FUNCTION OF ANCHOR</b>
+              <ul>
+                <li v-for="item in records[current_record_number].syntactic_function_of_anchor">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>SYNTACTIC STRUCTURE OF ANCHOR</b>
+              <ul>
+                <li v-for="item in records[current_record_number].syntactic_structure_of_anchor">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>PART OF SPEECH OF ANCHOR</b>
+              <ul>
+                <li v-for="item in records[current_record_number].part_of_speech_of_anchor">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>DEPENDENCY STRUCTURE</b>
+              <ol>
+                <li v-for="item in records[current_record_number].dependency_structure">{[ item ]}</li>
+              </ol>
+
+              <br>
+              <b>DEPENDENCY STRUCTURE OF ILLUSTRATION</b>
+              <ol>
+                <li v-for="item in records[current_record_number].dependency_structure_of_illustration">{[ item ]}</li>
+              </ol>
+
+              <br>
+              <b>COMMUNICATIVE TYPE</b>
+              <ul>
+                <li v-for="item in records[current_record_number].intonation">{[ item ]}</li>
+              </ul>
+
+              <br>
+              <b>USAGE LABEL</b> {[ records[current_record_number].usage_label ]}
+              <br>
+
+              <br>
+              <b>COMMENT</b> <br> {[ records[current_record_number].comment ]}
+              <br>
+
+              <br>
+              <b>REFERENCES</b>
+              <ul v-if="records[current_record_number].references[0] != ''" >
+                <li v-for="item in records[current_record_number].references">{[ item ]}</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+      </div>
+
+      <div class="more-buffer">
+		
+          <hr>
+
+          <a href="https://diku.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;5a56b1753b10711c00.jpg"
+                   class="figure-img img-fluid rounded" alt="Diku logo">
+            </figure>
+          </a>
+
+          <span style="display:inline-block; width: 25px;"></span>
+
+          <a href="https://uit.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;7a9d3808320cf7f600.png"
+                   class="figure-img img-fluid rounded" alt="UiT logo">
+            </figure>
+          </a>
+
+          <a href="https://www.hse.ru/en/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;ba4794503f453bf200.jpg"
+                   class="figure-img img-fluid rounded" alt="HSE logo">
+            </figure>
+          </a>
+        
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+    
+  <script src="https://constructicon.github.io/russian/js/constructicon.js"></script>
+
+
+  </body>
+</html>
