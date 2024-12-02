@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://constructicon.github.io/russian/img/favicon.ico">
+
+    <title>Constructicon</title>
+
+    
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="https://raw.githubusercontent.com/constructicon/russian/main/content/logo/constructicon-round.png" />
+    
+
+    
+      <meta name="description" content="Description of the Constructicon.
+" />
+      <meta name="twitter:description" content="Description of the Constructicon.
+" />
+    
+
+    
+      <meta name="twitter:title" content="Constructicon" />
+    
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+            integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68="
+            crossorigin="anonymous"></script>
+
+    <!-- https://vue-treeselect.js.org/ -->
+    <script src="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@3.14.0/dist/js-yaml.min.js"
+            integrity="sha256-8mtDTinb8+d2bC/9KhCJoCRBEylWUIV/3YEt5cSUvRk="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"
+            integrity="sha256-Jvh9+A4HNbbWsWl1Dw7kAzNsU3y8elGIjLnUSUNMtLg="
+            crossorigin="anonymous"></script>
+
+    <!-- https://github.com/bvaughn/js-search -->
+    <script src="https://cdn.jsdelivr.net/npm/js-search@2.0.0/dist/umd/js-search.min.js"
+            integrity="sha256-LD9UsSATk+xTzAbk8nD2gA2bjHKvetXtCMDAFkM2K5Q="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js" integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link href="https://constructicon.github.io/russian/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- navigation -->
+      <div class="row top-buffer">
+        <div class="col-md-3">
+          <figure class="figure">
+            
+            <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;66ea0c2bc689ec2a00.png"
+                 class="figure-img img-fluid rounded" alt="Constructicon logo">
+          </figure>
+        </div>
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9f2ff;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/">Browse</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/advanced-search/">Advanced search</a>
+                  </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/daily/">Daily dose</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/statistics/">Statistics</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/instructions/">Instructions</a>
+                  </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/about/">About</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- end navigation -->
+
+      <div class="top-buffer">
+        
+  <ul>
+    
+      <li>
+        <a href="https://constructicon.github.io/russian/semantic-types/#semantic-types">Semantic types</a>
+        
+          <ul>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types/#overview">Overview</a>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types/#1-semantic-class-qualia">1. Semantic class QUALIA</a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#1-1-subclass-situation-structure">1.1. Subclass Situation Structure</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#1-2-subclass-major-roles">1.2. Subclass Major Roles</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#1-3-subclass-situation-modifiers">1.3. Subclass Situation Modifiers</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#1-4-subclass-logical-relations">1.4. Subclass Logical Relations</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#1-5-subclass-properties">1.5. Subclass Properties</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#1-6-subclass-sets-and-elements">1.6. Subclass Sets and Elements</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#1-7-subclass-magnitude">1.7. Subclass Magnitude</a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types/#2-semantic-class-modality-and-its-neighborhood">2. Semantic class MODALITY AND ITS NEIGHBORHOOD</a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#2-1-subclass-core-modal-meanings">2.1. Subclass Core Modal Meanings</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#2-2-subclass-neighborhood-of-core-modal-meanings">2.2. Subclass Neighborhood of Core Modal Meanings</a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types/#3-semantic-class-subjectivity">3. Semantic class SUBJECTIVITY</a>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types/#4-semantic-class-discourse">4. Semantic class DISCOURSE</a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#4-1-subclass-discourse-organization">4.1. Subclass Discourse Organization</a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://constructicon.github.io/russian/semantic-types/#4-2-subclass-discourse-clauses">4.2. Subclass Discourse Clauses</a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types/#5-semantic-class-parameters">5. Semantic class PARAMETERS</a>
+                
+              </li>
+            
+              <li>
+                <a href="https://constructicon.github.io/russian/semantic-types/#list-of-references">List of references</a>
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+
+  
+    <h1 id="semantic-types">Semantic types</h1>
+<h2 id="overview">Overview</h2>
+<p>In Advanced Search, you can search for constructions with a specific meaning, for example constructions that express comparison, evaluation, temporal boundary, etc. We refer to such types of meanings with the term “Semantic types”. The description of each construction includes one or more tags that specify the semantic type it represents. In the window <strong>Semantic types</strong>, the tags are presented in alphabetical order, whereas the purpose of this page is to represent how individual semantic types form a coherent system that is easy to navigate. </p>
+<p>We distinguish 55 <strong>semantic types</strong> that are more general, and in addition 182 <strong>subtypes</strong> that are more specific and narrow. For example, a general semantic type Comparison has the subtypes Equality, Inequality, Similarity, Imitation, and Contrast. Taking into account the subtypes of semantic types can help you to narrow down your search. In order to “open” each semantic type in the search window, the user can click on the arrow symbol ›.</p>
+<p>All general semantic types that we use in this resource are listed in the table below and explained in the text that follows. All semantic types are presented as bullet points •. Those semantic types that have subtypes are indicated in the table with the plus +. For example, Addressee has subtypes in our annotation system, but Instrument does not. Definitions and illustrations of subtypes can be found in the text below the table, and they are indicated by empty circle bullets °.</p>
+<p>Semantic types of constructions form larger units: subclasses and classes. For convenience these classes are numbered and serve as headings that organize the inventory of semantic types into a structured system. The names of classes and subclasses are not available in the search window.</p>
+<img width="987" alt="Screen Shot 2021-05-26 at 13 14 06" src="https://user-images.githubusercontent.com/63615172/119692605-d3319a00-be4b-11eb-8de0-211752884093.png">
+<h2 id="1-semantic-class-qualia">1. Semantic class <strong>QUALIA</strong></h2>
+<p>Qualia is a term borrowed from philosophy where it is defined as individual instances or forms of conscious experience and intrinsic qualitative properties of experience. We use this term to refer to a large class of constructions that describe the properties of the given objective physical world, external to the speaker. In this sense, Qualia as a class is contrasted with the other four large classes of constructions termed Subjectivity, Modality &amp; its neighborhood, Discourse, and Parameters. We apply the term Qualia as an umbrella notion that includes seven groups of semantic types of constructions, namely (here termed subclasses): Situation structure, Situation modifiers, Major roles, Logical relations, Properties, Magnitude, and Sets &amp; elements.</p>
+<h3 id="1-1-subclass-situation-structure">1.1. Subclass Situation Structure</h3>
+<p>Situation structure is an umbrella term for those semantic types of constructions that specify structural caharecteristics of a situation, namely Timeline, Taxis, Actionality, Pluractionality, Phase of Action, Result, and Actuality.</p>
+<ul>
+<li>
+<p><strong>Timeline</strong> – Localization of a situation on a timeline (in terms of past, present, and future).</p>
+<ul>
+<li>
+<p><strong>Distant past</strong> – The construction locates a situation in the distant past: e.g. <strong>было время, (когда) Cl</strong>, as in <em>Было время, когда её стихи очень любили.</em></p>
+</li>
+<li>
+<p><strong>Recent past</strong> – The construction locates a situation in the recent past: e.g. <strong>только что VP-Pfv.Pst</strong>, as in <em>Вася только что принес деньги.</em></p>
+</li>
+<li>
+<p><strong>Past</strong> –  The construction locates a situation in the past without additional specification for whether it is distant or recent past: e.g. <strong>как-то раз VP</strong>, as in <em>Я как-то раз видела её на концерте.</em></p>
+</li>
+<li>
+<p><strong>Present</strong> – The construction locates a situation in the moment of speech, in the present: e.g. <strong>NP-Nom Cop на дворе</strong>, as in <em>Куда ты собралась, ночь на дворе?!</em></p>
+</li>
+<li>
+<p><strong>Future</strong> – The construction locates a situation in the future without additional specification for whether it is near or distant future: e.g. <strong>со временем Cl</strong>, as in <em>Со временем она обязательно научится готовить.</em></p>
+</li>
+<li>
+<p><strong>Near future</strong> – The construction locates a situation in the near future: e.g. <strong>вот-вот VP-Fut NP-Nom</strong>, as in <em>Вот-вот прилетит самолёт.</em></p>
+</li>
+<li>
+<p><strong>Distant future</strong> – The construction locates a situation in the distant future: e.g. <strong>когда-нибудь (потом) VP-Fut</strong>, as in <em>Я прочитаю эту книгу когда-нибудь потом.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Taxis</strong> – Taxis, or relative time, is understood as a category of temporal localization of events with respect to each other (simultaneity, anteriority, and posteriority). Whereas it is usually marked with special verb forms (Храковский 2003: 39-40; Храковский 2009: 21-22), here we observe constructional means to signify taxis relations between events.</p>
+<ul>
+<li>
+<p><strong>Preceding action</strong> – The construction indicates that an action precedes another action: e.g. <strong>Cl, перед тем как Cl</strong>, as in <em>Перед тем как сесть за стол, помой руки.</em></p>
+</li>
+<li>
+<p><strong>Simultaneous action</strong> – The construction indicates that several actions take place simultaneously: e.g. <strong>в тот NP-Acc, как/когда VP</strong>, as in <em>Все ахнули в тот момент, когда она заговорила.</em></p>
+</li>
+<li>
+<p><strong>Subsequent action</strong> –  he construction indicates that an action follows another action: e.g. <strong>XP, после чего XP</strong>, as in <em>Нужно довести до кипения, после чего добавить овощи.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Actionality</strong> – This term refers to a cluster of constructions with aspectual semantics that correspond to various types of Aktionsarten ('types of action'). Some of these constructions contain a verb formed by a typical Aktionsart morphological marker (a prefix or a suffix) and the arguments of that verb, whereas other constructions encode Aktionsart lexically, in the fixed part of the construction (anchor words).</p>
+<ul>
+<li>
+<p><strong>Attenuative</strong> – The construction indicates that an action is performed slightly or without effort as opposed to how this action is normally performed. The construction contains a verb that represents the attenuative Aktionsart and is prefixed with <em>pri-, pod-</em> or <em>po-</em> (Зализняк, Шмелев 2000: 120): e.g. <strong>при-Verb</strong>, as in <em>Катя приоткрыла окно.</em></p>
+</li>
+<li>
+<p><strong>Cumulative</strong> – The construction refers to the accumulation of results of an action (Зализняк, Шмелев 2000: 114), usually, the accumulation of a certain number of objects by means of performing successive portions of an action. Such constructions usually contain the verb prefixed with <em>na-</em> that represents the cumulative Aktionsart: e.g. <strong>NP-Nom на-Verb NP-Gen.Pl</strong>, as in <em>Он навёз домой много вещей.</em></p>
+</li>
+<li>
+<p><strong>Distributive</strong> – The construction indicates that an action applies in turn to all objects of a set or is performed by a set of subjects. Such constructions usually contain a verb that represents the distributive Aktionsart and is prefixed with <em>pere-, po-</em> or <em>raz-</em> (Зализняк, Шмелев 2000: 120): e.g. <strong>NP-Nom раз-Verb NP-Acc.Pl</strong>, as in <em>Официант разнёс по столам подносы.</em></p>
+</li>
+<li>
+<p><strong>Gradual development</strong> – The construction refers to a gradual, step by step development of a situation: e.g. <strong>VP с каждым NP-Ins</strong>, as in <em>Экономическая ситуация ухудшается с каждым днём.</em></p>
+</li>
+<li>
+<p><strong>Punctual</strong> – The construction indicates that an action is construed as momentary, without an intermediate stage (Comrie 1976): e.g. <strong>VP в одну минуту</strong>, as in <em>Печаль моя прошла в одну минуту.</em></p>
+</li>
+<li>
+<p><strong>Saturative</strong> – The construction refers to an action that is performed up to a full saturation level (or even oversaturation) and focuses on the state of the subject that performs the action (Зализняк, Шмелев 2000: 114). The saturative Aktionsart is often viewed as a subtype of the cumulative Aktionsart: e.g. <strong>на-Verb-ся (NP-Ins)</strong>, as in <em>Земля напиталась водой.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Pluractionality</strong> – Pluractionality describes the number of occurences of a situation or the repetition of identical phases in its internal structure (cf. Шлуинский 2005: 4; see also Newman 1980).</p>
+<ul>
+<li>
+<p><strong>Alternation</strong> – The construction indicates that several situations take place in turns, alternate with each other (cf. Ладыгина, Рахилина 2016): e.g. <strong>когда XP, когда XP</strong>, as in <em>Когда вовремя придёт, когда опоздает.</em></p>
+</li>
+<li>
+<p><strong>Discontinuative</strong> – The construction indicates that a situation is carried out with breaks or interruptions (cf. Шлуинский 2005: 49): e.g. <strong>VP урывками</strong>, as in <em>Этой ночью она спала урывками.</em></p>
+</li>
+<li>
+<p><strong>Frequentative</strong> – The construction indicates that a situation takes place regularly, but more often than expected (cf. Шлуинский 2005: 49): e.g. <strong>то и дело VP</strong>, as in <em>Маме то и дело звонили.</em></p>
+</li>
+<li>
+<p><strong>Habitual</strong> – The construction indicates that an action is repeated regularly or that the performance of this action is characteristic of a participant (cf. Шлуинский 2005: 49): e.g. <strong>каждый/всякий раз VP, (когда/как Cl)</strong>, as in <em>Каждый раз улыбаюсь, когда вижу её.</em></p>
+</li>
+<li>
+<p><strong>Iterative</strong> – The construction indicates that a situation takes place repeatedly, more than once (cf. Шлуинский 2005: 49): e.g. <strong>VP ещё и ещё</strong>, as in <em>Он ударил ещё и ещё.</em></p>
+</li>
+<li>
+<p><strong>Multiplicative</strong> – The construction indicates that a situation consists of multiple repeated portions of action (Шлуинский 2005: 49): e.g. <strong>VP по NP-Dat</strong>, as in <em>Курочка по зернышку клюёт.</em></p>
+</li>
+<li>
+<p><strong>Raritive</strong> – The construction indicates that a situation takes place regularly, but more rarely than expected (cf. Шлуинский 2005: 49): e.g. <strong>время от времени Cl</strong>, as in <em>Время от времени я перестаю что-либо успевать.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Phase of action</strong> – Phase of action constructions refer to one of logically possible temporal parts of a situation. Such constructions instantiate &quot;an independent semantic area of &quot;phasal values&quot; consisting of four elementary values termed Inchoative, Continuative, Terminative, and Cunctative&quot;, according to Plungian 1999: 317. According to this in-depth study of phasal semantics, these four values &quot;are concerned with the very fact of the existence or non-existence of the situation at the point of reference as compared to an earlier moment&quot; (rather than with the inner structure of a situation), which means that phasal values belong to the periphery of the aspectual domain. See also Плунгян 2011: 315.</p>
+<ul>
+<li>
+<p><strong>Inchoative</strong> – The construction refers to the beginning of a situation: e.g. <strong>NP-Nom как начать VP-Inf!</strong>, as in <em>А он как начал кричать!</em></p>
+</li>
+<li>
+<p><strong>Continuative</strong> – The construction indicates that a situation that has taken place at some earlier moment continues to exist at the present moment: e.g. <strong>всё VP-Ipfv да/и ~VP-Ipfv</strong>, as in <em>Мальчик всё шёл да шёл.</em></p>
+</li>
+<li>
+<p><strong>Terminative</strong> – The construction refers to the termination (the end) of a situation: e.g. <strong>NP-Nom бросить VP-Inf</strong>, as in <em>Я бросил курить.</em></p>
+</li>
+<li>
+<p><strong>Cunctative</strong> – The construction refers to the &quot;non-beginning&quot; of a situation, or the continuation of the &quot;non-activity&quot; (comparable with English <em>not yet</em> and certain verb forms in Bantu languages cf. Plungian 1999: 316; Плунгян 2011: 314): e.g. <strong>NP-Nom так и не VP</strong>, as in <em>Иван так и не женился.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Result</strong> – Constructions of this type group around the concept of result and can denote a range of meanings: achieving a result; unachieved result; an attempt towards performing and action, thus achieving a result. Note that the term <em>Result</em> in the Russian Constructicon covers a larger scope of meanings than the term <em>resultative</em>, which normally refers to only resultative phase of action (Плунгян 2011: 282; e.g. <em>дверь открыта</em> ‘the door is open’, <em>машина сломана</em> ‘the car is broken’).</p>
+<ul>
+<li>
+<p><strong>Achieved Result</strong> – The construction refers to an actual event or a state triggered by a preceding situation: e.g. <strong>VP до NP-Gen</strong>, as in <em>Все овощи нужно залить кипятком и варить до готовности.</em></p>
+</li>
+<li>
+<p><strong>Antiresultative</strong> – The construction refers to a violated resultative stage (cf. Плунгян 2001). There are two types of the antiresultative meaning: 1) a result has not been achieved as the movement towards the result has been interrupted; 2) a result has been achieved but then cancelled: e.g. <strong>едва не VP-Pst</strong>, as in <em>Иван Иванович едва не умер после такого розыгрыша.</em></p>
+</li>
+<li>
+<p><strong>Conative</strong> – The construction indicates an attempt to perform an action: e.g. <strong>NP-Nom пробовать VP-Inf</strong>, as in <em>Вася несколько раз пробовал открыть окно.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Actuality</strong> – The construction refers to a successful realization of an action (compare the English verb <em>manage</em>, cf. Plungian &amp; van der Auwera 1998: 104), or “the successful result of the ability” (Aijmer 2004: 62). Actuality as a category lies at the intersection of Aspectuality and Modality (Мордашова Forthcoming): <strong>NP-Dat удалось VP-Inf</strong>, as in <em>Мише удалось покурить.</em> No subtypes.</p>
+</li>
+</ul>
+<hr />
+<h3 id="1-2-subclass-major-roles">1.2. Subclass Major Roles</h3>
+<p>The terminology we employ in this section overlaps with the terms of semantic roles (Апресян 1974/1995). Here, the subtypes we distinguish refer to the semantics of the whole constructions, and the terms indicate various ways of interaction between the participants of a situation or different types of situations (e.g. possession, absence of a participant, etc.).</p>
+<ul>
+<li>
+<p><strong>Addressee</strong> – The addressee is understood as a hyperrole and includes not only the addressee of a speech event, but also the addressee of any non-verbal action. The action can affect the participant in a positive (Beneficiary) or negative (Maleficiary) way. The addressee of the speech event can be a single person (Core addressee) or a group of people (Audience).</p>
+<ul>
+<li>
+<p><strong>Core Addressee</strong> – The construction encodes a participant who receives a message from another participant in oral or written form: e.g. <strong>NP в адрес NP-Gen</strong>, as in <em>В адрес Вани послышались оскорбления.</em></p>
+</li>
+<li>
+<p><strong>Audience</strong> – The construction encodes a group of people who receive a message in oral or written form: e.g. <strong>NP/VP перед NP-Ins</strong>, as in <em>Он умел говорить перед большой публикой.</em></p>
+</li>
+<li>
+<p><strong>Beneficiary</strong> – The construction encodes the addressee of an action who benefits from this action: e.g. <strong>NP/VP в угоду NP-Dat</strong>, as in <em>Он сказал это в угоду начальству.</em></p>
+</li>
+<li>
+<p><strong>Maleficiary</strong> – The construction encodes a participant who is negatively affected by an event: e.g. <strong>VP назло NP-Dat</strong>, as in <em>Назло кондуктору куплю билет.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Instrument</strong> – The construction encodes an instrument or a tool, that is, an object used by a participant in order to carry out an action: e.g. <strong>VP с помощью/при помощи NP-Gen</strong>, as in <em>Он всё починил с помощью отвёртки.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Possession</strong> – The construction denotes that a participant possesses an object or, more rarely, a quality or a right. This type is broader than the term <em>possessive</em>, which is traditionally understood merely as the possession of an object: e.g. <strong>NP-Nom Cop/VP у NP-Gen на руках</strong>, as in <em>Документы у меня на руках.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Comitative</strong> – The construction expresses that a participant performs an action together with another participant or a group of participants. Unlike the Possession type, the Comitative type requires that both participants are animate: e.g. <strong>VP за компанию (с NP-Ins)</strong>, as in <em>Пойдёшь с нами за компанию?</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Caritive</strong> – The construction indicates the absence of a secondary agent or the absence of an object possessed by the main participant of the situation (Плунгян 2011: 125): e.g. <strong>NP-Nom Cop без NP-Gen как без рук</strong>, as in <em>Я без часов как без рук.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Non-standard subject</strong> – This tag refers to different ways of encoding the logical subject of an action, either by non-standard marking of the subject or denoting the substitution of the subject.</p>
+<ul>
+<li>
+<p><strong>Non-standard subject marking</strong> – The construction contains a non-standard marking of the subject, different from the standard Nominative case: e.g. <strong>я PronPers-Dat VP-Fut!</strong>, as in <em>Я тебе поору!</em></p>
+</li>
+<li>
+<p><strong>Subject substitution</strong> – The construction refers to the deputy of the subject or indicates that an action is carried out by a participant different from the expected subject: e.g. <strong>VP за NP-Acc</strong>, as in <em>Мать за дочь сделала домашнее задание.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-3-subclass-situation-modifiers">1.3. Subclass Situation Modifiers</h3>
+<p>Constructions of this type provide information regarding spatial, temporal, and manner characteristics of a situation.</p>
+<ul>
+<li>
+<p><strong>Spatial expressions</strong> – Spacial expressions are constructions that indicate spatial characteristics (or modifiers) of a situation. Spacial expressions can be directional and locative. Directional spatial expressions encode subtypes of Path (such as Goal, Source, and Route), whereas non-directional spatial expressions encode Location (these distinctions are based on Mitrofanova 2016 and works cited therein).</p>
+<ul>
+<li>
+<p><strong>Path:Source</strong> – The construction refers to the direction of motion in space and encodes the starting point, or the Source, of the Path: e.g. <strong>NP/VP с торца (NP-Gen)</strong>, as in <em>Вход с торца.</em></p>
+</li>
+<li>
+<p><strong>Path:Goal</strong> – The construction refers to the direction of motion in space and encodes the endpoint or destination, i.e. the Goal, of the Path: e.g. <strong>NP-Nom вести в NP-Acc</strong>, as in <em>Дверь вела в комнату.</em></p>
+</li>
+<li>
+<p><strong>Path:Route</strong> – The construction refers to the directed motion in space and encodes the trajectory, or the Route, of the Path: e.g. <strong>VP вдоль по NP-Dat</strong>, as in <em>Мы пошли вдоль по улице.</em></p>
+</li>
+<li>
+<p><strong>Location</strong> – The construction refers to location of an object in space (with no reference to either motion or its direction): e.g. <strong>NP в NP-Loc</strong>, as in <em>Боль в животе.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Temporal expressions</strong> – The tag incorporates various ways of referring to time (e.g. temporal expressions) different from grammatical tense.</p>
+<ul>
+<li>
+<p><strong>Clock</strong> – The construction refers to a specific time on the clock: e.g. <strong>без NumCrd-Gen (минут) NumCrd-Nom</strong>, as in <em>Приходи к без пятнадцати десять.</em></p>
+</li>
+<li>
+<p><strong>Proper time</strong> – The construction refers to the suitable time for performing an action (compare to English <em>high time</em>, <em>about time</em>): e.g. <strong>(NP-Dat) давно пора Cop VP-Inf</strong>, as in <em>Детям давно пора поесть.</em></p>
+</li>
+<li>
+<p><strong>Temporal boundary</strong> – The construction refers to a point on a timeline that serves as a starting or final point of an action or a situation: e.g. <strong>до сих пор Cl</strong>, as in <em>До сих пор мне грустно.</em></p>
+</li>
+<li>
+<p><strong>Time period</strong> – The construction refers to a time span during which an action or a situation takes place: e.g. <strong>VP за NP-Ins</strong>, as in <em>Он молчал за обедом.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Manner</strong> – The construction specifies the manner of action, i.e. provides information on how the action is carried out. The construction refers to a qualitative characteristics of an activity, the method used in performing an activity: e.g. <strong>VP-Ipfv без устали</strong>, as in <em>Жена без устали готовила на кухне.</em> No subtypes.</p>
+</li>
+</ul>
+<hr />
+<h3 id="1-4-subclass-logical-relations">1.4. Subclass Logical Relations</h3>
+<p>The construction refers to the relationship between events in terms of cause, purpose, consequence, condition, or concession.</p>
+<ul>
+<li>
+<p><strong>Cause</strong> – The construction indicates the cause of an action: e.g. <strong>VP от NP-Gen</strong>, as in <em>Ноги дрожат от страха.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Purpose</strong> – The construction indicates the purpose of an action: e.g. <strong>на что NP-Dat Cop NP-Nom?</strong>, as in <em>На что мне эти книги?</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Consequence</strong> – The construction refers to the consequences of an action: e.g. <strong>Cl, вследствие чего Cl</strong>, as in <em>Деньги расходовались нерационально, вследствие чего предприятие быстро разорилось.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Condition</strong> – The construction introduces the condition of an action or a situation: e.g. <strong>раз (уж) Cl, (то) Cl</strong>, as in <em>Раз уж мы встретились, давайте обсудим эту проблему.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Concession</strong> – The constructions of this type counterpose two situations that are in conflict with each other. The constructions denote that one of these situations is deemed possible or happening in spite of the other adverse situation. We distinguish the subtypes of concession semantics by following Апресян 1999.</p>
+<ul>
+<li>
+<p><strong>At least</strong> – Тhe speaker understands that it is very complicated or impossible to obtain something. The speaker agrees to obtain something of a minor value but at least available: e.g. <strong>(Cl,) по крайней мере Cl</strong>, as in <em>Если ты его не любишь, ты могла бы его по крайней мере уважать.</em></p>
+</li>
+<li>
+<p><strong>Compensation</strong> – The construction indicates that the speaker accepts that a certain situation takes place, but draws the interlocutor's attention to a different independent situation that is evaluated the opposite way (by contrast with the first situation). In the speaker's opinion, the second situation is more important and compensates the first situation: e.g. <strong>Cl, зато Cl</strong>, as in <em>Мы опоздали на самолет, зато теперь есть дополнительный день отдыха.</em></p>
+</li>
+<li>
+<p><strong>Concession with disagreement</strong> – The construction indicates that a situation is not likely to take place from the speaker's perspective. If the situation takes place, it will be weakened or neutralized by a certain event: e.g. <strong>(даже) если NP и VP, то Cl</strong>, as in <em>Если он и выиграет матч, то чемпионом всё равно не станет.</em></p>
+</li>
+<li>
+<p><strong>Extreme limit</strong> – The speaker affirms that a certain situation must or will take place even inspite of the adverse circumstances that strongly go beyond what is normal: e.g. <strong>хоть VP-Imp, (но/а) Cl</strong>, as in <em>Хоть умри, а завтра должен быть на работе рано утром.</em></p>
+</li>
+<li>
+<p><strong>Failed expectation</strong> – The construction indicates that a situation takes place in spite of the adverse circumstances of another situation: e.g. <strong>Несмотря/Невзирая на NP-Acc, Cl</strong>, as in <em>Несмотря на отзывы туристов, он всё равно поехал в Грузию.</em></p>
+</li>
+<li>
+<p><strong>Imitative agreement</strong> – The construction indicates that from the speaker's point of view, a certaion situation does not provide enough support for the second situation to take place. The construction encodes concession via reduplication of a component and an adversative conjunction in the second part: e.g. <strong>VP-Inf(-то) ~VP, а/но Cl</strong>, as in <em>Спросить спрошу, но он может не знать.</em></p>
+</li>
+<li>
+<p><strong>Limitation</strong> – The construction indicates that the speaker accepts that a certain situation takes place, but draws the interlocutor's attention to a different independent situation that is less important and evaluated with the opposite polarity value (by contrast with the first situation). The second situation obstructs or causes difficulties for the first situation to take place: e.g. <strong>(Cl), вот только Cl</strong>, as in <em>Всё бы сделал, вот только времени не хватает.</em></p>
+</li>
+<li>
+<p><strong>Other</strong> – The constructions that do not belong to the subtypes described above: e.g. <strong>(Cl) разве что/только Cl</strong>, as in <em>Не буду пить, разве что пригублю.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-5-subclass-properties">1.5. Subclass Properties</h3>
+<p>This group of constructions includes three semantic types: Salient Property, Temporary Characteristics, and Comparison.</p>
+<ul>
+<li>
+<p><strong>Salient property</strong> – The construction refers to the core, prominent and usually constant characteristics of an object, participant or an action that determine their nature.</p>
+<ul>
+<li>
+<p><strong>Belonging to a class</strong> – The construction characterizes a participant or an object by assigning them to a class where they belong: e.g. <strong>NP из Adj-Gen</strong>, as in <em>Человек из любопытных.</em></p>
+</li>
+<li>
+<p><strong>Capacity for an activity</strong> – The construction characterizes a participant by referring to their capacity to perform a certain action: e.g. <strong>NP-Nom Cop слишком Adj, чтобы VP-Inf</strong>, as in <em>Он слишком слаб, чтобы лететь на самолете.</em></p>
+</li>
+<li>
+<p><strong>Characteristics through specification</strong> – The construction characterizes a participant or an object by providing a more accurate name for them: e.g. <strong>не Noun, а NP</strong>, as in <em>Не дом у них, а столярная мастерская.</em></p>
+</li>
+<li>
+<p><strong>Domain</strong> – The construction characterizes a participant or an object by referring to the area of activity or thematic domain: e.g. <strong>NP/VP по вопросам NP-Gen</strong>, as in <em>Специалист по вопросам экологии.</em></p>
+</li>
+<li>
+<p><strong>Essence</strong> – The construction characterizes a participant or an object by referring to their core nature, the most important qualities: e.g. <strong>Noun-Nom – это ~Noun-Nom</strong>, as in <em>Москва – это Москва.</em></p>
+</li>
+<li>
+<p><strong>Experience</strong> – The construction characterizes a participant or an object by referring to their personal experience or the experience of use (for an object): e.g. <strong>NP-Nom иметь дело с NP-Ins</strong>, as in <em>Он когда-то имел дело с трудными подростками.</em></p>
+</li>
+<li>
+<p><strong>Functionality</strong> – The construction characterizes an object by referring to the way it is used or will be used: e.g. <strong>NP от NP-Gen</strong>, as in <em>Ключ от двери.</em></p>
+</li>
+<li>
+<p><strong>Matching the standard</strong> – The construction characterizes a participant, an object or an action by evaluating whether they correspond to a certain standard, the norm: e.g. <strong>чем NP-Nom Cop не NP-Nom?</strong>, as in <em>Чем картошка не еда?</em></p>
+</li>
+<li>
+<p><strong>Naming</strong> – The construction refers to the name of an animate participant or an object (including lastname, patronymic, pseudonym, nickname, by-name, street name, etc.): e.g. <strong>NP-Acc звать-Inf NP-Ins/NP-Nom</strong>, as in <em>Мальчика звать Юрой.</em></p>
+</li>
+<li>
+<p><strong>Paragon</strong> – The construction characterizes a participant or an object by referring to the prototypical examplar, perfect example of a particular quality: e.g. <strong>(ну) Noun-Nom и ~Noun-Nom</strong>, as in <em>Мужик здоровый такой. Ну медведь и медведь.</em></p>
+</li>
+<li>
+<p><strong>Personal interests</strong> – The construction characterizes an object or an activity by referring to the area of personal interests, preferences or capacities of the participant. The object or an activity is characterized by being included in or excluded from this area: e.g. <strong>XP это Cop не PronPoss-Nom</strong>, as in <em>Математика это не моё.</em></p>
+</li>
+<li>
+<p><strong>Personality</strong> – The construction characterizes a participant by referring to their personality type, temper, or psychological qualities: e.g. <strong>NP-Nom Cop себе на уме</strong>, as in <em>Вася себе на уме, никогда не говорит всей правды.</em></p>
+</li>
+<li>
+<p><strong>Property assignment</strong> – The construction expresses a general characteristics of an object by assigning it a certain property or by pointing out its peculiar features: e.g. <strong>NP-Nom носить/иметь Adj-Acc характер-Acc</strong>, as in <em>Большинство звонков носило консультационный характер.</em></p>
+</li>
+<li>
+<p><strong>Repeatedly the same</strong> – The construction characterizes an action or a situation as preserving the same nature over time and as a matter of repetition: e.g. <strong>VP-Ipfv одно и то же</strong>, as in <em>Писал он всегда одно и то же.</em></p>
+</li>
+<li>
+<p><strong>Sensory property</strong> – The construction characterizes a participant or an object by specifying their sensory properties, the appearance, taste, smell, etc.: e.g. <strong>NP-Nom иметь вид NP-Gen</strong>, as in <em>Лучи изгибались, имея вид гиперболы.</em></p>
+</li>
+<li>
+<p><strong>Spatial characteristics</strong> – The construction characterizes an object by referring to its spatial localization: e.g. <strong>NP/VP с торца (NP-Gen)</strong>, as in <em>Вход с торца.</em></p>
+</li>
+<li>
+<p><strong>Status</strong> – The construction characterizes a participant by referring to their status. The constructions of this type refer to family relations, friendship, job positions, academic ranks, hierarchy at work (employer vs employee), reputation, etc. The constructions of this type share the semantic component 'assign a certain status, place or role in a hierarchy or community to a participant': e.g. <strong>NP-Nom приходиться NP-Dat NP-Ins</strong>, as in <em>Этот мальчик приходится мне сыном.</em></p>
+</li>
+<li>
+<p><strong>Temporal characteristics</strong> – The construction characterizes an object by referring to a period of time: e.g. <strong>NP за NP-Acc</strong>, as in <em>Журнал за ноябрь скоро выйдет из печати.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Temporary characteristics</strong> – The constructions with this tag refer to temporary, non-constant characteristics that do not define the core nature of the participant, but rather describe their external manifestations, such as behavior, emotional and physical state, circumstances, etc.</p>
+<ul>
+<li>
+<p><strong>Appropriateness</strong> – The construction refers to appropriateness of an action or an object: e.g. <strong>VP (не) по делу</strong>, as in <em>Он всё говорил по делу.</em></p>
+</li>
+<li>
+<p><strong>Availability</strong> – The construction refers to the presence and availability of an object or a participant: e.g. <strong>VP на поверхности</strong>, as in <em>Разгадка всё это время лежала на поверхности.</em></p>
+</li>
+<li>
+<p><strong>Behavior</strong> – The construction characterizes a participant by referring to their behavior: e.g. <strong>NP-Nom держать NP-Acc при себе</strong>, as in <em>Он держит мысли при себе.</em></p>
+</li>
+<li>
+<p><strong>Bodily position</strong> – The construction refers to the spatial configuration of the body of an object or a participant: e.g. <strong>VP вниз головой</strong>, as in <em>Девочка висит вниз головой.</em></p>
+</li>
+<li>
+<p><strong>Circumstances</strong> – The construction characterizes a participant by referring to the external circumstances, the situation faced by the participant: e.g. <strong>NP-Nom оказаться в NP-Loc</strong>, as in <em>Он оказался в трудной ситуации.</em></p>
+</li>
+<li>
+<p><strong>Context</strong> – The construction refers to the context of an action or a situation: e.g. <strong>Cl в свете NP-Gen</strong>, as in <em>В свете приближающихся выборов партии оживили свою работу.</em></p>
+</li>
+<li>
+<p><strong>Control</strong> – The construction expresses that a participant has the situation under control and feels comfortable: e.g. <strong>у NP-Gen всё Cop схвачено</strong>, as in <em>У нашего директора везде всё схвачено.</em></p>
+</li>
+<li>
+<p><strong>Emotional state</strong> – The construction characterizes a participant by referring to their emotional state: e.g. <strong>NP-Nom Cop вне себя</strong>, as in <em>Иди скорее! Начальник вне себя!</em></p>
+</li>
+<li>
+<p><strong>Importance</strong> – The construction refers to the importance and value of a participant or an object: e.g. <strong>NP-Nom Cop в цене</strong>, as in <em>Раньше дружба была в цене.</em></p>
+</li>
+<li>
+<p><strong>Matching the norm</strong> – The construction characterizes an object or a situation with regard to the norm: e.g. <strong>(у NP-Gen) NP-Nom Cop в порядке</strong>, as in <em>У тебя всё в порядке?</em></p>
+</li>
+<li>
+<p><strong>Physical state</strong> – The construction characterizes a participant by referring to their physical state: e.g. <strong>NP-Nom Cop без сознания</strong>, as in <em>Помогите, тут девушка без сознания!</em></p>
+</li>
+<li>
+<p><strong>Relevance</strong> – The construction refers to the relevance of the object for the modern time, present moment. The object is viewed as up to date: e.g. <strong>NP-Nom/VP-Inf Cop в моде/тренде</strong>, as in <em>В моде сейчас яркие цвета в одежде.</em></p>
+</li>
+<li>
+<p><strong>Transformation</strong> – The construction refers to the radical qualitative transformation of an object or a participant: e.g. <strong>VP NP-Acc из ничего</strong>, as in <em>Он смастерил шкатулку из ничего.</em></p>
+</li>
+<li>
+<p><strong>Witnesses</strong> – The construction indicates that an action or a situation takes place in the presence of witnesses: e.g. <strong>VP при NP-Loc</strong>, as in <em>Не ругайся при детях!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Comparison</strong> – Comparison is understood as &quot;evaluation of the degree of similarity or difference of two or more entities (Treis 2018: 1). We distinguish the following subtypes: Inequality, Equality, Similarity, Contrast and Imitation (cf. the term <em>simulation</em> in typological literature).</p>
+<ul>
+<li>
+<p><strong>Equality</strong> – The construction denotes that two entities are identical with regard to a certain property: e.g. <strong>такой же XP как и NP</strong>, as in <em>Сын такой же высокий, как и отец.</em></p>
+</li>
+<li>
+<p><strong>Inequality</strong> – The construction denotes that two entities are inequal with regard to a certain property, that is one entity is characterized with the larger or smaller degree of the property: e.g. <strong>по-Adj/Adv-Cmp</strong>, as in <em>К сыну надо относиться помягче.</em></p>
+</li>
+<li>
+<p><strong>Similarity</strong> – The construction denotes that two entities are similar with regard to a certain property: e.g. <strong>NP в стиле NP-Gen</strong>, as in <em>Истории в стиле Андерсена.</em></p>
+</li>
+<li>
+<p><strong>Imitation</strong> – The construction refers to a fake similarity of two entities: e.g. <strong>VP под видом NP-Gen</strong>, as in <em>Она приехала в город под видом туриста.</em></p>
+</li>
+<li>
+<p><strong>Contrast</strong> – The construction denotes a contrast between two entities with regard to a certain property: e.g. <strong>в отличие от NP-Gen VP</strong>, as in <em>В отличие от Пети, Миша всегда говорил правду.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-6-subclass-sets-and-elements">1.6. Subclass Sets and Elements</h3>
+<p>The constructions of this type contain information on the relationship between an element and a set. We distinguish between quantifiers and operators. The operators modify a proposition or a set and &quot;apply&quot; to simplex quantifiers to derive complex quantifiers.</p>
+<ul>
+<li>
+<p><strong>Additive</strong> – The construction denotes that some physical objects are added to a set (as opposed to Discourse additive denoting that some information is added to what has already been said): e.g. <strong>VP в придачу (к NP-Dat)</strong>, as in <em>В придачу к медали он получил премию.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Inclusive</strong> – The construction denotes that an element is included in a set: e.g. <strong>NP, в том числе (и) NP</strong>, as in <em>Живые существа, в том числе и растения, пьют воду.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Еxceptive</strong> – The construction denotes that an element is excluded from a set: e.g. <strong>за исключением NP-Gen, Cl</strong>, as in <em>Я прочитал все, за исключением последней главы.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Exclusive</strong> – The construction denotes that a physical entity, a participant or an action are viewed as the exceptional and the only of their kind, and can be encountered exclusively in a given situation. Because of its exclusivity, an element is distinguished from the set but is not excluded from the set: e.g. <strong>не кто/что иной, как NP</strong>, as in <em>Это был не кто иной, как директор школы.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Subset</strong> – The construction denotes a subset that belongs to a set. The construction often refers to the hyperonym vs. hyponym relationship (that is an umbrella term vs. a more specific word): e.g. <strong>NP из круга NP-Gen</strong>, as in <em>Знакомые из круга писателей.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Options</strong> – The construction denotes that several options exist on equal rights and can occur in the situation: e.g. <strong>хоть NP, хоть NP</strong>, as in <em>Покупай хоть мотоцикл, хоть машину.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Quantification</strong> – The constructions with this tag contain quantifiers of various kinds. We adopt the classification of quantifiers typologically verified and applied for the Russian data in Татевосов 2002 and Paperno 2012:</p>
+<ul>
+<li>
+<p><strong>Universal</strong> – The construction contains a universal quantifier, that is a quantifier with the semantics of totality (such as <em>все, всякий, любой, каждый, всегда, везде, весь</em>): e.g. <strong>(NP) все до единый-Gen Cl</strong>, as in <em>Они все до единого присутствовали на собрании.</em></p>
+</li>
+<li>
+<p><strong>Universal: Free Choice</strong> – The construction contains a universal quantifier with the semantics of unrestricted free choice, a subtype of universal quantifiers (such as <em>какой угодно, где угодно, любой, хоть</em>): e.g. <strong>PronInt угодно</strong>, as in <em>Вася попросил купить что угодно.</em></p>
+</li>
+<li>
+<p><strong>Existential</strong> – The construction contains a generalized existential quantifier, that is a quantifier that refers to the existence of a set of sets (such as <em>большинство, несколько, меньшинство, иногда, периодически</em>): e.g. <strong>(великое) множество NP-Gen.Pl</strong>, as in <em>Можно найти великое множество примеров этой конструкции.</em></p>
+</li>
+<li>
+<p><strong>Existential: Free Choice</strong> – The construction contains a generalized existential quantifier with the semantics of unrestricted free choice, a subtype of generalized existential quantifiers (such as <em>сколько влезет, сколько хочешь, сколько угодно</em>): e.g. <strong>VP-Ipfv.Imp/NP-Gen сколько хочешь</strong>, as in <em>Читай сколько хочешь.</em></p>
+</li>
+<li>
+<p><strong>Proportional</strong> – The construction contains a proportional quantifier, that is a quantifier that refers to a proportion (such as <em>во многом, по большей части, каждый пятый, в основном, нечасто, обычно, в целом, время от времени, редко, в большинстве своем,</em> etc.): e.g. <strong>NP/PP в большинстве своем VP</strong>, as in <em>Дети в большинстве своем были готовы к школе.</em></p>
+</li>
+<li>
+<p><strong>Existential: Value judgment quantifier</strong> – The construction contains a value judgment quantifier that expresses a subjective evaluation of the quantity (such as <em>много, мало, немного, сколько, столько</em>). This group of quantifiers is a subtype of generalized existential quantifiers: e.g. <strong>столько NP-Gen Cop/VP, что Cl</strong>, as in <em>На концерт пришло столько людей, что некуда было сесть.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="1-7-subclass-magnitude">1.7. Subclass Magnitude</h3>
+<p>This group of constructions includes three semantic types: Non-Existence, Measure, and Calculation.</p>
+<ul>
+<li>
+<p><strong>Non-Existence</strong> – Constructions with this tag signify that an important component of a situation is absent, unaffected or disappears.</p>
+<ul>
+<li>
+<p><strong>Absence</strong> – The construction signifies that a certain crucial for the speaker component of a situation (like time, space, object, partner, etc.) is absent (compare similar structures in English: there is nothing to live for; there is nowhere to go; there is nothing to eat; there is no one to talk to; etc.): e.g. <strong>(NP-Dat) VP-Inf Cop нечего</strong>, as in <em>Есть было нечего.</em></p>
+</li>
+<li>
+<p><strong>Disappear</strong> – The construction signifies that an object or a participant of the situation vanishes: e.g. <strong>NP-Gen как не бывало</strong>, as in <em>Простуды как не бывало.</em></p>
+</li>
+<li>
+<p><strong>Unaffected generally</strong> – The construction signifies that the object is not affected by the action at all: e.g. <strong>ничего не VP</strong>, as in <em>Вася ничего не ел.</em></p>
+</li>
+<li>
+<p><strong>Unaffected small portion</strong> – The construction signifies that not a single small portion of the object is affected by an action: e.g. <strong>ни крошки не VP</strong>, as in <em>Он так и не съел ни крошки.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Measure</strong> – Constructions of this type encode the quantity of discrete objects, amount of substance or values of quantified properties of objects such as size, length, volume, weight, etc. This type includes constructions with numerals or other, non-conventional, means of expressing amount or quantity.</p>
+<ul>
+<li>
+<p><strong>Age</strong> – The construction denotes age: e.g. <strong>NP под NumCrd-Acc (лет)</strong>, as in <em>Людмиле Петровне под пятьдесят.</em></p>
+</li>
+<li>
+<p><strong>Dimensions</strong> – The construction denotes measurement of a certain parameter of a single object. This parameter is linear (length, height, depth, radius, diameter). We do not separate these parameters since the same constructions are used to encode them: e.g. <strong>NP длиной/шириной/толщиной/высотой/глубиной (в) NumCrd-Acc NP-Gen</strong>, as in <em>Велодорожка длиной шесть километров.</em></p>
+</li>
+<li>
+<p><strong>Distance</strong> – The construction denotes measurement of the distance between two objects: e.g. <strong>Cl в NumCrd-Loc кварталах/домах (от NP-Gen)</strong>, as in <em>Этот магазин был в трёх кварталах от почты.</em></p>
+</li>
+<li>
+<p><strong>Money</strong> – The construction denotes prices and other amounts of money: e.g. <strong>VP на NumCrd-Acc рублей</strong>, as in <em>На сто рублей можно купить хлеб и колбасу.</em></p>
+</li>
+<li>
+<p><strong>Size</strong> – The construction denotes measurement of an object's size: e.g. <strong>NP (размером/величиной) с NP-Acc</strong>, as in <em>Собака была размером с лошадь.</em></p>
+</li>
+<li>
+<p><strong>Speed</strong> – The construction denotes measurement of the speed: e.g. <strong>Cl, а как чешет!</strong>, as in <em>Такой маленький, а как чешет!</em></p>
+</li>
+<li>
+<p><strong>Surface area</strong> – The construction denotes measurement of surface area: e.g. <strong>NP площадью (в) NumCrd-Acc NP</strong>, as in <em>Участок площадью сто гектаров.</em></p>
+</li>
+<li>
+<p><strong>Time</strong> – The construction denotes measurement of a certain time period: e.g. <strong>VP NumCrd-Nom NP-Gen</strong>, as in <em>Он писал письмо четыре часа.</em></p>
+</li>
+<li>
+<p><strong>Unrestricted domain</strong> – This subtype includes constructions that are not limited to a single measurement parameter: e.g. <strong>куча NP-Gen</strong>, as in <em>У меня всегда куча дел.</em></p>
+</li>
+<li>
+<p><strong>Volume</strong> – The construction denotes measurement of an object's volume. The construction is relevant for both the volume of a physical container or a metaphorical container of information, such as a book: e.g. <strong>NP объёмом (в) NumCrd-Acc NP</strong>, as in <em>Книга объёмом в сто страниц.</em></p>
+</li>
+<li>
+<p><strong>Weight</strong> – The construction denotes measurement of an object's weight: e.g. <strong>NP весом/массой (в) NumCrd-Acc NP</strong>, as in <em>Баржа весом в шесть тонн.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Calculation</strong> – Constructions encode various mathematical operations (addition, subtraction, division, multiplication, exponentiation, and radical expression) as well as equations and fractions.</p>
+<ul>
+<li>
+<p><strong>Addition</strong> – The construction encodes a mathematical operation of addition: e.g. <strong>NumCrd-Nom плюс/и NumCrd-Nom – (равно/VP) NumCrd-Nom/NumCrd-Dat</strong>, as in <em>Два плюс два равно четыре.</em></p>
+</li>
+<li>
+<p><strong>Division</strong> – The construction encodes a mathematical operation of division: e.g. <strong>NumCrd-Acc разделить/поделить/делить на NumCrd-Acc – (равно/VP) NumCrd-Nom</strong>, as in <em>Пятнадцать разделить на три равно пять.</em></p>
+</li>
+<li>
+<p><strong>Equation</strong> – The construction expresses mathematical equations and inequations: e.g. <strong>Cl (не) равно/равняется NumCrd-Dat/NumCrd-Nom</strong>, as in <em>Два плюс один не равно пяти.</em></p>
+</li>
+<li>
+<p><strong>Exponentiation</strong> – The construction encodes a mathematical operation of exponentiation: e.g. <strong>NumCrd-Nom в NumOrd-Loc (степени) – (равно/VP) NumCrd-Nom/NumCrd-Dat</strong>, as in <em>Десять в пятой степени – сто тысяч.</em></p>
+</li>
+<li>
+<p><strong>Extraction of a root</strong> – The construction encodes a mathematical operation of extraction of a root: e.g. <strong>(квадратный) корень из NumCrd-Gen – (это) NumCrd-Nom/равен NumCrd-Dat</strong>, as in <em>Десять в пятой степени – сто тысяч.</em></p>
+</li>
+<li>
+<p><strong>Fraction</strong> – The construction names mathematical fractions, including both simple and decimal fractions: e.g. <strong>одна NumOrd-Sg.F (часть/доля) (NP-Gen)</strong>, as in <em>Добавить одну пятую ложки сахара.</em></p>
+</li>
+<li>
+<p><strong>Multiplication</strong> – The construction encodes a mathematical operation of multiplication: e.g. <strong>NumCrd-Acc (умножить/помножить) на NumCrd-Acc – (равно/VP) NumCrd-Nom</strong>, as in <em>Семь на восемь – пятьдесят шесть.</em></p>
+</li>
+<li>
+<p><strong>Subtraction</strong> – The construction encodes a mathematical operation of subtraction: e.g. <strong>NumCrd-Nom минус NumCrd-Nom – (равно/VP) NumCrd-Nom/NumCrd-Dat</strong>, as in <em>Пять минус три будет два.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="2-semantic-class-modality-and-its-neighborhood">2. Semantic class MODALITY AND ITS NEIGHBORHOOD</h2>
+<p>On the one hand, we adopt the traditional widely accepted approach and take a narrow understanding of modality that refers to Root and Epistemic modality. On the other hand, we consider categories closely related to modality as its &quot;neighborhood&quot;, and suggest that it includes Volition, Causation, Prohibition, Threat, Request, Apprehension, and Curse.</p>
+<h3 id="2-1-subclass-core-modal-meanings">2.1. Subclass Core Modal Meanings</h3>
+<ul>
+<li>
+<p><strong>Root modality</strong> – We adopt the traditional widely accepted approach and take a narrow understanding of modality. According to this approach, this category includes necessity and possibility (cf. van der Auwera &amp; Plungian 1998; Nuyts 2016). For deontic participant-external possibility we use a separate tag Permission.</p>
+<ul>
+<li>
+<p><strong>Necessity: Internal</strong> – The construction refers to a participant-internal necessity determined by the needs or qualities (e.g. character, personality) of the partcipant: e.g. <strong>(NP-Dat) Cop нужный-Short/необходимый-Short NP-Nom</strong>, as in <em>Мне нужна ваша поддержка.</em></p>
+</li>
+<li>
+<p><strong>Necessity: External</strong> – The construction refers to a participant-external necessity determined by the circumstances external to the participant and imposing a certain behavior: e.g. <strong>(NP-Dat) пришлось/придётся VP-Inf</strong>, as in <em>Пришлось выпить лекарство.</em></p>
+</li>
+<li>
+<p><strong>Possibility</strong> – The construction refers to a dynamic possibility that includes both participant-internal possibility, or ability (determined by the properties and capacities of the participant), and participant-external possibility (determined by the absence of obstacles for a situation): e.g. <strong>(NP-Dat) Cop можно VP-Inf</strong>, as in <em>До Москвы из Лондона можно долететь за четыре часа.</em></p>
+</li>
+<li>
+<p><strong>Permission</strong> – The construction refers to a deontic external possibility, i.e. permission to perform an action or the speaker's request for such permission: e.g. <strong>не страшно/ничего, если Cl?</strong>, as in <em>Не страшно, если я закурю?</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Epistemic modality</strong> – We follow Nuyts (2016: 38) in understanding epistemic modality as an estimation of &quot;the likelihood that the state of affairs expressed in the clause applies in the world&quot;. Therefore, epistemic modality indicates the degree of confidence in a proposition, typically on the side of the speaker (cf. Boye 2016: 117).</p>
+<ul>
+<li>
+<p><strong>High degree of certainty</strong> – The construction refers to a high degree of confidence in the proposition: the situation is assessed as probable or highly probable: e.g. <strong>зуб даю, что Cl</strong>, as in <em>Зуб даю, что никто в комнату не заходил.</em></p>
+</li>
+<li>
+<p><strong>Low degree of certainty</strong> – The construction refers to a low degree of confidence in the proposition: the situation is assessed as highly improbable: e.g. <strong>вроде (как) XP/Cl</strong>, as in <em>Он вроде как идёт.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="2-2-subclass-neighborhood-of-core-modal-meanings">2.2. Subclass Neighborhood of Core Modal Meanings</h3>
+<ul>
+<li>
+<p><strong>Volition</strong> – The construction denotes a desire or a wish. This type of constructions includes both expressions of the desires of the speaker (optative) and expressions of the desires of any participant of the situation (desiderative): e.g. <strong>вот бы (NP-Dat) (никогда не/всегда) VP-Inf!</strong>, as in <em>Вот бы никогда не работать!</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Causation</strong> – We use the tag Causation in a broad sense as 'encouragement to perform an action'. This does not necessarily entail the involvement of an additional participant (as would be expected from the grammatical term <em>causative</em>).</p>
+<ul>
+<li>
+<p><strong>Direct</strong> – The construction expresses clear direct causation to perform an action (primarily imperative forms): e.g. <strong>давай(те) VP-Fut.1.Pl!</strong>, as in <em>Давайте пойдем в кино!</em></p>
+</li>
+<li>
+<p><strong>Indirect</strong> – The construction expresses implicit or covert causation to perform an action (for example, in the form of a question): e.g. <strong>как насчёт XP?</strong>, as in <em>Как насчёт выпить?</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Prohibition</strong> – This tag refers to different ways of expressing prohibition: standard (Prohibitive) and attenuated (Attenuated prohibitive). Following (Рахилина 2013), we also include in this category continuative prohibitives as a separate subtype. </p>
+<ul>
+<li>
+<p><strong>Attenuated prohibitive</strong> – The construction expresses prohibition to perform an action in the future. The prohibition is expressed in a mild, attenuated form and is pronounced in a less categorical tone compared to the standard prohibitive: e.g. <strong>(NP-Dat) не стоит VP-Ipfv.Inf</strong>, as in <em>Не стоит разговаривать с ним.</em></p>
+</li>
+<li>
+<p><strong>Continuative prohibitive</strong> – The construction expresses encouragement to stop an action: e.g. <strong>хорош VP-Ipfv.Inf!</strong>, as in <em>Эй, наверху! Хорош прыгать!</em></p>
+</li>
+<li>
+<p><strong>Prohibitive</strong> – The construction expresses strict prohibition to perform an action in the future: e.g. <strong>ни слова NP-Dat о NP-Loc!</strong>, as in <em>Ни слова маме о нашей поездке!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Threat</strong> – The construction conveys a threat. The speaker condemns an action that is performed or can potentially be performed by the interlocutor or another participant of the situation. It is implied that the speaker can punish them if they do not obey: e.g. <strong>я PronPers-Dat VP-Fut!</strong>, as in <em>Я тебе поору!</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Request</strong> – The construction conveys the speaker's request to perform an action: e.g. <strong>нельзя ли Cop VP-Inf?</strong>, as in <em>Нельзя ли сделать музыку потише?</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Apprehension</strong> – The construction expresses apprehension or warning regarding an &quot;undesirable situation that the speaker deems possible and wants to avoid&quot; (Baydina 2016). The speaker is afraid of that this situation can take place (Apprehensive sub-type) and urges the conversation partner to perform an action that would help to avoid this situation (Preventive sub-type) (cf. Добрушина 2006).</p>
+<ul>
+<li>
+<p><strong>Apprehensive</strong> – The construction expresses apprehension on behalf of the speaker regarding an undesirable action or event that can take place: e.g. <strong>((Я) боюсь,) как бы не VP-Pfv.Pst</strong>, as in <em>Как бы Миша не опоздал!</em></p>
+</li>
+<li>
+<p><strong>Preventive</strong> – The construction expresses warning and serves as an attempt of the speaker to prevent an undesirable action or event to take place: e.g. <strong>смотреть-Imp, (не) VP-Imp</strong>, as in <em>Смотрите, не опоздайте!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Curse</strong> – See semantic class DISCOURSE, subclass Discourse clauses, semantic type Routine.</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-semantic-class-subjectivity">3. Semantic class SUBJECTIVITY</h2>
+<p>A large class of constructions incoding assessment, attitude, polarity value, mirativity, and source of opinion.</p>
+<ul>
+<li>
+<p><strong>Assessment</strong> – Assessment constructions &quot;express evaluation of an item external to the speaker&quot; (Endresen and Janda 2020). This item can be a physical object, or an animate participant in a situation, or a situation itself.</p>
+<ul>
+<li>
+<p><strong>Assessment in relation to knowledge</strong> – The construction evaluates an object, a participant, time, or space depending on whether they are known or unknown to the speaker: e.g. <strong>бог весть PronInt</strong>, as in <em>Они принесли в пакете бог весть что.</em></p>
+</li>
+<li>
+<p><strong>Assessment in relation to norms and expectations</strong> – The construction encodes assessment in terms of what is normal, standard, and/or expected. Тhe speaker compares the evaluated item to their idealized model of the world that functions as a standard. The idea of what is normal suggests to the speaker what to expect (Endresen and Janda 2020): e.g. <strong>VP как следует</strong>, as in <em>Он работал как следует.</em></p>
+</li>
+<li>
+<p><strong>Assessment in relation to quantification</strong> – The construction encodes assessment by referring to a certain degree, or quantity, of a property. The relevant degrees form a scale and include: none, little, some/enough, a lot, and beyond the limit: e.g. <strong>VP/Adj сверх меры</strong>, as in <em>Он одарён сверх меры.</em></p>
+</li>
+<li>
+<p><strong>Assessment specific to people</strong> – The construction encodes assessment of characteristics specific to people, such as intellectual capacities, behavior, power, appearance, emotional state, etc.: e.g. <strong>у NP-Gen NP-Nom хромать</strong>, as in <em>У брата сильно хромает география.</em></p>
+</li>
+<li>
+<p><strong>General Assessment</strong> – The construction expresses an overall, undifferentiated evaluation of an object by approaching it as a whole, holistically. General Assessment is usually expressed by the adjectives &quot;good&quot; or &quot;bad&quot; and their synonyms that vary in terms of expressivity and stylistics (Endresen and Janda 2020): e.g. <strong>NP-Nom Cop хороший-Short/плохой-Short NP-Ins</strong>, as in <em>Эти места хороши своими лесами.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Attitude</strong> – Attitude constructions refer to the evaluation of the speaker’s internal state of mind or internal emotional approach taken towards a situation. The constructions еxpress how the speaker feels about something, what standpoint he or she takes, what the speaker’s personal perspective on a subject or a situation is (Endresen and Janda 2020).</p>
+<ul>
+<li>
+<p><strong>Acceptance</strong> – The construction denotes that the speaker more or less accepts the situation. The constructions convey the semantics of support and lack of support of an idea or a situation, willingness or unwillingness to perform an action, concern or unconcern, reconciliation, remorse, etc. Each of these meanings suggests additional semantic nuances to the general meaning of acceptance: e.g. <strong>XP так ~XP</strong>, as in <em>Суп так суп.</em></p>
+</li>
+<li>
+<p><strong>Capacity and Preferences</strong> – The construction denotes attitude motivated by the capacities or preferences of the speaker. Being capable to deal with something triggers the attitude of feeling comfortable or uncomfortable with a certain activity: e.g. <strong>NP-Nom Cop с NP-Ins на &quot;вы&quot;</strong>, as in <em>Я с техникой на &quot;вы&quot;.</em></p>
+</li>
+<li>
+<p><strong>Dissatisfaction</strong> – The construction denotes that the speaker is dissatisfied with another participant, their actions or the entire situation. The attitudes of this type form a scale from mild Discontent to strong Disapproval to Swearing to Curse: e.g. <strong>(NP-Dat) только NP-Gen (ещё) не хватало!</strong>, as in <em>Только дождя не хватало!</em></p>
+</li>
+<li>
+<p><strong>Emotional Attitude</strong> – The construction denotes the emotional attitude of the speaker towards a situation. The constructions can name specific emotional attitudes, refer to strong uncontrolled emotions or emphasize the depth or scope of the feeling: e.g. <strong>NP-Dat Noun-Nom Cop не (в) ~Noun (без NP-Gen)</strong>, as in <em>Девочкам радость не в радость.</em></p>
+</li>
+<li>
+<p><strong>Mental Attitude</strong> – The construction denotes attitude motivated by the speaker’s knowledge or expectations. The constructions encode skepticism, confidence, perplexity, or mirativity: e.g. <strong>рассказывай/рассказывайте, Cl</strong>, as in <em>Рассказывай, не было денег!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Polarity value</strong> – This tag is applicable to Assessement and Attitude constructions and specifies whether they carry positive or negative evaluation.</p>
+<ul>
+<li>
+<p><strong>Positive</strong> – The construction denotes positive evaluation (assessment or attitude): e.g. <strong>NP-Nom Cop ничего (такой-Nom)</strong>, as in <em>Профессор он был ничего.</em></p>
+</li>
+<li>
+<p><strong>Negative</strong> – The construction denotes negative evaluation (assessment or attitude): e.g. <strong>с PronPers-Gen хватит/хватило (NP-Gen)/с PronPers-Gen Cop довольно (NP-Gen)!</strong>, as in <em>С меня хватит!</em></p>
+</li>
+<li>
+<p><strong>Both Negative and Positive</strong> – The construction can carry either positive or negative evaluation (assessment or attitude) depending on the fillers, possibility of negation, or a broader context: e.g. <strong>на редкость Adj/Adv</strong>, as in <em>На редкость просто.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Source of opinion</strong> – Constructions of this type refer to the author of an opinion.</p>
+<ul>
+<li>
+<p><strong>Asking for opinion</strong> – The construction formulates a question to a participant about their opinion regarding a certain topic: e.g. <strong>PronPers-Nom не находить, что Cl?</strong>, as in <em>Вы не находите, что это немного странно?</em></p>
+</li>
+<li>
+<p><strong>Expressing opinion</strong> – The construction expresses the opinion of the participant regarding a certain topic: e.g. <strong>по мнению NP-Gen, Cl</strong>, as in <em>По мнению властей, необходимо принять меры и остановить загрязнение реки.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Mirative</strong> – The construction expresses that the speaker is surprised with the new unexpected information (DeLancey 1997; Aikhenvald 2012): e.g. <strong>NP-Nom возьми и VP-Imp</strong>, as in <em>А он возьми и купи новую машину!</em> No subtypes.</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-semantic-class-discourse">4. Semantic class DISCOURSE</h2>
+<p>Discourse is written and spoken communication between the speaker and the conversation partner. We use the term Discourse to refer to a distinct large class of constructions that function at the discourse level. These constructions structure the text, organize the communication and often refer to a broader context than a single sentence.</p>
+<h3 id="4-1-subclass-discourse-organization">4.1. Subclass Discourse Organization</h3>
+<p>This group includes the constructions that organize the communication process, usually by adding an optional commentary information in the form of parentheticals inserted or added to the main content of the clause. Here we distinguish between two types of constructions: Discourse structure constructions and Source of information constructions.</p>
+<ul>
+<li>
+<p><strong>Discourse structure</strong> – The constructions are used to organize discourse, that is to itemize an argument or a narrative, introduce new information, summarize one's message, switch to a new topic, provide an illustrative example or explain a concept.</p>
+<ul>
+<li>
+<p><strong>Clarification</strong> – The construction clarifies a certain statement by rephrasing the message in different words: e.g. <strong>иначе говоря, XP</strong>, as in <em>Смешное потому и смешно, что оно правдиво. Иначе говоря, не всё правдивое смешно, но всё смешное правдиво.</em></p>
+</li>
+<li>
+<p><strong>Discourse additive</strong> – The construction adds more information to what has already been said: e.g. <strong>ко всему прочему, Cl</strong>, as in <em>Ко всему прочему, он курит и пьёт.</em></p>
+</li>
+<li>
+<p><strong>Emphasis</strong> – The construction emphasizes a certain element of the utterance: e.g. <strong>(и) без того XP</strong>, as in <em>Капитан и без того знал, что нужно делать.</em></p>
+</li>
+<li>
+<p><strong>Exеmplification</strong> – The construction clarifies a certain statement by providing an example: e.g. <strong>к примеру, Cl/XP</strong>, as in <em>Вот, к примеру, мне нравится Мерилин Монро.</em></p>
+</li>
+<li>
+<p><strong>Sequence</strong> – The construction shows that one part of the text follows another one: e.g. <strong>в-NumOrd-ых, Cl</strong>, as in <em>Во-первых, я бы хотел поблагодарить своего тренера.</em></p>
+</li>
+<li>
+<p><strong>Summary</strong> – The construction infers that some information is a conclusion from the previous statements. Alternatively, the construction makes a generalization over previous statements and provides a summary: e.g. <strong>таким образом, Cl</strong>, as in <em>Таким образом, наша команда за год добилась важных результатов.</em></p>
+</li>
+<li>
+<p><strong>Topic</strong> – The construction introduces a topic for discussion: e.g. <strong>что касается NP-Gen, то Cl</strong>, as in <em>Что касается спорта, то я никогда не любил бегать.</em></p>
+</li>
+<li>
+<p><strong>Topic change</strong> – The construction ends the discussion of one topic and switches attention to another topic of conversation: e.g. <strong>Это всё Cop Pred, но Cl</strong>, as in <em>Это всё хорошо, но самое главное – безопасность.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Intersubjectivity</strong> – The construction refers to a common standard, often idiomatic, way of naming something and thus appeals to a large community of speakers. Compare English <em>as they say</em> (see also Nuyts 2005: 14): e.g. <strong>так сказать, XP</strong>, as in <em>Это один из тех фильмов, которые, так сказать, на века.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Objectivity</strong> – The speaker presents some information as well-known to many people accurate facts and objectivizes the content of the message by referring to the status of the information. Compare English <em>in fact</em>: e.g. <strong>как известно, Cl</strong>, as in <em>Как известно, он мастер стихи сочинять.</em> No subtypes.</p>
+</li>
+<li>
+<p><strong>Source of information</strong> – The construction indicates the source of the provided information: e.g. <strong>по словам NP-Gen, Cl</strong>, as in <em>По словам учителя, провести урок дистанционно не так просто.</em> No subtypes.</p>
+</li>
+</ul>
+<hr />
+<h3 id="4-2-subclass-discourse-clauses">4.2. Subclass Discourse Clauses</h3>
+<p>This group includes the constructions that have a prominent communicative function and constitute an entire clause. Here we distinguish between two types: the constructions that express Reaction to the previous discourse and Routines.</p>
+<ul>
+<li>
+<p><strong>Reaction to the previous discourse</strong> – Previous context is crucial for understanding constructions of this type. These constructions show how the speaker reacts to the statement of the interlocutor or the speaker's own statements.  Such constructions also occur when presenting the inner monologue of the speaker that is constructed as a conversation in which the speaker is talking to him- or herself. We distingush the constructions that semantically equal 'Yes' or &quot;No&quot; (the subtypes Agreement and Disagreement accordingly) and the constructions that express the surprise, evidence or warning. </p>
+<ul>
+<li>
+<p><strong>Agreement</strong> – The construction indicates the speaker's agreement with the preceding statement: e.g. <strong>как Cop не VP-Inf!</strong>, as in <em>Как не знать!</em></p>
+</li>
+<li>
+<p><strong>Disagreement</strong> – The construction indicates the speaker's disagreement with the preceding statement: e.g. <strong>(а) кто (это) сказал, что Cl</strong>, as in <em>А кто сказал, что мы не хотим в кино?</em></p>
+</li>
+<li>
+<p><strong>Doubt</strong> – The construction expresses the speaker's doubts about the interlocutor's earlier statement: e.g. <strong>PronPers Verb-Fut.2.Sg!</strong>, as in <em>– Ты должен его уговорить. – Его уговоришь!</em></p>
+</li>
+<li>
+<p><strong>Insight</strong> – The construction indicates that he speaker suddenly realizes the covert meaning of the interlocutor's earlier words or actions: e.g. <strong>вот NP-Nom к чему (клонить)</strong>, as in <em>Вот ты к чему клонишь...</em></p>
+</li>
+<li>
+<p><strong>Irrelevance</strong> – The construction indicates that an element of a situation is irrelevant to the speaker: e.g. <strong>что/чего тут Cop VP-Inf?!</strong>, as in <em>Что тут думать? Надо срочно покупать эту сумку!</em></p>
+</li>
+<li>
+<p><strong>Self-evidence</strong> – The construction expresses the idea that some information is, from the speaker's point of view, indisputable or even self-evident based on the speaker's general knowledge or their awareness about this specific situation: e.g. <strong>ещё бы PronPers-Dat не Verb-Inf, Cl!</strong>, as in <em>Ещё бы им не любить работу, когда они выросли в деревне!</em></p>
+</li>
+<li>
+<p><strong>Surprise</strong> – The construction indicates that the speaker is surprised by the received message: e.g. <strong>как это XP/Cl?</strong>, as in <em>Как это он не приедет?</em></p>
+</li>
+<li>
+<p><strong>Warning</strong> – The construction expresses a speaker's warning addressed to the interlocutor: e.g. <strong>и (только) не говори потом, что Cl</strong>, as in <em>И не говори потом, что я тебя не предупреждала!</em></p>
+</li>
+<li>
+<p><strong>Accentuation</strong> – The construction stresses an element of the interlocutor's earlier statement: e.g. <strong>в то́м-то и NP-Nom, (что) Cl</strong>, as in <em>В том-то и дело, что не знаем.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Routine</strong> – Fixed formulaic phrases used in typical communicative contexts (greetings, partings, apologies, etc.). </p>
+<ul>
+<li>
+<p><strong>Apology</strong> – The construction expresses apologies: e.g. <strong>Прошу прошения за NP-Acc/за то, что Cl</strong>, as in <em>Прошу прощения за опоздание.</em></p>
+</li>
+<li>
+<p><strong>Conversation support</strong> – The construction is used to keep the conversation going and encode the speaker's feedback: e.g. <strong>Вот-вот, Cl</strong>, as in <em>Вот-вот, мне тоже фильм понравился!</em></p>
+</li>
+<li>
+<p><strong>Curse</strong> – The construction expresses negative wishes and imposes destruction or damage on the interlocutor or another participant of the situation: e.g. <strong>чтоб NP-Dat пусто было</strong>, as in <em>И вообще, убирайтесь со своими советами. Чтоб вам всем пусто было!</em></p>
+</li>
+<li>
+<p><strong>Greeting</strong> – The construction expresses greeting: e.g. <strong>NP-Nom приветствовать NP-Acc</strong>, as in <em>Приветствуем вас на нашей конференции!</em></p>
+</li>
+<li>
+<p><strong>Kind wishes</strong> – The construction expresses kind wishes, condolences, and congratulations: e.g. <strong>(NP-Nom поздравлять) c NP-Ins (NP-Acc)</strong>, as in <em>С Новым годом!</em></p>
+</li>
+<li>
+<p><strong>Oath</strong> – The construction expresses an oath or promise: e.g. <strong>NP-Nom дать слово, что Cl</strong>, as in <em>Даю слово, что ты меня больше никогда не увидишь.</em></p>
+</li>
+<li>
+<p><strong>Parting</strong> – The construction is used in the situation of parting: e.g. <strong>до NP-Gen!</strong>, as in <em>До свидания!</em></p>
+</li>
+<li>
+<p><strong>Politeness marker</strong> – The construction serves to mark politeness on behalf of the speaker: e.g. <strong>Уж простить-Imp/извинить-Imp, но Cl</strong>, as in <em>Уж простите, но всё будет по договору.</em></p>
+</li>
+<li>
+<p><strong>Praise</strong> – The construction expresses praise: e.g. <strong>Слава NP-Dat, (что) Cl</strong>, as in <em>Слава богу, вижу прекрасно и всё слышу.</em></p>
+</li>
+<li>
+<p><strong>Swearing</strong> – Highly expressive constructions that contain taboo vocabulary and usually convey negative emotions of the speaker about the situation: e.g. <strong>ни черта́ не VP</strong>, as in <em>Я ни черта не вижу.</em></p>
+</li>
+<li>
+<p><strong>Thanks</strong> – The construction expresses gratitude: e.g. <strong>Спасибо NP-Dat (за NP-Acc/за то, что Cl)!</strong>, as in <em>Спасибо тебе за помощь!</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="5-semantic-class-parameters">5. Semantic class PARAMETERS</h2>
+<p>Parameters are understood here as the meanings of intensity and accuracy that can apply and &quot;build over&quot; some other meanings (for example, temporal, spatial, or quantitative semantics, etc.). Parameters imply a certain scale (intensity scale or accuracy scale) that serves as a point of reference for a property or a situation characterized by a construction.</p>
+<ul>
+<li>
+<p><strong>Degree of intensity</strong> – Degree of intensity construction is &quot;any device that scales a quality, whether up or down or somewhere between the two&quot;. Degree of intensity is an indication of &quot;a point on an abstractly conceived intensity scale; and the point indicated may be relatively low or relatively high&quot; (Quirk et al. 1985: 589). Distinctions between the subtypes of intensifiers proposed in Quirk et al. 1985 are applied to the Russian constructions in Zhukova 2020.</p>
+<ul>
+<li>
+<p><strong>Maximizer</strong> – The construction denotes the top extreme of an intensity scale and indicates that the quality cannot be increased further or that the action has reached its limit. Corresponds to English <em>absolutely, totally</em>: e.g. <strong>как нельзя Adv-Cmp VP</strong>, as in <em>Порошок как нельзя лучше отстирал жирные пятна.</em></p>
+</li>
+<li>
+<p><strong>Booster</strong> – The construction denotes a high degree of intensity. Refers to qualities that can potentially increase infinitely. Corresponds to English <em>very, much</em>: e.g. <strong>VP не в пример Adj-Cmp/Adv-Cmp</strong>, as in <em>Он выглядел не в пример приятнее.</em></p>
+</li>
+<li>
+<p><strong>Approximator</strong> – The construction expresses “an approximation to the force of the verb, while indicating that the verb concerned expresses more than is relevant” (Quirk et al. 1985: 597). Corresponds to English <em>almost, enough</em>: e.g. <strong>почти/практически XP</strong>, as in <em>Мы почти приехали: осталось всего две остановки.</em></p>
+</li>
+<li>
+<p><strong>Diminisher</strong> – The construction emphasizes that a quality or an action is present or performed to a small extent or not fully (corresponds to English <em>merely, partly, mildly</em>). Diminishers refer to a larger degree of intensity than Minimizers. Diminishers mostly modify qualities expressed by adjectives and adverbs: e.g. <strong>не такой уж и Adj</strong>, as in <em>Не такой уж и страшный.</em></p>
+</li>
+<li>
+<p><strong>Minimizer: Low</strong> – The construction denotes a very small degree of intensity or a quantity that is very small (almost zero level). The construction does not deny that an action took place but rather downgrades it. Minimizers of low degree mostly modify verbs or VPs: e.g. <strong>с трудом VP</strong>, as in <em>Я с трудом верил его рассказу.</em></p>
+</li>
+<li>
+<p><strong>Minimizer: Absence</strong> – The construction emphasizes that a quality or an action is totally absent or not available to any extent (zero level): e.g. <strong>ни на грамм не VP</strong>, as in <em>Она этому тону ни на грамм не верит.</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Degree of accuracy</strong> – The degree to which the result of a measurement corresponds to the correct value or a standard.</p>
+<ul>
+<li>
+<p><strong>Approximate</strong> – The construction shows that the number of objects is approximate. It also includes cases where the situation does not entirely correspond to its definition: e.g. <strong>NP-Gen.Pl NumCrd</strong>, as in <em>На лекцию пришли человек двадцать.</em></p>
+</li>
+<li>
+<p><strong>Exact</strong> – The construction refers to an exact number of objects, exact time or perfectly suitable size: e.g. <strong>(в) аккурат VP</strong>, as in <em>Жди меня, и я вернусь в аккурат к обеду.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="list-of-references">List of references</h2>
+<p><strong>Works written in English</strong></p>
+<p>Aijmer, Karin. 2004. The semantic path from modality to aspect: <em>Be able to</em> in a cross-linguistic perspective. In: Hans Lindquist and Christian Mair (eds.) Corpus approaches to grammaticalization in English. Amsterdam / Philadelphia: John Benjamins. 57-78.</p>
+<p>Aikhenvald, Alexandra. 2012. The essence of mirativity. In: Linguistic Typology, Vol. 16. 435–485. </p>
+<p>Baydina, Ekaterina. 2016. The Russian apprehensive construction: Syntactic status reassessed, negation vindicated. Leiden: Leiden University MA Thesis.</p>
+<p>Boye, Kasper.  2016. The expression of epistemic modality. In: Jan Nuyts and Johan van der Auwera (eds.). The Oxford Handbook of Modality and Mood. 117-140. Oxford: Oxford University Press.</p>
+<p>Comrie, Bernard. 1976. Aspect: An introduction to the study of verbal aspect and related problems. Cambridge: Cambridge University Press.</p>
+<p>DeLancey, S. 1997. Mirativity: The grammatical marking of unexpected information. In: Linguistic Typology, Vol. 1. 33–52.</p>
+<p>Endresen, Anna, Laura A. Janda. 2020. Taking Construction Grammar One Step Further: Families, Clusters, and Networks of Evaluative Constructions in Russian. In: Mike Putnam, Matthew Carlson, Antonio Fábregas, Eva Wittenberg (eds.) Defining construction: Insights into the emergence and generation of linguistic representations (special issue of Frontiers in Psychology 11). pp. 1-22.</p>
+<p>Mitrofanova, Natalia. 2016. Paths and Places: Aspects of Grammar and Acquisition. Doctoral dissertation. UiT: The Arctic University of Norway.</p>
+<p>Newman, Paul. 1980. Nominal and Verbal Plurality in Chadic. Berlin: Walter de Gruyter.</p>
+<p>Nuyts, Jan. 2005. Modality: Overview and linguistic issues. In: William Frawley (ed.) The Expression of Modality, 1-26. (The Expression of Cognitive Categories 1.) Berlin / New York: Mouton de Gruyter.</p>
+<p>Nuyts, Jan. 2016. Analyses of modal meanings. In: Jan Nuyts and Johan van der Auwera (eds.). The Oxford Handbook of Modality and Mood. 31-49. Oxford: Oxford University Press.</p>
+<p>Paperno, Denis. 2012. Quantification in Standard Russian. In: Edward L. Keenan, Denis Paperno. 2012. Handbook of quantifiers in natural language. (Studies in Linguistics and Philosophy 90), Vol. 1, 729-80. Dordrecht: Springer.</p>
+<p>Plungian, V.A. 1999. A typology of phasal meanings, Abraham, W., Kulikov, L. (eds.) Tense-aspect, transitivity, and causativity: Essays in honor of Vladimir Nedjalkov, John Benjamins, Amsterdam.</p>
+<p>Quirk, Randolph, Sidney Greenbaum, Geoffrey Leech, and Jan Svartvik. 1985. A Comprehensive Grammar of the English Language. London: Longman.</p>
+<p>Treis, Yvonne 2018. Comparative Constructions: An Introduction. In: Linguistic Discovery 16 (1). i–xxvi.</p>
+<p>van der Auwera, Johan and Plungian, Vladimir. 1998. Modality's Semantic Map. In: Linguistic Typology 2. 79-124.</p>
+<p>Zhukova, Valentina. 2020. Intensifying constructions in Russian based on data from Russian Constructicon. Moscow: National Research University Higher School of Economics, MA Thesis.</p>
+<p><strong>Works written in Russian / Русскоязычные работы</strong></p>
+<p>Апресян В. Ю. 1999. Уступительность в языке и слова со значением уступки. In: Вопросы языкознания. 1999. № 5. 24-44.</p>
+<p>Апресян Ю. Д. 1974/1995. Лексическая семантика. Москва. Издательство «Языки русской культуры».</p>
+<p>Добрушина Н. Р. 2006. Грамматические формы и конструкции со значением опасения и предостережения. In: Вопросы языкознания. 2006. № 2. 28-67.</p>
+<p>Зализняк А. А., Шмелев А.Д. 2000. Введение в русскую аспектологию. Москва.
+Издательство «Языки русской культуры».</p>
+<p>Ладыгина А. С., Рахилина, Е. В. 2016. Русские конструкции со значением чередования ситуаций. In: Язык: поиски, факты, гипотезы. Сборник статей к 100-летию со дня рождения академика Н.Ю. Шведовой. Москва. 320-336. </p>
+<p>Мордашова Д. Д. (в процессе работы) Значение реализованной возможности как зона пересечения модальности и аспекта. Кандидатская диссертация. Московский государственный университет им. М.В. Ломоносова. Москва.</p>
+<p>Плунгян, В. А. 2001. Антирезультатив: до и после результата. In: В. А. Плунгян (ред.). Исследования по теории грамматики. Вып. 1. Грамматические категории. Москва. Издательство «Русские словари», 50-88.</p>
+<p>Плунгян В. А. 2003. Общая морфология: введение в проблематику. 2-е изд. Москва. Издательство «Едиториал УРСС».</p>
+<p>Плунгян, В. А. 2011. Введение в грамматическую семантику: Грамматические значения и грамматические системы языков мира. Москва. Издательство Российского государственного гуманитарного университета.</p>
+<p>Рахилина, Е. В. 2013. Кондуктор, нажми на тормоза... In:  Компьютерная лингвистика и интеллектуальные технологии: По материалам ежегодной Международной конференции «Диалог». Т. 1: Основная программа конференции. Вып. 12 (19). Москва. Издательство Российского государственного гуманитарного университета. 665-673. </p>
+<p>Татевосов, С. Г. 2002. Семантика составляющих именной группы: кванторные слова. Москва. ИМЛИ РАН.</p>
+<p>Храковский, В. С. 2003. Категория таксиса (Общая характеристика). In: Вопросы языкознания, 2003, № 2. 33-54.</p>
+<p>Храковский В. С. 2009. Таксис: Семантика, синтаксис, типология. In:  Храковский В. С. (отв. ред.) Типология таксисных конструкций. Москва. Издательство «Знак». 11-113.</p>
+<p>Шлуинский, А. Б. 2005. Типология предикатной множественности: количественные аспектуальные значения. Кандидатская диссертация. Московский государственный университет им. М.В. Ломоносова. Москва.</p>
+
+  
+
+  
+
+      </div>
+
+      <div class="more-buffer">
+		
+          <hr>
+
+          <a href="https://diku.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;5a56b1753b10711c00.jpg"
+                   class="figure-img img-fluid rounded" alt="Diku logo">
+            </figure>
+          </a>
+
+          <span style="display:inline-block; width: 25px;"></span>
+
+          <a href="https://uit.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;7a9d3808320cf7f600.png"
+                   class="figure-img img-fluid rounded" alt="UiT logo">
+            </figure>
+          </a>
+
+          <a href="https://www.hse.ru/en/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;ba4794503f453bf200.jpg"
+                   class="figure-img img-fluid rounded" alt="HSE logo">
+            </figure>
+          </a>
+        
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+    
+    
+
+  </body>
+</html>

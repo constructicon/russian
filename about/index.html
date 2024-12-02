@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://constructicon.github.io/russian/img/favicon.ico">
+
+    <title>Constructicon</title>
+
+    
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="https://raw.githubusercontent.com/constructicon/russian/main/content/logo/constructicon-round.png" />
+    
+
+    
+      <meta name="description" content="Description of the Constructicon.
+" />
+      <meta name="twitter:description" content="Description of the Constructicon.
+" />
+    
+
+    
+      <meta name="twitter:title" content="Constructicon" />
+    
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+            integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68="
+            crossorigin="anonymous"></script>
+
+    <!-- https://vue-treeselect.js.org/ -->
+    <script src="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@3.14.0/dist/js-yaml.min.js"
+            integrity="sha256-8mtDTinb8+d2bC/9KhCJoCRBEylWUIV/3YEt5cSUvRk="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"
+            integrity="sha256-Jvh9+A4HNbbWsWl1Dw7kAzNsU3y8elGIjLnUSUNMtLg="
+            crossorigin="anonymous"></script>
+
+    <!-- https://github.com/bvaughn/js-search -->
+    <script src="https://cdn.jsdelivr.net/npm/js-search@2.0.0/dist/umd/js-search.min.js"
+            integrity="sha256-LD9UsSATk+xTzAbk8nD2gA2bjHKvetXtCMDAFkM2K5Q="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js" integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link href="https://constructicon.github.io/russian/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- navigation -->
+      <div class="row top-buffer">
+        <div class="col-md-3">
+          <figure class="figure">
+            
+            <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;66ea0c2bc689ec2a00.png"
+                 class="figure-img img-fluid rounded" alt="Constructicon logo">
+          </figure>
+        </div>
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9f2ff;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/">Browse</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/advanced-search/">Advanced search</a>
+                  </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/daily/">Daily dose</a>
+                </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/statistics/">Statistics</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                      <a class="nav-link" href="https://constructicon.github.io/russian/instructions/">Instructions</a>
+                  </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://constructicon.github.io/russian/about/">About</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- end navigation -->
+
+      <div class="top-buffer">
+        
+
+<div class="row">
+    <div class="col-4">
+      <nav id="my_content" class="h-100 flex-column align-items-stretch pe-4 border-end">
+        <nav class="nav nav-pills flex-column" style="position: relative; height: 500px;">
+          <a class="nav-link" href="#about">About the project</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ml-3 my-1" href="#item-1">1. What is the Russian Constructicon</a>
+            <a class="nav-link ml-3 my-1" href="#item-2">2. Code and data</a>
+            <a class="nav-link ml-3 my-1" href="#item-3">3. Team behind this project</a>
+            <a class="nav-link ml-3 my-1" href="#item-4">4. How to cite</a>
+            <a class="nav-link ml-3 my-1" href="#item-5">5. Key publications</a>
+            <a class="nav-link ml-3 my-1" href="#item-6">6. Talks</a>
+            <a class="nav-link ml-3 my-1" href="#item-7">7. Student projects</a>
+            <a class="nav-link ml-3 my-1" href="#item-7">8. Что такое Русский Конструктикон</a>
+
+
+          </nav>
+        </nav>
+      </nav>
+    </div>
+
+    <div class="col-8">
+        <div data-bs-spy="scroll" data-bs-target="#my_content" data-bs-smooth-scroll="true" style="position: relative; height: 500px; overflow-y: scroll;">
+          <div id="about">
+            <h2>About the project</h2>
+          </div>
+          <div id="item-1">
+            <h2>1. What is the Russian Constructicon</h2>
+            <p>The Russian Constructicon (RusCon) is a free open-access electronic resource
+            that offers a searchable database of multiword grammatical constructions of
+            Russian, with over 3600 constructions (and more being continuously added).
+            </p>
+            <p>The constructions are accompanied with thorough
+            descriptions of their properties and illustrated with corpus-based example
+            sentences. Descriptions are provided by linguists and translated into English
+            and Norwegian. The constructions are organized in families, clusters, and
+            networks based on their semantic and syntactic properties. Search functions
+            make it possible to filter constructions for a variety of features including
+            semantic types, syntactic patterns, morphological categories,
+            semantic roles, and CEFR levels of language proficiency. </p>
+
+            <p>The resource is designed for both researchers and L2 learners of Russian and
+            strategically targets highly frequent but non-transparent constructions that
+            are most essential for learners of Russian. We focus on those language specific
+            constructions that have both fixed and variable elements. The fixed part of a construction is called the <strong>anchor</strong>. The anchor can be specific words or it can be the structure of a construction like word order or reduplication. The variable elements of a construction are called <strong>slots</strong>. Slots can be filled with a restricted set of lexemes. A good
+            example of such a construction is <strong>net-net da i VP-Pfv</strong> (lit. ‘no-no and do X’) used
+            for referring to irregular events, as in <em>On net-net da i sprosit</em> ‘He can
+            occasionally ask a question’. Other peculiar constructions collected in this
+            resource include <strong>(NP-Gen) ne napaseš’sja (na NP-Acc)</strong>, as in <em>Na vsex ne
+            napaseš’sja</em> (‘One cannot prepare enough resources for everyone’), <strong>NP-Nom Cop
+            tak sebe</strong>, as in <em>Kartina byla tak sebe</em> (‘The painting was so-so [lit. that
+            self]’), <strong>xoroš VP-Ipfv.Inf!</strong>, as in <em>Xoroš prygat’!</em> (‘Stop jumping! [lit. good
+            jump]’), etc. Many such constructions are more frequent than fully idiomatic
+            expressions and present L2 learners with a greater challenge: they are
+            ubiquitous in spoken and written language but often underrepresented in
+            descriptive grammars of Russian.</p>
+
+            <p>The Russian Constructicon is a joint project administered in 2016-2021 as a collaboration
+            between UiT The Arctic University of Norway (CLEAR research group) in Tromsø
+            and the National Research University Higher School of Economics in Moscow
+            (School of Linguistics). Both faculty and students at all levels (BA through
+            PhD) contributed to the project.</p>
+            <p>Building the Russian Constructicon was funded by SIU project “Constructing a Russian Constructicon” (NCM-RU-2016/10025) in
+            2016 and the TWIRLL project (“Targeting Wordforms in Russian Language
+            Learning”, CPRU-2017/10027) in 2017-2020 supported by Norwegian Agency for
+            International Cooperation and Quality Enhancement in Higher Education (Diku,
+            <a href="https://diku.no/en">https://diku.no/en</a>). The work on building the Russian Constructicon has also been supported in 2021 by the Ministry of Science and Higher Education of the Russian Federation within Agreement No 075-15-2020-793. and by the Ministry of Education of the Republic of Korea and the National Research Foundation of Korea (NRF-2021S1A5A2A03065528).</p>
+            <p>The Russian Constructicon was launched in English for the international academic community at the Slavic Cognitive Linguistics Conference in June 2021. A public launch in Norwegian took place at UiT The Arctic University of Norway in September 2021 (video at <a href="https://www.youtube.com/watch?v=cz8Lc0sx1Fc&t=9s">https://www.youtube.com/watch?v=cz8Lc0sx1Fc&t=9s</a>).</p>
+            <p>Based on the data collected in the Russian Constructicon, in 2022 we created a new educational resource for learning and teaching Russian as a second language: Construxercise! Hands-on learning of Russian constructions, available at <a href="https://constructicon.github.io/construxercise-rus/">https://constructicon.github.io/construxercise-rus/</a>. This resource offers over 150 practical exercises for mastering a variety of Russian discourse constructions and practicing them in conversation. </p>
+            <p>The expertise on constructicon-building that we developed over the years of this project was shared with PhD students and members of the academic community in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar" and administered by UiT The Arctic University of Norway in 2023 (see more at <a href="https://uit.no/utdanning/emner/emne/785431/hif-8040">https://uit.no/utdanning/emner/emne/785431/hif-8040</a> and <a href="https://site.uit.no/clear/course-constructicography/">https://site.uit.no/clear/course-constructicography/</a>).</p>
+
+            <p>For more details on the Russian Constructicon see the <a href="https://www.youtube.com/channel/UC8q-_F8c8bx9gI7fYET1-dQ">YouTube channel</a>.</p>
+            <p>If you want to suggest a new construction for this resource, please enter it in the <a href="https://forms.gle/tkyDAY6UM6QbizGs7">electronic form</a>.</p>
+          </div>
+          <div id="item-2">
+            <h2 id="2-code-and-data">2. Code and data</h2>
+            <ul>
+            <li>Source code: <a href="https://github.com/constructicon/russian">https://github.com/constructicon/russian</a></li>
+            <li>Source data: <a href="https://github.com/constructicon/russian-data">https://github.com/constructicon/russian-data</a></li>
+            </ul>
+          </div>
+          <div id="item-3">
+            <h2 id="3-team-behind-this-project">3. Team behind this project</h2>
+            <ul>
+            <li><a href="https://uit.no/ansatte/person?p_document_id=41561">Laura A. Janda</a> (UiT The Arctic University of Norway): Background research,
+            Concept, Design, Data mining, Editing of content, Dissemination of findings
+            and results, Translation of definitions to English, Annotation of CEFR levels</li>
+            <li><a href="https://bast.fr/">Radovan Bast</a> (UiT The Arctic University of Norway, Department of information
+            technology): New user interface, design and programming</li>
+            <li><a href="https://en.uit.no/ansatte/person?p_document_id=585584">Anna Endresen</a> (UiT The Arctic University of Norway): Content, Design, Data
+            mining, Editing, Semantic and syntactic annotation, Usage labels, Writing definitions, Semantic roles annotation,
+            Dissemination of findings and results, Coordination of teamwork</li>
+            <li><a href="https://www.researchgate.net/profile/Valentina-Zhukova-4">Valentina Zhukova</a> (National Research University Higher School of Economics in
+            Moscow): Content, Design, Data mining, Semantic and syntactic annotation, Writing definitions, Semantic roles annotation,
+            Dissemination of findings and results</li>
+            <li><a href="https://iling-ran.ru/web/en/scholars/mordashova">Daria Mordashova</a> (Lomonosov Moscow State University, Institute of Linguistics
+            of the Russian Academy of Sciences): Content, Design, Data mining, Semantic
+            and syntactic annotation, Writing definitions, Semantic roles annotation, Dissemination of findings and results</li>
+            <li><a href="https://www.hse.ru/en/org/persons/26736782">Ekaterina Rakhilina</a> (National Research University Higher School of Economics
+            in Moscow, Vinogradov Institute of Russian Language at Russian Academy of
+            Sciences): Background research, Concept, Design, Content, Data mining,
+            Semantic annotation, Editing, Dissemination of findings and results</li>
+            <li><a href="https://www.hse.ru/en/staff/olesar">Olga Lyashevskaya</a> (National Research University Higher School of Economics in
+            Moscow, Vinogradov Institute of Russian Language at Russian Academy of
+            Sciences): Concept, Design, Data mining, UD analysis, Syntactic annotation,
+            Dissemination of findings and results</li>
+            <li><a href="https://en.uit.no/ansatte/person?p_document_id=41533">Tore Nesset</a> (UiT The Arctic University of Norway): Background research,
+            Concept, Design, Editing of content, Dissemination of findings and results, Annotation of CEFR levels </li>
+            <li><a href="https://github.com/ftyers">Francis M. Tyers</a> (Indiana University; earlier affiliated with UiT The Arctic
+            University of Norway and National Research University Higher School of
+            Economics): Concept, Design, UD for Russian</li>
+            <li>Marianne Lund: Translation of definitions to Norwegian</li>
+            <li>James McDonald: Translation of definitions to English</li>
+            </ul>
+            <p>The students who contributed to building the Russian Constructicon are (ordered alphabetically by last name): Kirill Aksenov, Anna Aksenova, Pavel Al’bickij, Kristina Bagdasaryan, Aleksej Baklanov, Olga Bakurova, Aleksandra Bogojavlenskaya, Zoia Butenko, Polina Bychkova, Polina Chernomorchenko, Ljubov’ Chubarova, Maria Cfasman, Nikita Chestnov, Daria Demidova, Kathleen M. Dickson, Igor’ Dmitriev, Danila Fedotov, Ekaterina Gerasimova, Maria Grabovskaya, Daria Ignatenko, Aleksandra Ignat’eva, Natalia Kalanova, Ksenia Khristosova, Elizaveta Kibisova, Anna Klezovich, Evgenija Kozjuk, Polina Kudrjavceva, Jana Labenskaja, Polina Leonova, Natalja Logvinova, Ekaterina Matjuxina, James McDonald, Daria Mordashova, Maria Nordrum, Aleksandr Orlov, Tatiana Perevoshchikova, Polina Ponomareva, Glorija Rozovskaja, Alina Russkix, Galina Ryazanskaya, Aleksej Ryzhkov, Ulyana Sentsova, Fedor Sizov, Aleksandr Skaj, Alexandra Solomatina, Anastasia Timoshina, Ekaterina Voloshina, Alina Zabolotskaya, Valentina Zhukova. </p>
+          </div>
+          <div id="item-4">
+            <h2 id="5-how-to-cite">4. How to cite</h2>
+            <p>We hope that you will use information that you have found in the Russian Constructicon in your scholarly work (for example in oral presentations or publications). If you do, please be sure to give appropriate credit by citing the Russian Constructicon as follows:</p>
+            <p><strong>Bast, Radovan, Anna Endresen, Laura A. Janda, Marianne Lund, Olga Lyashevskaya, James McDonald, Daria Mordashova, Tore Nesset, Ekaterina Rakhilina, Francis M. Tyers, Valentina Zhukova. 2021. The Russian Constructicon. An electronic database of the Russian grammatical constructions. Available at <a href="https://constructicon.github.io/russian/">https://constructicon.github.io/russian/</a>.</strong></p>
+
+          </div>
+          <div id="item-5">
+            <h2 id="4-key-publications">5. Key publications</h2>
+            <ol>
+              <li><p>Janda, Laura A., Olga Lyashevskaya, Tore Nesset, Ekaterina Rakhilina,
+                Francis M. Tyers. 2018. <a href="http://ansatte.uit.no/laura.janda/mypubs/cal.22.06jan.pdf">“Chapter 6. A Constructicon for Russian: Filling in the Gaps”.</a> In Benjamin Lyngfelt, Lars Borin, Kyoko Ohara, &amp; Tiago Timponi
+                Torrent (eds.), <em>Constructicography: Constructicon development across languages</em> [Constructional Approaches to Language 22], 165-181. Amsterdam:
+                John Benjamins Publishing Co. DOI: [10.1075/cal.22.06jan] <a href="https://doi.org/10.1075/cal.22.06jan">https://doi.org/10.1075/cal.22.06jan</a></p>
+              </li>
+              <li><p>Janda, Laura A., Anna Endresen, Valentina Zhukova, Daria Mordashova,
+                Ekaterina Rakhilina. 2020. <a href="https://www.researchgate.net/publication/350411506_How_to_build_a_constructicon_in_five_years_The_Russian_example">“How to build a constructicon in five years: The Russian Example”.</a> In:  Frank Brisard, Timothy Colleman, Astrid De
+                Wit, Renata Enghels, Nikos Koutsoukos, Tanja Mortelmans, and María Sol
+                Sansiñena (eds.) <em>The Wealth and Breadth of Construction-Based Research</em> [a thematic issue of <em>Belgian Journal of Linguistics</em> 34]. pp. 162-175. <a href="https://benjamins.com/catalog/bjl.00043.jan">https://benjamins.com/catalog/bjl.00043.jan</a></p>
+              </li>
+              <li><p>Endresen, Anna, Valentina Zhukova, Daria Mordashova, Ekaterina Rakhilina,
+                Olga Lyashevskaya. 2020. <a href="https://www.researchgate.net/publication/342420695_The_Russian_Constructicon_A_new_linguistic_resource_its_design_and_key_characteristics_Russkij_Konstruktikon_Novyj_lingvisticeskij_resurs_ego_ustrojstvo_i_specifika">“Русский конструктикон: Nовый лингвистический ресурс, его устройство и специфика” [= The Russian Constructicon: A new linguistic resource, its design and key characteristics].</a> In: <em>Computational linguistics and Intellectual Technologies. Papers from the Annual International Conference “Dialogue-2020”.</em> Issue 19, 226-241. DOI: [10.28995/2075-7182-2020-19-241-255] <a href="https://doi.org/10.28995/2075-7182-2020-19-241-255">https://doi.org/10.28995/2075-7182-2020-19-241-255</a></p>
+              </li>
+              <li><p>Endresen, Anna, Laura A. Janda. 2020. <a href="https://www.researchgate.net/publication/346032978_Taking_Construction_Grammar_One_Step_Further_Families_Clusters_and_Networks_of_Evaluative_Constructions_in_Russian">“Taking Construction Grammar One Step Further: Families, Clusters, and Networks of Evaluative Constructions in Russian”.</a> In Mike Putnam, Matthew Carlson, Antonio Fábregas, Eva Wittenberg (eds.) <em>Defining Construction: Insights into the Emergence and Generation of Linguistic Representations</em> [special issue of <em>Frontiers in Psychology</em> 11]. pp. 1-22. ISSN 1664-1078. <a href="https://doi.org/10.3389/fpsyg.2020.574353">https://doi.org/10.3389/fpsyg.2020.574353</a></p>
+              </li>
+              <li>Janda, Laura A., Mikhail Kopotev, Tore Nesset. 2020. <a href="https://www.researchgate.net/publication/343086140_Constructions_their_families_and_their_neighborhoods_the_case_of_durak_durakom_%27a_fool_times_two%27Konstrukcii_ih_semi_i_sosedi_Durak_durakom">Constructions, their families and their neighborhoods: the case of durak durakom ‘a fool times two’.</a> In <em>Russian Linguistics</em> 44, 109-127. <a href="https://doi.org/10.1007/s11185-020-09225-y">https://doi.org/10.1007/s11185-020-09225-y</a></li>
+              <li>
+                Endresen, Anna, Valentina Zhukova, Elena Bjørgve, Daria Demidova, Natalia Kalanova, Zoia Butenko, George Lonshakov, David Henrik Lavén. 2022. “Construxercise!: Implementation of a construction-based approach to language pedagogy”. In Russian Language Journal 72. 47-71. Preprint DOI: <a href="http://dx.doi.org/10.13140/RG.2.2.12476.92807">10.13140/RG.2.2.12476.92807</a>
+              </li>
+              <li>
+                Rakhilina, E., V. Zhukova, D. Demidova, P. Kudrjavceva, G. Rozovskaja, A. Endresen, L.A. Janda. 2022. “Frazeologija v rakurse Russkogo Konstruktikona” [= Phraseology in the light of the Russian Constructicon] In Bulletin of the Russian Academy of Sciences: Studies in Literature and Language. Vol. 2(32). Pp. 13-44. DOI: <a href="https://doi.org/10.31912/pvrli-2022.2.2">10.31912/pvrli-2022.2.2</a>
+              </li>
+              <li>
+                Janda, Laura A., Anna Endresen, Valentina Zhukova, Daria Mordashova, Ekaterina Rakhilina. Forthcoming in 2023. “From data to theory: an emergent semantic classification based on the large-scale Russian constructicon.” In Constructions and Frames.
+              </li>
+              <li>
+                Endresen, Anna, Valentina Zhukova, Laura A. Janda, Daria Mordashova, Ekaterina Rakhilina. Forthcoming in 2023. “Turning a list into a network via family-based expansion of the Russian Constructicon”. In Ziem, A., Willich A., Michel S. (Eds.) Constructing constructicons. “Constructional Approaches to Language” series of John Benjamins.
+              </li>
+              <li>
+                Janda, L. A., V. Zhukova, A. Endresen, A. Forthc. 2023. “Typology of reduplication in Russian: constructions within and beyond a single clause”. In Kopotev, M. and K. Kwon. (Eds.) Constructicons with lexical repetitions. De Gruyter.
+              </li>
+              <li>
+                Mordashova, Daria (Мордашова Д. Д.) 2023. Структура семантической зоны модальности в русском языке: моделирование системных отношений между конструкциями (на материале ресурса «Русский конструктикон») [= The structure of the semantic domain of modality in Russian: modelling the systemic relationships between constructions (based on the Russian Constructicon)]. In Вопросы языкознания 2: 29–55. DOI: 10.31857/0373-658X.2023.2.29-55
+              </li>
+              <li>
+                Zhukova, Valentina. 2023. How to threaten in Russian: a constructionist approach. Russian Linguistics. <a href="https://doi.org/10.1007/s11185-023-09274-z">https://doi.org/10.1007/s11185-023-09274-z</a>
+              </li>
+            </ol>
+          </div>
+          <div id="item-6">
+            <h2 id="6-talks">Talks</h2>
+            <ol>
+              <li>
+                Nesset, Tore and Laura Alexis Janda. 2023. “Digital Resources Bridging the Gap Between Linguistic Theory and Pedagogical Practice”, Invited guest lecture in the Late Lunch Talk Series of the Princeton Center for Language Study, Princeton University, New Jersey, March 21, 2023.
+              </li>
+              <li>
+                Endresen, Anna. 2023. “Representation of a structured inventory of constructions in a construct-i-con resource”, a guest lecture in the course LING305 “Modern Grammatical and Semantic Theory”, University of Bergen, Norway, February 20, 2023.
+              </li>
+              <li>
+                Bast, Radovan. 2023. The importance of open code and open data: The case of the Russian Constructicon. Lecture in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar", UiT, April 28, 2023.
+              </li>
+              <li>
+                Rakhilina, Ekaterina. 2023. Pragmaticon: Construction Grammar of split constructions. Lecture in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar", UiT, April 28, 2023.
+              </li>
+              <li>
+                Rakhilina, Ekaterina. 2023. Discourse formulae as constructions. Lecture in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar", UiT, April 25, 2023.
+              </li>
+              <li>
+                Endresen, Anna. 2023. How to build, expand, and systematize the inventory of constructions: The path of the Russian Constructicon. Lecture in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar", UiT, April 28, 2023.
+              </li>
+              <li>
+                Lyashevskaya, Olga. 2023. Universal Dependencies schema as a mean to structure the Constructicon and link linguistic resources. Lecture in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar", UiT, April 28, 2023.
+              </li>
+              <li>
+                Lyashevskaya, Olga. 2023. A community of constructions in the Russian Constructicon. Lecture in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar", UiT, March 7, 2023.
+              </li>
+              <li>
+                Tore Nesset and Laura A. Janda. 2023. Exploring relationships between constructions: Allostructions in Equilibrium. Lecture in the digital PhD course HIF-8060 entitled "Constructicography: Advanced topics in Construction Grammar", UiT, April 28, 2023.
+              </li>
+              <li>
+                Zhukova, Valentina & Daria Mordashova. 2023. Bottom-up approach to collecting data: blessing and curse for a large linguistic resource. Presented at I Conferenza dei dottorandi in linguistica a Roma [= <a href="https://condor2022.wordpress.com/eng/">The I PhD Student Conference in Linguistics in Rome</a>] (ConDoR2022-23), Università La Sapienza & Università Roma Tre, Rome, Italy, February 23-24, 2023.
+              </li>
+              <li>
+                Zhukova, Valentina. 2023. <a href="https://www.aatseel.org/100111/pdf/aatseel_2023_abstracts.pdf">Construxercise!: implementation of a construction-based approach to language pedagogy</a>. Presented digitally at <a href="https://www.aatseel.org/program">The 2023 AATSEEL Conference</a>, University of Southern California, USA. 16–19 February 2023.
+              </li>
+              <li>
+                Zhukova, Valentina, Anna Endresen, Laura A. Janda. 2023. “Constructions within and beyond a single clause in the system of Russian reduplication”. The 12th International Conference on Construction Grammar (ICCG 12), May 19-21, 2023, Prague.
+              </li>
+              <li>
+                Janda, Laura A., Valentina Zhukova, Anna Endresen. 2023. “Reduplication in the ecosystem of Russian constructions”. The 18th Conference of the Slavic Cognitive Linguistics Association (SCLA 2023), June 1-3, 2023, Harvard University (Cambridge/Boston, Massachusetts).
+              </li>
+              <li>
+                Zhukova, Valentina. 2023. Empty negation? Two competing contrastive constructions in Russian. To be presented at the <a href="https://slavic.fas.harvard.edu/2023-conference">Slavic Cognitive Linguistics Conference</a> (SCLA-2023), Harvard University, Cambridge/Boston, USA. 1-3 June 2023.
+              </li>
+              <li>
+                Endresen, Anna, Valentina Zhukova, Laura Alexis Janda. 2023. “Construxercise!: how to implement a construction-based approach to language pedagogy”. The 18th Conference of the Slavic Cognitive Linguistics Association (SCLA 2023), June 1-3, 2023, Harvard University (Cambridge/Boston, Massachusetts).
+              </li>
+              <li>
+                Janda, Laura A., Valentina Zhukova, Anna Endresen, Daria Mordashova, Ekaterina Rakhilina, Olga Lyashevskaya. 2023. “What happens if you try to build a constructicon for a whole language?” International FrameNet Workshop 2023: Cognitively Grounded Approaches to Applied Language Description (IFNW2023, <a href="https://www.globalframenet.org/ifnw-2023">https://www.globalframenet.org/ifnw-2023</a>). Düsseldorf, August 7-11, 2023.
+              </li>
+              <li>
+                Nesset, Tore, Valentina Zhukova, Anastasia Makarova. 2023. The linguistics of threats: a cognitive approach to political discourse. <a href="https://iclc16.phil.hhu.de/">16th International Cognitive Linguistics Conference</a> (ICLC-16), Heinrich Heine University, Düsseldorf, Germany. August 7-11, 2023.
+              </li>
+              <li>
+                Laura A. Janda. 2022. “Scaling up a constructicon: strategies for semantic classification and data management”, invited lecture at the University of Turku, Finland, April 2022.
+              </li>
+              <li>
+                Zhukova, Valentina, Laura A. Janda, and Anna Endresen. 2022. Bridging the gap between a constructicon and L2 learners. 3rd conference “Constructions in the Nordics” (CxCG) at U of Kiel, Germany. Sept. 19-20, 2022.
+              </li>
+              <li>
+                Endresen, A., Valentina Zhukova, Laura A. Janda, Tore Nesset. 2022. Ресурс что надо: Det russiske konstruktikonet og undervisning i russisk [=The Russian constructicon and language pedagogy] (In Norwegian). 22th Nordic Congress of Slavists. Oslo, Aug. 10-14, 2022.
+              </li>
+              <li>
+                Zhukova, Valentina. 2022. <a href="https://youtu.be/F---EPI849Q">Towards constructicon alignment? Semantic classification in the Russian Constructicon</a>. Presented at the international workshop <a href="https://www.globalframenet.org/caw2022">The Constructicon Alignment Workshop 2022</a> (CAW 2022). Gothenburg, Sweden. 8–9 December 2022.
+              </li>
+              <li>
+                Endresen, A. Bridging the gap between a constructicon and L2 learners. Organizing international thematic PhD courses at UiT The Arctic University of Norway. Talk at the “Citizen Journalism meeting: Presentation of UiT study programs”. UiT The Arctic University of Norway. December 6-7, 2022.
+              </li>
+              <li>
+                Zhukova, Valentina, Laura A. Janda, and Anna Endresen. Bridging the gap between a constructicon and L2 learners. 3rd conference “Constructions in the Nordics” (CxCG) at U of Kiel, Germany. Sept. 19-20, 2022.
+              </li>
+              <li>
+                Endresen, Anna, Valentina Zhukova, Laura A. Janda, Tore Nesset. Ресурс что надо: Det russiske konstruktikonet og undervisning i russisk [=The Russian constructicon and language pedagogy] (In Norwegian). 22th Nordic Congress of Slavists. Oslo, Aug. 10-14, 2022.
+              </li>
+              <li>
+                Zhukova, Valentina and Ekaterina Rakhilina. 2022. Constructions built of constructions: on intensified comparatives. Presented at the international workshop <a href="https://constructionsinthenordics.org/programme-and-abstracts-cxgn-3/">Constructions in the Nordics</a> (CxGN 3). Kiel University, Kiel, Germany. 19–20 September 2022.
+              </li>
+              <li>
+                Mordashova, Daria. 2022. Epistemic modality in the Russian Constructicon: building a constructional network. Presented at the international workshop <a href="https://constructionsinthenordics.org/programme-and-abstracts-cxgn-3/">Constructions in the Nordics</a> (CxGN 3). Kiel University, Kiel, Germany. September 19-20, 2022.
+              </li>
+              <li>
+                Zhukova, Valentina. 2022. Expressing Threats in Russian: a constructional perspective. Presented at 22. Nordisk slavistmøte [=22th Nordic Congress of Slavists], The University of Oslo, Oslo, Norway. 10–13 August 2022.
+              </li>
+              <li>
+                Endresen, Anna. 2022. Det russiske konstruktikonet: hva er det for noe? [= The Russian Constructicon: What is it?]. A talk for the students of the RUS-2025 class, UiT The Arctic University of Norway, February 17, 2022.
+              </li>
+              <li>
+                Mordashova, Daria. 2022. Русские конструкции с модальной семантикой: опыт конструктикографического описания. Presented at Грамматика, полевая лингвистика, когнитивный подход к языку. Конференция молодых исследователей памяти Александра Евгеньевича Кибрика, Москва, Россия, 29 октября 2022 г.
+              </li>
+              <li>
+                Janda, Laura A. Russian's ICONic constructICON. A talk presented at a series of zoom talks "Explorations in Construction Grammar" organised by Interdisziplinäres Zentrum für Lexikografie, Valenz- und Kollokationsforschung. November 8, 2021. Video <a href="https://www.youtube.com/watch?v=8FCYvLPqPhg&t=515s">https://www.youtube.com/watch?v=8FCYvLPqPhg&t=515s</a>
+              </li>
+              <li>
+                Endresen, Anna, Valentina Zhukova, Daria Mordashova. International launch of the Russian Constructicon, took place at the SCLC-2020/2021: Slavic Cognitive Linguistics Conference, June 3-6, 2021. Video <a href="https://www.youtube.com/watch?v=TBUBgCVkcCg">https://www.youtube.com/watch?v=TBUBgCVkcCg</a>
+              </li>
+              <li>
+                Janda, Laura A., Anna Endresen, Ekaterina Rakhilina, Valentina Zhukova, and Daria Mordashova. 2021. How to build a constructicon in five years: The Russian recipe. A talk to be presented at the 11th International Conference on Construction Grammar (ICCG11). University of Antwerp, Belgium, August 2021. Prerecorded video <a href="https://www.youtube.com/watch?v=HN-MS0SZffQ">https://www.youtube.com/watch?v=HN-MS0SZffQ</a>
+              </li>
+              <li>
+                Endresen, Anna, Laura A. Janda, Daria Mordashova, Ekaterina Rakhilina, Valentina Zhukova. 2021. Prohibitive constructions in Russian: Families and clusters. A talk presented at the 11th International Conference on Construction Grammar (ICCG11). University of Antwerp, Belgium, August 18, 2021. Prerecorded video <a href="https://www.youtube.com/watch?v=fhbtLPdF0rk">https://www.youtube.com/watch?v=fhbtLPdF0rk</a>
+              </li>
+              <li>
+                Endresen, Anna, Valentina Zhukova, Daria Mordashova, Ekaterina Rakhilina. 2021. Semantic classification of constructions in the Russian Constructicon, presented at the Slavic Cognitive Linguistics Conference (SCLC-2020/2021), June 3, 2021. Zoom, Tromsø, Norway. Prerecorded video <a href="https://www.youtube.com/watch?v=H7_AarSqDQA&feature=youtu.be">https://www.youtube.com/watch?v=H7_AarSqDQA&feature=youtu.be</a>
+              </li>
+              <li>
+                Endresen, Anna and Laura A. Janda. 2021. Našli razvlečenie! Patterns of Assessment and Attitude constructions in Russian, presented at the Slavic Cognitive Linguistics Conference (SCLC-2020/2021), June 3-6, 2021. Prerecorded video <a href="https://www.youtube.com/watch?v=WqILGEbDZaA">https://www.youtube.com/watch?v=WqILGEbDZaA</a>
+              </li>
+              <li>
+                Janda, Laura A. 2021. How to build a Constructicon in five years: The Russian recipe. A talk presented at the SCLC-2020/2021: Slavic Cognitive Linguistics Conference, June 3-6, 2021. Video <a href="https://www.youtube.com/watch?v=fLikPES7QfM">https://www.youtube.com/watch?v=fLikPES7QfM</a>
+              </li>
+              <li>
+                Janda, Laura A., Anna Endresen, Tore Nesset. 2021. Det russiske konstruktikonet: Hvordan vi bygger en database med syntaktiske konstruksjoner [= The Russian Constructicon: How we build a database of syntactic constructions]. Presented virtually in Norwegian at the NORKOG Sommerseminaret 2020/2021 [= Summer Seminar of the Norwegian Cognitive Linguistics Association, <a href="https://site.uit.no/sommerseminaret2020/">https://site.uit.no/sommerseminaret2020/</a>], UiT The Arctic University of Norway, Tromsø. June 10, 2021.
+              </li>
+              <li>
+                Zhukova, Valentina. 2021. Constructions denoting degree of intensity in the Russian Constructicon. A talk presented at the <a href="https://site.uit.no/clear/sclc-2020/">SCLC-2020/2021: Slavic Cognitive Linguistics Conference</a>, June 3-6, 2021. Video <a href="https://www.youtube.com/watch?v=jLP0415oN9U&feature=youtu.be">https://www.youtube.com/watch?v=jLP0415oN9U&feature=youtu.be</a>
+              </li>
+              <li>
+                Mordashova, Daria. 2021. Comparative constructions in the Russian Constructicon: Families and Clusters, a talk presented at the <a href="https://site.uit.no/clear/sclc-2020/">SCLC-2020/2021: Slavic Cognitive Linguistics Conference</a>, June 3-6, 2021. Prerecorded video <a href="https://www.youtube.com/watch?v=7DYjRjev0f0&feature=youtu.be">https://www.youtube.com/watch?v=7DYjRjev0f0&feature=youtu.be</a>
+              </li>
+              <li>
+                Kibisova, Elizaveta. 2021. Куча проблем и море идей: когнитивный анализ конструкций с именными количественными квантификаторами [= A pile of problems and a sea of ideas: a cognitive account of the constructions with nominal quanifiers]. A talk presented at the <a href="https://site.uit.no/clear/sclc-2020/">SCLC-2020/2021: Slavic Cognitive Linguistics Conference</a>, June 3-6, 2021.
+              </li>
+              <li>
+                Rakhilina, Ekaterina, Evgeniia Koziuk and Polina Bychkova. 2021. Discourse Formulae and Constructions: There and Back, a talk presented at the SCLC-2020/2021: Slavic Cognitive Linguistics Conference, June 3-6, 2021.
+              </li>
+              <li>
+                Zhukova, Valentina. 2021. Constructions denoting Threat in Russian based on data from the Russian constructicon. Presented at Novemberseminaret i russisk og russlandsstudier 2021, UiT The Arctic University of Norway, Tromsø, Norway. 16 November 2021.
+              </li>
+              <li>
+                Endresen, Anna, Daria Mordashova, Valentina Zhukova, Ekaterina Rakhilina, Olga Lyashevskaya. 2020. “Русский Конструктикон: Новый лингвистический ресурс, его устройство и специфика” [= The Russian Constructicon: A new linguistic resource, its design and key characteristics], a talk presented on-line at <a href="http://www.dialog-21.ru">Dialogue 2020: 26th International Conference on Computational Linguistics and Intellectual Technologies</a>, June 17-19, 2020, Moscow. Video <a href="https://www.youtube.com/watch?v=o9-2h2e4HFE&feature=youtu.be">https://www.youtube.com/watch?v=o9-2h2e4HFE&feature=youtu.be</a>
+              </li>
+              <li>
+                Lyashevskaya, Olga, Daria Mordashova, Valentina Zhukova, Anna Endresen, Laura A. Janda, Ekaterina Rakhilina. 2020. “Core grammar, non-compositional, and discourse organisation constructions in the full-text construction annotation task for Russian”. Presented virtually at <a href="https://www.globalframenet.org/construction-annotation-workshop-2020">The Construction Annotation Workshop 2020</a>. October 6 & 8, 2020. <a href="https://static1.squarespace.com/static/5bc797b1523958aa328c4f66/t/5f7b4e02a96b3a18f4342a45/1601916420745/Lyashevskaya+et+al.pdf">Abstract</a>.
+              </li>
+              <li>
+                Endresen, Anna, Daria Mordashova, Valentina Zhukova, Laura A. Janda, Olga Lyashevskaya, Ekaterina Rakhilina. “Annotation of constructions in the light of strategies adopted in the Russian Constructicon: Challenges of accurate and user-friendly representations of semantic and syntactic properties.” Presented virtually at <a href="https://www.globalframenet.org/construction-annotation-workshop-2020">The Construction Annotation Workshop 2020</a> organized by Tiago Torrent, Alexander Ziem, Benjamin Lyngfelt. November 3, 2020.
+              </li>
+              <li>
+                Endresen, Anna. “Typer av grammatiske konstruksjoner i det russiske konstruktikonet” [= Types of grammatical constructions in the Russian Constructicon]. Presented virtually at the the annual November seminar on Russian and Russian studies at UiT The Arctic University of Norway (<a href="https://site.uit.no/novemberseminaret/program-2020/">Novemberseminaret i russisk og russlandstudier 2020</a>). November 19, 2020.
+              </li>
+              <li>
+                Lyashevskaya, Olga, Katia Rakhilina, Valentina Zhukova. 2019. “Russian Constructicon: clusters, families, and usage scenarios”. Presented at the conference <a href="https://gsw.phil.hhu.de/wpevent?id=towards-a-multilingual-constructicon-issues-approaches-perspectives">“Towards a multilingual constructicon: issues, approaches, perspectives”</a>, Düsseldorf, December 2019.
+              </li>
+              <li>
+                Janda, Laura A., Tore Nesset, Ekaterina Rakhilina, Valentina Zhukova. 2019. Round table “The Russian Constructicon: achievements and challenges” at Det 21:a Nordiska Slavistmötet [The 21st Congress of Scandinavian Slavists] in Joensuu, Finland (August 14-18, 2019).
+              </li>
+              <li>
+                Endresen, Anna, Anna Klezovich, Olga Lyashevskaya, Daria Mordashova, Maria Nordrum, Ekaterina Rakhilina, Francis Tyers, and Valentina Zhukova. 2019. “Building a Constructicon for Russian: How to identify families of constructions” Presented at the <a href="https://iclc2019.site">15th International Cognitive Linguistics Conference (ICLC-15)</a>. Kwansei Gakuin University, Nishinomiya, Japan, August 2019.
+              </li>
+              <li>
+                Endresen, Anna. 2019. “Nu rabota i rabota: Russian constructions with reduplication”. Presented at November Seminar of the Russian Faculty at UiT The Arctic University of Norway (<a href="https://site.uit.no/novemberseminaret/">Novemberseminaret i russisk 2019</a>), November 29, 2019.
+              </li>
+              <li>
+                Mordashova, Daria and Valentina Zhukova. 2019. “Писали до посинения: об одной результативной конструкции в русском языке.” [= Writing until one turns blue: On one resultative construction in Russian] Presented at the conference <a href="https://iling.spb.ru/events/rusconstr2019/programme.html">“Constructional and Lexical Semantic Approaches to Russian – VI”</a> at Institute for Linguistic Studies, The Russian Academy of Sciences. Saint Petersburg, Russia. October 3-5, 2019.
+              </li>
+              <li>
+                Janda, Laura A., Mihail Kopotev and Tore Nesset. 2019. “Дружба дружбой: загадка творительного предикативного без связки”, at the conference Двадцатые Филологические чтения. Интерпретационный потенциал языковой системы и творческая активность говорящего: взаимодействие лексической и грамматической семантики, at Новосибирский государственный педагогический университет, October 2019.
+              </li>
+              <li>
+                Janda, Laura A., Tore Nesset and Valentina Zhukova. 2018. “TWIRLL: Targeting Wordforms in Russian Language Learning”, at 25th Anniversary of collaboration between UiT The Arctic University in Norway and Russia in Tromsø, Norway, September 2018.
+              </li>
+              <li>
+                Janda, Laura A. and Robert J. Reynolds. 2018. “The constructional semantics of aspect in Russian”, at a conference entitled Constructional semantics: Cognitive, functional and typological approaches, in Helsinki, August 2018.
+              </li>
+              <li>
+                Janda, Laura A. and Tore Nesset. 2018. “Realistic input for L2 learners: Constructions with Russian motion verbs”, at the International Conference on Constructionist Approaches to Language Pedagogy at the University of Texas at Austin, February 2018.
+              </li>
+              <li>
+                Janda, Laura A., Ekaterina Rakhilina, Olga Lyashevskaya, Tore Nesset and Francis M. Tyers. 2018. “A Constructicon for Learners of Russian”, at the International Conference on Constructionist Approaches to Language Pedagogy at the University of Texas at Austin, February 2018.
+              </li>
+              <li>
+                Janda, Laura A., Olga Lyashevskaya and Hanne M. Eckhoff. 2017. “Конструкционные свойства глаголов совершенного и несовершенного вида: от частного к общему” [= Constructional properties of perfective and imperfective verbs: from general to specific], at the RusConstr (Русский язык: конструкционные и лексико-семантические подходы) conference in St. Petersburg, Russia, October 2017.
+              </li>
+              <li>
+                Janda, Laura A., Ekaterina Rakhilina, Olga Lyashevskaya, Tore Nesset and Francis M. Tyers. 2017. “А мы возьми и начни его строить: The Russian Constructicon”. The Slavic Cognitive Linguistics Conference in St. Petersburg, Russia, October 2017.
+              </li>
+              <li>
+                Janda, Laura A. 2016. “Who kissed who? Constructing a language for learners, teachers and researchers”, Keynote Speech at Challenges of Foreign Language teaching VII conference at Jan Evangelista Purkyně University in Ústí nad Labem, Czech Republic, October 2016.
+              </li>
+            </ol>
+          </div>
+          <div id="item-7">
+            <h2 id="7-student-projects">7. Student projects</h2>
+            The data from the Russian Constructicon was analyzed in several student projects (course papers, Master's theses and doctoral dissertations), including:
+            <ol>
+              <li>
+                Zhukova, Valentina. <b>“Threat in Russian - a constructional perspective”</b>, Forthcoming, doctoral dissertation.
+              </li>
+              <li>
+                Mordashova, Daria. <b>“Структура семантической зоны модальности и смежных категорий: конструктикографический подход”</b> [= The structure of the semantic domain of modality and related categories: a constructicographic approach]. Forthcoming, doctoral dissertation.
+              </li>
+              <li>
+                Demidova, Daria. <b>”Аспекты конструкционализации на материале Русского Конструктикона”</b> [=Aspects of constructionalization based on the material of the Russian Constructicon]. MA thesis, 2022.
+              </li>
+              <li>
+                Zhukova, Valentina. <b>”Intensifying Constructions in Russian Based on Data from Russian Constructicon”</b>, MA thesis, 2020, 119 pp.
+              </li>
+              <li>
+                Kibisova, Elizaveta. <b>“MEASURE constructions in Russian based on the data from the Russian Constructicon”</b>, MA thesis, 2020, 88 pp.
+              </li>
+              <li>
+                Ignat’eva, Aleksandra. <b>“Конструкции условия русского языка как радиальная категория”</b> [= Russian condition constructions as a radial category], MA thesis, 2020.
+              </li>
+              <li>
+                Khristosova, Ksenia. <b>“VP без NP-Gen: каритивные конструкции в проекте “Русский Конструктикон”</b> [= VP bez NP-Gen: caritive constructions in Russian Constructiсon], course paper, 2020, 32 pp.
+              </li>
+              <li>
+                Bogoiavlenskaia, Aleksandra. <b>“Swearing constructions with the anchor word čërt ‘devil’ in Modern Russian: Construction Grammar analysis meets second language pedagogy”</b>, course paper, 2020, 22 pp.
+              </li>
+            </ol>
+
+          </div>
+          <div id="item-8">
+            <h2 id="8-">8. Что такое Русский Конструктикон</h2>
+            <p>Русский Конструктикон – это бесплатный электронный ресурс, который находится в открытом доступе и предлагает пользователям обширную базу данных, содержащую неоднословные грамматические конструкции русского языка. Русский Конструктикон является на настоящий момент самым большим конструктиконом среди других аналогичных ресурсов. Он включает более 2200 конструкций и продолжает постоянно пополняться.</p>
+            <p>Описание каждой конструкции в Русском Конструктиконе включает ее толкование, набор помет, отражающих ее семантические, синтаксические и стилистические особенности, а также примеры, основанные на корпусных данных и иллюстрирующие ее функционирование в языке. Толкования конструкций составлены лингвистами и переведены на английский и норвежский языки. На основе сочетания семантических и синтаксических характеристик конструкции сгруппированы в семьи, гнезда и классы.</p>
+            <p>Возможности ресурса позволяют искать конструкции с помощью функции точного поиска или задавать поиск по ряду параметров, таких как семантический тип, синтаксический тип, различные характеристики якоря, морфологические ограничения, семантические роли, а также уровни владения иностранным языком по общеевропейской системе CEFR (от A1 до C2).</p>
+            <p>Ресурс ориентирован на пользователей разного рода: как на исследователей, так и на студентов, изучающих русский язык как иностранный. Поэтому в фокусе внимания здесь оказываются прежде всего высокочастотные конструкции русского языка, которые не очевидны по своему значению и устройству и могут вызвать трудности у изучающих русский язык как неродной. Предпочтение отдается таким конструкциям, которые характерны именно для русского языка. Конструкции, включенные в этот ресурс, обычно состоят из фиксированной части и переменных. Фиксированная часть называется <strong>“якорем”</strong> (anchor) и может быть представлена конкретной лексемой или структурными особенностями типа инверсионного порядка слов или повторения элементов. Переменные называются <strong>“слотами”</strong> (slots) и могут заполняться разными словами, но часто эта вариативность строго ограничена. Хорошим примером такой конструкции является структура <strong>нет-нет да и VP-Pfv</strong>, обозначающая нерегулярные события, как, например, в предложении <em>Он нет-нет да и спросит</em>. Другие конструкции, собранные в этом ресурсе, включают <strong>(NP-Gen) не напасёшься (на NP-Acc)</strong> (<em>На всех не напасешься</em>), <strong>NP-Nom Cop так себе</strong> (<em>Картина была так себе</em>), <strong>Хорош VP-Ipfv.Inf!</strong> (<em>Хорош прыгать!</em>) и др. Многие конструкции такого рода встречаются в речи чаще, чем фразеологизмы, и представляют бóльшие трудности для иностранных студентов: конструкции пронизывают как разговорную, так и официальную, как устную, так и письменную речь, но нередко остаются за рамками грамматик и словарей.</p>
+            <p>Русский Конструктикон – это совместный проект Университета Тромсе – Норвежского Арктического Университета (исследовательская группа CLEAR) и Национального исследовательского университета «Высшая школа экономики» (Школа лингвистики). В работе над ресурсом участвовали Л.А.Янда, Т.Нессет, А.А.Эндресен (группa CLEAR, UiT); Е. В. Рахилина, О. Н. Ляшевская, В. А. Жукова (Школa лингвистики НИУ ВШЭ); Д. Д. Мордашова (МГУ им. М. В. Ломоносова, Институт языкознания РАН); Ф. Тайерс (Университет Индианы, США). Программное обеспечение и создание нового интерфейса осуществил Р. Баст (Отдел цифровых исследований, UiT). Участие в работе принимали также студенты бакалавриата, магистратуры и аспирантуры названных университетов.</p>
+            <p>Создание ресурса финансировалось грантом “Constructing a Russian Constructicon” (NCM-RU-2016/10025) в 2016 г., а также из бюджета проекта TWIRLL (“Targeting Wordforms in Russian Language Learning”, CPRU-2017/10027) в 2017-2020 гг., поддержанного Норвежским агентством по международному сотрудничеству и повышению качества высшего образования (Diku, <a href="https://diku.no/en">https://diku.no/en</a>). Работа над ресурсом была также поддержана Министерством науки и высшего образования Российской Фередерации в рамках Соглашения No 075-15-2020-793.</p>
+            <p>Дополнительная информация о ресурсе доступна на <a href="https://site.uit.no/russian-constructicon/">сайте</a> и на <a href="https://www.youtube.com/channel/UC8q-_F8c8bx9gI7fYET1-dQ">YouTube-канале</a>.</p>
+            <p>Если вы хотите предложить конструкцию для пополнения нашего ресурса, заполните <a href="https://forms.gle/tkyDAY6UM6QbizGs7">форму</a>.</p>
+            <p><strong>Как ссылаться</strong></p>
+            <p>Мы надеемся, что информация и данные, представленные в Русском Конструктиконе, окажутся актуальными для вашей научной работы и пригодятся в подготовке докладов и публикаций. Если вы будете использовать или приводить материалы этого ресурса, не забудьте дать соответствующую ссылку, цитируя Русский Конструктикон следующим образом:</p>
+            <p><strong>Bast, Radovan, Anna Endresen, Laura A. Janda, Marianne Lund, Olga Lyashevskaya, Daria Mordashova, Tore Nesset, Ekaterina Rakhilina, Francis M. Tyers, Valentina Zhukova. 2021. The Russian Constructicon. An electronic database of the Russian grammatical constructions. Available at <a href="https://constructicon.github.io/russian/">https://constructicon.github.io/russian/</a>.</strong></p>
+          </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+      </div>
+
+      <div class="more-buffer">
+		
+          <hr>
+
+          <a href="https://diku.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;5a56b1753b10711c00.jpg"
+                   class="figure-img img-fluid rounded" alt="Diku logo">
+            </figure>
+          </a>
+
+          <span style="display:inline-block; width: 25px;"></span>
+
+          <a href="https://uit.no/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;7a9d3808320cf7f600.png"
+                   class="figure-img img-fluid rounded" alt="UiT logo">
+            </figure>
+          </a>
+
+          <a href="https://www.hse.ru/en/" target="_blank">
+            <figure class="figure">
+              
+              <img src="https:&#x2F;&#x2F;constructicon.github.io&#x2F;russian&#x2F;processed_images&#x2F;ba4794503f453bf200.jpg"
+                   class="figure-img img-fluid rounded" alt="HSE logo">
+            </figure>
+          </a>
+        
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+    
+    
+
+  </body>
+</html>

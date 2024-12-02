@@ -1,0 +1,84 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3, h4, h5, h6 {
+  font-size: 16px;
+}
+
+h7 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 40%;
+}
+
+.top-buffer { margin-top: 25px; }
+
+.more-buffer { margin-top: 150px; }
+
+.bottom-buffer { margin-bottom: 25px; }
+
+.highlight { background-color: #8fe6fe; }
+
+[v-cloak] {
+  display: none;
+}
+
+.chart-container1 {
+  width: 57vw;
+  height: 1000px;
+  margin-left: 11%;
+  margin-bottom: 50px
+}
+
+.chart-container2 {
+  width: 60vw;
+  margin-left: 6%;
+  margin-bottom: 50px;
+}
+
+.chart-container3 {
+  margin-left: 18%;
+  width: 51vw;
+  margin-bottom: 50px
+}
+
+table {
+  white-space: nowrap;
+}
+
+.selectST {
+  margin-left: 31.5%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.bblock {
+	display: table-cell;
+    font-size: 15px;
+  	width: 200px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+.wrap {
+  margin-left: 26%;
+  display: table;
+  border-spacing: 20px 20px;
+}
